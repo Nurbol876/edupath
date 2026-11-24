@@ -1,0 +1,206 @@
+[
+    {
+        "id":  "mext-japan",
+        "name":  "MEXT",
+        "country":  {
+                        "ru":  "Япония",
+                        "kg":  "Жапония",
+                        "en":  "Japan"
+                    },
+        "program":  "MEXT",
+        "university":  null,
+        "lastUpdated":  "2026-11-23",
+        "sourceUrl":  "https://www.studyinjapan.go.jp/en/smap-stopj-applications-scholarships/",
+        "verified":  false,
+        "verificationNote":  "TODO: проверить категории и требования MEXT на официальном сайте",
+        "qsRank":  null,
+        "city":  null,
+        "region":  null,
+        "languages":  [
+
+                      ],
+        "difficulty":  null,
+        "grantTypes":  [
+
+                       ],
+        "grantCoverage":  null,
+        "directAdmissionAfter11":  null,
+        "livingCostMonthly":  null,
+        "deadlines":  [
+
+                      ],
+        "requirements":  null,
+        "visaInformation":  null,
+        "website":  null
+    },
+    {
+        "id":  "poland-scholarships",
+        "name":  "Грантовые программы Польши",
+        "country":  {
+                        "ru":  "Польша",
+                        "kg":  "Польша",
+                        "en":  "Poland"
+                    },
+        "program":  "Грантовые программы Польши",
+        "university":  null,
+        "lastUpdated":  "2026-11-23",
+        "sourceUrl":  "https://nawa.gov.pl/en/",
+        "verified":  false,
+        "verificationNote":  "TODO: проверить доступные программы и требования на официальном сайте NAWA",
+        "qsRank":  null,
+        "city":  null,
+        "region":  null,
+        "languages":  [
+
+                      ],
+        "difficulty":  null,
+        "grantTypes":  [
+
+                       ],
+        "grantCoverage":  null,
+        "directAdmissionAfter11":  null,
+        "livingCostMonthly":  null,
+        "deadlines":  [
+
+                      ],
+        "requirements":  null,
+        "visaInformation":  null,
+        "website":  null
+    },
+    {
+        "id":  "serbia-scholarships",
+        "name":  "Стипендии Сербии",
+        "country":  {
+                        "ru":  "Сербия",
+                        "kg":  "Сербия",
+                        "en":  "Serbia"
+                    },
+        "program":  "Стипендии Сербии",
+        "university":  null,
+        "lastUpdated":  "2026-11-23",
+        "sourceUrl":  "https://www.studyinserbia.rs/",
+        "verified":  false,
+        "verificationNote":  "TODO: проверить стипендии и требования на официальном сайте",
+        "qsRank":  null,
+        "city":  null,
+        "region":  null,
+        "languages":  [
+
+                      ],
+        "difficulty":  null,
+        "grantTypes":  [
+
+                       ],
+        "grantCoverage":  null,
+        "directAdmissionAfter11":  null,
+        "livingCostMonthly":  null,
+        "deadlines":  [
+
+                      ],
+        "requirements":  null,
+        "visaInformation":  null,
+        "website":  null
+    },
+    {
+        "id":  "russia-quota",
+        "name":  "Государственная квота",
+        "country":  {
+                        "ru":  "Россия",
+                        "kg":  "Россия",
+                        "en":  "Russia"
+                    },
+        "program":  "Государственная квота",
+        "university":  null,
+        "lastUpdated":  "2026-11-23",
+        "sourceUrl":  "https://education-in-russia.com/",
+        "verified":  false,
+        "verificationNote":  "TODO: проверить порядок квотного отбора для граждан Кыргызстана",
+        "qsRank":  null,
+        "city":  null,
+        "region":  null,
+        "languages":  [
+
+                      ],
+        "difficulty":  null,
+        "grantTypes":  [
+
+                       ],
+        "grantCoverage":  null,
+        "directAdmissionAfter11":  null,
+        "livingCostMonthly":  null,
+        "deadlines":  [
+
+                      ],
+        "requirements":  null,
+        "visaInformation":  null,
+        "website":  null
+    },
+    {
+        "id":  "uae-scholarships",
+        "name":  "Стипендии вузов ОАЭ",
+        "country":  {
+                        "ru":  "ОАЭ",
+                        "kg":  "БАЭ",
+                        "en":  "United Arab Emirates"
+                    },
+        "program":  "Стипендии вузов ОАЭ",
+        "university":  null,
+        "lastUpdated":  "2026-11-23",
+        "sourceUrl":  "https://www.moe.gov.ae/",
+        "verified":  false,
+        "verificationNote":  "TODO: найти и проверить официальные страницы стипендий вузов",
+        "qsRank":  null,
+        "city":  null,
+        "region":  null,
+        "languages":  [
+
+                      ],
+        "difficulty":  null,
+        "grantTypes":  [
+
+                       ],
+        "grantCoverage":  null,
+        "directAdmissionAfter11":  null,
+        "livingCostMonthly":  null,
+        "deadlines":  [
+
+                      ],
+        "requirements":  null,
+        "visaInformation":  null,
+        "website":  null
+    },
+    {
+        "id":  "kazakhstan-scholarships",
+        "name":  "Стипендии вузов Казахстана",
+        "country":  {
+                        "ru":  "Казахстан",
+                        "kg":  "Казакстан",
+                        "en":  "Kazakhstan"
+                    },
+        "program":  "Стипендии вузов Казахстана",
+        "university":  null,
+        "lastUpdated":  "2026-11-23",
+        "sourceUrl":  "https://studyin.kz/",
+        "verified":  false,
+        "verificationNote":  "TODO: проверить официальные программы для иностранных абитуриентов",
+        "qsRank":  null,
+        "city":  null,
+        "region":  null,
+        "languages":  [
+
+                      ],
+        "difficulty":  null,
+        "grantTypes":  [
+
+                       ],
+        "grantCoverage":  null,
+        "directAdmissionAfter11":  null,
+        "livingCostMonthly":  null,
+        "deadlines":  [
+
+                      ],
+        "requirements":  null,
+        "visaInformation":  null,
+        "website":  null
+    }
+]

@@ -409,9 +409,30 @@ button, input, select, textarea {
 
 .chance-form-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr) auto auto;
-  gap: 14px;
+  grid-template-columns: 1fr 1.2fr 1fr 1fr 1.2fr auto auto;
+  gap: 12px;
   align-items: flex-end;
+}
+
+@media (max-width: 1200px) {
+  .chance-form-grid {
+    grid-template-columns: repeat(3, 1fr) auto auto;
+  }
+}
+
+.badge-no-ielts {
+  background: #ecfdf5;
+  color: #065f46;
+  border: 1px solid #6ee7b7;
+  font-weight: 800;
+  box-shadow: 0 1px 2px rgba(6, 95, 70, 0.08);
+}
+
+.badge-ielts-req {
+  background: #f8fafc;
+  color: #475569;
+  border: 1px solid #cbd5e1;
+  font-weight: 600;
 }
 
 .chance-field {
@@ -1771,6 +1792,231 @@ input[type="checkbox"]:checked + .switch-toggle::after {
   width: 35%;
 }
 
+.card-data-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 5px 10px;
+  margin: -4px 0 12px;
+  color: var(--text-muted);
+  font-size: 0.7rem;
+}
+
+.unverified-label {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  padding: 2px 7px;
+  border: 1px solid var(--warning-border);
+  border-radius: var(--radius-full);
+  background: var(--warning-light);
+  color: #92400e;
+  font-size: 0.72rem;
+  font-weight: 800;
+}
+
+.verified-label {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  padding: 2px 7px;
+  border: 1px solid var(--success-border);
+  border-radius: var(--radius-full);
+  background: var(--success-light);
+  color: #047857;
+  font-size: 0.72rem;
+  font-weight: 800;
+}
+
+.btn-report-error {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  padding: 4px 8px;
+  border: 1px solid var(--danger-border);
+  border-radius: var(--radius-sm);
+  background: var(--danger-light);
+  color: #991b1b;
+  font-size: 0.74rem;
+  font-weight: 700;
+}
+
+.btn-report-error:hover {
+  background: #fee2e2;
+  color: #7f1d1d;
+}
+
+.data-load-error {
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid var(--danger-border);
+  border-radius: var(--radius-lg);
+  background: var(--danger-light);
+  color: #7f1d1d;
+}
+
+.data-load-error button {
+  margin-top: 12px;
+}
+
+.university-page-container {
+  padding-top: 24px;
+  padding-bottom: 48px;
+}
+
+.university-page {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: clamp(16px, 4vw, 36px);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-xl);
+  background: var(--bg-card);
+  box-shadow: var(--shadow-md);
+}
+
+.university-back-link {
+  display: inline-block;
+  margin-bottom: 18px;
+  font-weight: 700;
+}
+
+.university-page-header {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 24px;
+  align-items: center;
+}
+
+.university-page-image {
+  width: 100%;
+  min-height: 190px;
+  max-height: 320px;
+  border-radius: var(--radius-lg);
+  object-fit: cover;
+  background: var(--bg-hover);
+}
+
+.university-page-heading h1 {
+  margin: 4px 0 8px;
+  color: var(--text-main);
+  font-size: clamp(1.7rem, 3vw, 2.4rem);
+  line-height: 1.15;
+}
+
+.university-location,
+.university-page-heading > p:not(.university-location) {
+  color: var(--text-muted);
+}
+
+.university-page-actions,
+.university-page-footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.university-data-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 14px;
+  margin: 20px 0 0;
+  padding: 12px 0;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-muted);
+  font-size: 0.84rem;
+}
+
+.university-image-note,
+.data-source-missing {
+  color: var(--text-muted);
+  font-size: 0.78rem;
+}
+
+.university-image-note {
+  margin-top: 5px;
+}
+
+.university-info-section {
+  margin-top: 24px;
+}
+
+.university-info-section h2 {
+  margin-bottom: 10px;
+  color: var(--text-main);
+  font-size: 1.18rem;
+}
+
+.university-info-section > p,
+.university-info-section li {
+  color: var(--text-muted);
+  line-height: 1.65;
+}
+
+.university-info-section ul {
+  padding-left: 20px;
+}
+
+.university-facts-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.university-facts-grid > div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  background: var(--bg-page);
+}
+
+.university-facts-grid strong {
+  color: var(--text-muted);
+  font-size: 0.78rem;
+}
+
+.university-facts-grid span {
+  color: var(--text-main);
+  overflow-wrap: anywhere;
+}
+
+.university-chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.university-page-footer {
+  padding-top: 18px;
+  border-top: 1px solid var(--border-color);
+}
+
+.university-not-found {
+  max-width: 700px;
+  margin: 30px auto;
+  padding: 24px;
+  text-align: center;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 3px solid #2563eb;
+  outline-offset: 3px;
+}
+
+[hidden] {
+  display: none !important;
+}
+
 /* ==========================================================================
    Footer
    ========================================================================== */
@@ -1879,6 +2125,26 @@ input[type="checkbox"]:checked + .switch-toggle::after {
 }
 
 @media (max-width: 768px) {
+  .header-inner {
+    height: auto;
+    min-height: 72px;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+
+  .brand-wrapper {
+    flex: 1 1 100%;
+    min-width: 0;
+  }
+
+  .header-actions {
+    flex: 1 1 100%;
+    justify-content: space-between;
+    gap: 8px;
+  }
+
   .hero-title {
     font-size: 1.85rem;
   }
@@ -1906,5 +2172,34 @@ input[type="checkbox"]:checked + .switch-toggle::after {
 
   .uni-cards-grid {
     grid-template-columns: 1fr;
+  }
+
+  .university-page-header {
+    grid-template-columns: 1fr;
+  }
+
+  .university-page-image {
+    min-height: 160px;
+  }
+
+  .university-facts-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .compare-floating-bar {
+    width: calc(100vw - 20px);
+    max-width: 520px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px;
+    border-radius: var(--radius-lg);
+  }
+
+  .compare-bar-label {
+    flex: 1 1 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 0.78rem;
   }
 }

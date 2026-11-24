@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>EduPath KG — Каталог университетов мира для абитуриентов Кыргызстана</title>
   <meta name="description" content="Современный каталог университетов мира с грантами и стипендиями для выпускников 11 классов и студентов из Кыргызстана. Türkiye Bursları, Stipendium Hungaricum, GKS, DAAD и требования по визам в Бишкеке.">
+  <meta property="og:title" content="EduPath KG — Каталог университетов мира">
+  <meta property="og:description" content="Каталог университетов с грантами и стипендиями для абитуриентов из Кыргызстана.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -30,6 +34,10 @@
       <nav class="main-nav">
         <a href="#catalog-section" class="nav-link active" data-view="catalog" data-i18n="navCatalog">Каталог вузов</a>
         <a href="#chance-calculator" class="nav-link" data-view="calculator" data-i18n="navCalculator">Калькулятор шансов</a>
+        <a href="#" class="nav-link" data-view="ielts_guide" onclick="openIeltsGuideModal(); return false;">
+          <span style="color: #2563eb; font-weight: 700;">★</span>
+          <span data-i18n="navGuide">Гид по IELTS</span>
+        </a>
         <a href="#catalog-section" class="nav-link" data-view="favorites">
           <span data-i18n="navFavorites">Избранное</span>
           <span class="nav-badge-count" id="fav-count-badge">0</span>
@@ -58,12 +66,9 @@
       <div class="hero-content">
         <div class="hero-pill">
           <span class="hero-pill-dot"></span>
-          <span>Набор на учебный сезон 2026–2027 открыт!</span>
+          <span data-i18n="catalogNotice">Каталог содержит данные, которые требуют проверки</span>
         </div>
-        <h1 class="hero-title">
-          Поступай в ведущие университеты мира <br>
-          <span class="hero-title-gradient">с полным финансированием из Кыргызстана</span>
-        </h1>
+        <h1 class="hero-title" data-i18n="heroTitle">Поступай в ведущие университеты мира из Кыргызстана</h1>
         <p class="hero-description" data-i18n="heroDesc">
           Актуальная база проверенных данных: гранты Türkiye Bursları, Stipendium Hungaricum, GKS, DAAD, правила после 11 класса КР, адреса посольств в Бишкеке и реальные расходы в месяц.
         </p>
@@ -71,19 +76,23 @@
         <!-- Live Statistics Grid -->
         <div class="hero-stats-grid">
           <div class="hero-stat-card">
-            <div class="stat-number" id="stat-total-unis">14</div>
+            <div class="stat-number" id="stat-total-unis">16</div>
             <div class="stat-label" data-i18n="statUnis">вузов в базе</div>
           </div>
           <div class="hero-stat-card">
-            <div class="stat-number" id="stat-total-grants" style="color: #059669;">13</div>
+            <div class="stat-number" id="stat-total-no-ielts" style="color: #059669;">11</div>
+            <div class="stat-label" data-i18n="statNoIelts">доступны без IELTS</div>
+          </div>
+          <div class="hero-stat-card">
+            <div class="stat-number" id="stat-total-grants" style="color: #7c3aed;">15</div>
             <div class="stat-label" data-i18n="statGrants">с полными грантами</div>
           </div>
           <div class="hero-stat-card">
-            <div class="stat-number" id="stat-total-direct11" style="color: #0284c7;">11</div>
+            <div class="stat-number" id="stat-total-direct11" style="color: #0284c7;">13</div>
             <div class="stat-label" data-i18n="statDirect11">принимают после 11 кл.</div>
           </div>
           <div class="hero-stat-card">
-            <div class="stat-number" id="stat-total-countries">10</div>
+            <div class="stat-number" id="stat-total-countries">11</div>
             <div class="stat-label" data-i18n="statCountries">стран мира</div>
           </div>
         </div>
@@ -106,24 +115,44 @@
             <div class="chance-field">
               <label class="chance-label" for="calc-gpa" data-i18n="calcGpaLabel">Средний балл аттестата (из 5.0):</label>
               <div class="chance-input-wrap">
-                <input type="number" id="calc-gpa" class="chance-input" placeholder="Напр. 4.7" step="0.1" min="3.0" max="5.0">
+                <input type="number" id="calc-gpa" class="chance-input" placeholder="Например, 4.7" data-i18n-placeholder="placeholderGpa" step="0.1" min="3.0" max="5.0">
                 <span class="chance-input-suffix">/ 5.0</span>
               </div>
             </div>
 
             <div class="chance-field">
-              <label class="chance-label" for="calc-ielts" data-i18n="calcIeltsLabel">Балл IELTS (или эквивалент):</label>
+              <label class="chance-label" for="calc-exam-type" data-i18n="calcExamTypeLabel">Языковой экзамен:</label>
               <div class="chance-input-wrap">
-                <input type="number" id="calc-ielts" class="chance-input" placeholder="Напр. 6.5" step="0.5" min="4.0" max="9.0">
-                <span class="chance-input-suffix">IELTS</span>
+                <select id="calc-exam-type" class="chance-input" style="cursor: pointer;">
+                  <option value="ielts">IELTS</option>
+                  <option value="toefl">TOEFL iBT</option>
+                  <option value="duolingo">Duolingo (DET)</option>
+                  <option value="none" data-i18n="examNoCertificate">Без языкового сертификата</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="chance-field" id="calc-exam-score-wrap">
+              <label class="chance-label" for="calc-exam-score" data-i18n="calcExamScoreLabel">Балл языкового теста:</label>
+              <div class="chance-input-wrap">
+                <input type="number" id="calc-exam-score" class="chance-input" placeholder="Например, 6.5" data-i18n-placeholder="placeholderExamScore" step="0.5" min="4.0" max="9.0">
+                <span class="chance-input-suffix" data-i18n="scoreSuffix">балл</span>
+              </div>
+            </div>
+
+            <div class="chance-field">
+              <label class="chance-label" for="calc-sat-score" data-i18n="calcSatLabel">Балл Digital SAT (если есть):</label>
+              <div class="chance-input-wrap">
+                <input type="number" id="calc-sat-score" class="chance-input" placeholder="Например, 1350" data-i18n-placeholder="placeholderSatScore" step="10" min="800" max="1600">
+                <span class="chance-input-suffix">SAT</span>
               </div>
             </div>
 
             <div class="chance-field">
               <label class="chance-label" for="calc-budget" data-i18n="calcBudgetLabel">Годовой бюджет семьи на учебу:</label>
               <div class="chance-input-wrap">
-                <input type="number" id="calc-budget" class="chance-input" placeholder="0 для грантов или USD" min="0" step="500">
-                <span class="chance-input-suffix">$ / год</span>
+                <input type="number" id="calc-budget" class="chance-input" placeholder="0 — только гранты или сумма в USD" data-i18n-placeholder="placeholderBudget" min="0" step="500">
+                <span class="chance-input-suffix" data-i18n="annualSuffix">$ / год</span>
               </div>
             </div>
 
@@ -132,15 +161,17 @@
           </div>
 
           <div class="chance-legend-bar">
-            <span>Обозначения на карточках:</span>
-            <div class="legend-item"><span class="legend-badge high">● Высокие шансы</span> высокий балл и соответствие требованиям</div>
-            <div class="legend-item"><span class="legend-badge moderate">● Хорошие шансы</span> проходной порог достижим</div>
-            <div class="legend-item"><span class="legend-badge challenging">● Высокий конкурс</span> амбициозный выбор</div>
+            <span data-i18n="chanceLegendTitle">Обозначения на карточках:</span>
+            <div class="legend-item"><span class="legend-badge high" data-i18n="chanceHigh">● Высокие шансы</span> <span data-i18n="chanceHighHint">баллы соответствуют указанным требованиям</span></div>
+            <div class="legend-item"><span class="legend-badge moderate" data-i18n="chanceModerate">● Хорошие шансы</span> <span data-i18n="chanceModerateHint">ориентир, а не гарантия поступления</span></div>
+            <div class="legend-item"><span class="legend-badge challenging" data-i18n="chanceChallenging">● Высокий конкурс</span> <span data-i18n="chanceChallengingHint">высокий конкурс; проверьте требования вуза</span></div>
           </div>
         </div>
       </div>
     </div>
   </section>
+
+  <section class="container data-load-error" id="data-load-error" hidden role="alert"></section>
 
   <!-- Main Catalog Area -->
   <main class="container" id="catalog-section" style="padding-top: 32px;">
@@ -165,6 +196,15 @@
           </label>
         </div>
 
+        <!-- NO IELTS Toggle Switch -->
+        <div class="filter-group">
+          <label class="switch-control" for="filter-no-ielts">
+            <span style="color: #059669; font-weight: 700;" data-i18n="noIeltsOnly">✓ Где IELTS не обязателен (внутр. тест / язык)</span>
+            <input type="checkbox" id="filter-no-ielts" class="switch-input">
+            <span class="switch-toggle"></span>
+          </label>
+        </div>
+
         <!-- 11th Grade Direct Admission Toggle Switch -->
         <div class="filter-group">
           <label class="switch-control" for="filter-direct-11">
@@ -180,23 +220,23 @@
           <div class="region-chips">
             <button class="region-chip-btn active" data-region="all">
               <span data-i18n="allRegions">Все регионы</span>
-              <span class="chip-count">14</span>
+              <span class="chip-count" id="region-count-all">0</span>
             </button>
             <button class="region-chip-btn" data-region="europe">
               <span data-i18n="regionEurope">Европа</span>
-              <span class="chip-count">5</span>
+              <span class="chip-count" id="region-count-europe">0</span>
             </button>
             <button class="region-chip-btn" data-region="asia">
               <span data-i18n="regionAsia">Азия</span>
-              <span class="chip-count">5</span>
+              <span class="chip-count" id="region-count-asia">0</span>
             </button>
             <button class="region-chip-btn" data-region="middle_east">
               <span data-i18n="regionMiddleEast">Ближний Восток / Евразия</span>
-              <span class="chip-count">2</span>
+              <span class="chip-count" id="region-count-middle-east">0</span>
             </button>
             <button class="region-chip-btn" data-region="north_america">
               <span data-i18n="regionNorthAmerica">Северная Америка</span>
-              <span class="chip-count">3</span>
+              <span class="chip-count" id="region-count-north-america">0</span>
             </button>
           </div>
         </div>
@@ -207,8 +247,8 @@
           <div class="range-slider-wrap">
             <input type="range" id="budget-range" class="range-slider" min="0" max="70000" step="1000" value="70000">
             <div class="range-values">
-              <span>$0 (Грант)</span>
-              <span id="budget-val-display" style="color: var(--primary);">Любой бюджет</span>
+              <span data-i18n="budgetGrantZero">$0 (грант)</span>
+              <span id="budget-val-display" style="color: var(--primary);" data-i18n="budgetRangeAny">Любой бюджет</span>
             </div>
           </div>
         </div>
@@ -271,6 +311,8 @@
     </div>
   </main>
 
+  <main class="container university-page-container" id="university-page" hidden></main>
+
   <!-- Floating Comparison Drawer -->
   <div class="compare-floating-bar" id="compare-floating-bar">
     <div class="compare-bar-label">
@@ -282,13 +324,121 @@
     <button class="btn-bar-clear" onclick="clearCompare()" data-i18n="btnClearCompare">Очистить</button>
   </div>
 
+  <!-- IELTS Country Requirements Guide Modal -->
+  <div class="modal-backdrop" id="ielts-guide-modal">
+    <div class="modal-window large">
+      <button class="btn-modal-close" onclick="closeAllModals()">&times;</button>
+      <div id="ielts-guide-content">
+      <div style="padding: 24px 24px 16px; border-bottom: 1px solid var(--border-color); background: linear-gradient(135deg, #1e3a8a 0%, #0284c7 100%); color: #fff;">
+        <span style="background: rgba(255,255,255,0.2); padding: 4px 10px; border-radius: 9999px; font-size: 0.78rem; font-weight: 700; text-transform: uppercase;">Справочник абитуриента КР</span>
+        <h3 style="font-size: 1.4rem; font-weight: 800; margin-top: 6px;">Рекомендуемые баллы IELTS для учебы на английском языке</h3>
+        <p style="font-size: 0.88rem; color: #e0f2fe; margin-top: 4px;">Где нужен строгий высокий балл (США, Корея, Канада, ОАЭ), а где можно поступить без IELTS или сдать внутренний тест.</p>
+        <p data-i18n="ieltsGuideWarning" style="font-size: 0.82rem; margin-top: 8px;">Данные ниже не проверены по официальным источникам; перед подачей уточняйте требования в вузе.</p>
+      </div>
+
+      <div class="modal-body" style="padding: 24px;">
+        <div class="alert-box info" style="margin-bottom: 20px;">
+          <strong>💡 В чем разница между минимальным и рекомендуемым баллом:</strong>
+          <p style="margin-top: 6px;">
+            • <strong>Минимальный балл (6.0–6.5)</strong> — дает право подать документы. Но при высоком конкурсе на 100% гранты (Türkiye Bursları, Stipendium Hungaricum, GKS, Pearson, Need-Blind в США) преимущество получают те, у кого балл выше.<br>
+            • <strong>Рекомендуемый балл (7.0–7.5+)</strong> — реальный ориентир, с которым выигрывают полное финансирование и комфортно учатся на англоязычных лекциях.
+          </p>
+        </div>
+
+        <div class="guide-section-block">
+          <h4 class="guide-block-title">Таблица языковых стандартов по странам</h4>
+          <table class="compare-table" style="font-size: 0.85rem;">
+            <thead>
+              <tr>
+                <th>Страна / Регион</th>
+                <th>Язык уроков</th>
+                <th>Минимальный IELTS</th>
+                <th>Рекомендуемый IELTS на грант</th>
+                <th>Альтернативы и правила без IELTS</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>🇺🇸 США</strong><br>(Amherst, USF)</td>
+                <td>100% Английский</td>
+                <td><strong style="color: #d97706;">6.5</strong></td>
+                <td><strong style="color: #059669; font-size: 1rem;">7.5 – 8.0</strong></td>
+                <td>В США уроки, дебаты и эссе идут на английском. Принимаются <strong>TOEFL (100+)</strong>, <strong>Duolingo (130+)</strong>. Очень важен <strong>SAT (1450+)</strong>.</td>
+              </tr>
+              <tr>
+                <td><strong>🇰🇷 Южная Корея</strong><br>(KAIST, SNU)</td>
+                <td>100% Английский (KAIST) / Корейский (SNU)</td>
+                <td><strong style="color: #d97706;">6.5</strong></td>
+                <td><strong style="color: #059669; font-size: 1rem;">7.0 – 7.5</strong></td>
+                <td>В KAIST все лекции на английском! Принимаются TOEFL (83+), Duolingo (115+), SAT Math 780+. <br><em>Без IELTS:</em> по госстипендии <strong>GKS</strong> с 1 годом корейского языка.</td>
+              </tr>
+              <tr>
+                <td><strong>🇨🇦 Канада</strong><br>(University of Toronto)</td>
+                <td>100% Английский</td>
+                <td><strong style="color: #d97706;">6.5</strong> (нет band < 6.0)</td>
+                <td><strong style="color: #059669; font-size: 1rem;">7.0 – 7.5</strong></td>
+                <td>Для стипендии им. Лестера Б. Пирсона (100% full ride) нужен уверенный IELTS 7.0+. Принимаются TOEFL (100+) и Duolingo (120+).</td>
+              </tr>
+              <tr>
+                <td><strong>🇦🇪 ОАЭ</strong><br>(NYU Abu Dhabi)</td>
+                <td>100% Английский</td>
+                <td><strong style="color: #d97706;">7.0</strong></td>
+                <td><strong style="color: #059669; font-size: 1rem;">7.5 – 8.0</strong></td>
+                <td>Американский диплом NYU. Финалисты проходят интервью на английском языке на Candidate Weekend. Альтернатива: Duolingo (130+), SAT (1470+).</td>
+              </tr>
+              <tr>
+                <td><strong>🇭🇺 Венгрия</strong><br>(ELTE, Debrecen)</td>
+                <td>100% Английский</td>
+                <td><strong style="color: #d97706;">5.5 – 6.0</strong></td>
+                <td><strong style="color: #059669; font-size: 1rem;">6.5</strong></td>
+                <td>По гранту <strong>Stipendium Hungaricum</strong>. В ELTE можно сдать <strong>внутренний онлайн-тест и скайп-интервью без IELTS</strong>!</td>
+              </tr>
+              <tr>
+                <td><strong>🇹🇷 Турция</strong><br>(METU, Манас, Истанбул)</td>
+                <td>Английский (METU) / Турецкий</td>
+                <td><strong style="color: #d97706;">6.0</strong> (для англ.)</td>
+                <td><strong style="color: #059669; font-size: 1rem;">6.5 – 7.0</strong></td>
+                <td>В METU можно сдать внутренний экзамен <strong>METU EPE</strong> по прибытии! В «Манас» и Istanbul Uni IELTS <strong>не требуется вообще</strong> (бесплатный подготовительный год Hazırlık / TÖMER).</td>
+              </tr>
+              <tr>
+                <td><strong>🇩🇪 Германия</strong><br>(TUM, RWTH Aachen)</td>
+                <td>Немецкий / Английский</td>
+                <td><strong style="color: #d97706;">6.5</strong> (для англ.)</td>
+                <td><strong style="color: #059669; font-size: 1rem;">7.0+</strong></td>
+                <td>Для бесплатного обучения на немецком языке IELTS <strong>не требуется</strong> (нужен TestDaF или поступление в Studienkolleg с немецким B1/B2).</td>
+              </tr>
+              <tr>
+                <td><strong>🇨🇿 Чехия</strong><br>(Карлов университет)</td>
+                <td>Чешский / Английский</td>
+                <td><strong style="color: #d97706;">—</strong></td>
+                <td><strong style="color: #059669; font-size: 1rem;">Чешский B2</strong></td>
+                <td><strong>IELTS не нужен!</strong> 100% бесплатное высшее образование на чешском языке после 1 года языкового курса ÚJOP.</td>
+              </tr>
+              <tr>
+                <td><strong>🇰🇬 Кыргызстан</strong><br>(АУЦА)</td>
+                <td>100% Английский</td>
+                <td><strong style="color: #d97706;">6.0</strong></td>
+                <td><strong style="color: #059669; font-size: 1rem;">6.5 – 7.0</strong></td>
+                <td>В АУЦА можно сдавать <strong>внутренний ежемесячный тест АУЦА в Бишкеке</strong> (English + Essay + Math) вместо IELTS!</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      </div>
+      <div id="ielts-guide-unavailable" class="modal-body" hidden>
+        <div class="alert-box info" data-i18n="ieltsGuideUnavailable">Подробный гид сейчас доступен только на русском и не проверен по официальным источникам.</div>
+      </div>
+    </div>
+  </div>
+
   <!-- Comparison Modal Table -->
   <div class="modal-backdrop" id="compare-modal">
     <div class="modal-window large">
       <button class="btn-modal-close" onclick="closeAllModals()">&times;</button>
       <div style="padding: 24px 24px 14px; border-bottom: 1px solid var(--border-color); display: flex; align-items: center; justify-content: space-between;">
         <h3 style="font-size: 1.3rem; font-weight: 800; color: var(--text-main);" data-i18n="compareModalTitle">Сравнение выбранных университетов</h3>
-        <button class="btn-reset-filters" onclick="clearCompare(); closeAllModals();">Очистить список</button>
+        <button class="btn-reset-filters" onclick="clearCompare(); closeAllModals();" data-i18n="btnClearCompare">Очистить список</button>
       </div>
       <div class="modal-body" style="padding-top: 10px;">
         <div id="compare-table-container" class="compare-table-wrap"></div>
@@ -352,7 +502,7 @@
         <div>
           <div class="footer-brand-title">
             <span>🎓 EduPath KG</span>
-            <span class="brand-flag-badge">Кыргызстан</span>
+            <span class="brand-flag-badge" data-i18n="footerCountryName">Кыргызстан</span>
           </div>
           <p class="footer-desc" data-i18n="footerText">
             EduPath KG — независимый информационный портал для школьников, абитуриентов и родителей из Кыргызстана. Информация собрана на основе официальных данных университетов, правительственных стипендий и консульских отделов в Бишкеке.
@@ -360,36 +510,38 @@
         </div>
 
         <div>
-          <h4 class="footer-col-title">Ключевые стипендии</h4>
+          <h4 class="footer-col-title" data-i18n="footerScholarshipsTitle">Стипендии</h4>
           <ul class="footer-links">
-            <li><a href="https://www.turkiyeburslari.gov.tr" target="_blank" rel="noopener">Türkiye Bursları (Турция)</a></li>
-            <li><a href="https://apply.stipendiumhungaricum.hu" target="_blank" rel="noopener">Stipendium Hungaricum (Венгрия)</a></li>
-            <li><a href="https://www.studyinkorea.go.kr" target="_blank" rel="noopener">GKS (Южная Корея)</a></li>
-            <li><a href="https://www.daad.de" target="_blank" rel="noopener">DAAD (Германия)</a></li>
-            <li><a href="https://www.campuschina.org" target="_blank" rel="noopener">CSC (Китай)</a></li>
+            <li><a href="https://www.turkiyeburslari.gov.tr" target="_blank" rel="noopener" data-i18n="footerScholarshipTurkey">Türkiye Bursları (Турция)</a></li>
+            <li><a href="https://apply.stipendiumhungaricum.hu" target="_blank" rel="noopener" data-i18n="footerScholarshipHungary">Stipendium Hungaricum (Венгрия)</a></li>
+            <li><a href="https://www.studyinkorea.go.kr" target="_blank" rel="noopener" data-i18n="footerScholarshipKorea">GKS (Южная Корея)</a></li>
+            <li><a href="https://www.daad.de" target="_blank" rel="noopener" data-i18n="footerScholarshipGermany">DAAD (Германия)</a></li>
+            <li><a href="https://www.campuschina.org" target="_blank" rel="noopener" data-i18n="footerScholarshipChina">CSC (Китай)</a></li>
           </ul>
         </div>
 
         <div>
-          <h4 class="footer-col-title">Полезно для абитуриента КР</h4>
+          <h4 class="footer-col-title" data-i18n="footerUsefulTitle">Полезные ссылки для абитуриентов КР</h4>
           <ul class="footer-links">
-            <li><a href="https://student.edu.gov.kg" target="_blank" rel="noopener">Портал МОН КР (student.edu.gov.kg)</a></li>
-            <li><a href="https://portal.tunduk.gov.kg" target="_blank" rel="noopener">Справка о несудимости («Түндүк»)</a></li>
-            <li><a href="http://minjust.gov.kg" target="_blank" rel="noopener">Апостиль (Минюст КР)</a></li>
-            <li><a href="https://auca.kg" target="_blank" rel="noopener">Digital SAT в Бишкеке (Silk Road / АУЦА)</a></li>
+            <li><a href="https://student.edu.gov.kg" target="_blank" rel="noopener" data-i18n="footerStudentPortal">Портал МОН КР</a></li>
+            <li><a href="https://portal.tunduk.gov.kg" target="_blank" rel="noopener" data-i18n="footerPoliceCertificate">Справка о несудимости («Түндүк»)</a></li>
+            <li><a href="http://minjust.gov.kg" target="_blank" rel="noopener" data-i18n="footerApostille">Апостиль (Минюст КР)</a></li>
+            <li><a href="https://auca.kg" target="_blank" rel="noopener" data-i18n="footerSatCenter">Digital SAT в Бишкеке (Silk Road / АУЦА)</a></li>
           </ul>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <span>© 2026–2027 EduPath KG. Все права защищены.</span>
-        <span>Сделано с заботой о будущем школьников и студентов Кыргызстана 🇰🇬</span>
+        <span data-i18n="footerCopyright">© 2026–2027 EduPath KG. Все права защищены.</span>
+        <span data-i18n="footerMadeWith">С заботой о будущем школьников и студентов Кыргызстана 🇰🇬</span>
       </div>
     </div>
   </footer>
 
   <!-- Scripts -->
   <script src="data.js"></script>
+  <script src="data-loader.js"></script>
+  <script src="university-pages.js"></script>
   <script src="app.js"></script>
 </body>
 </html>

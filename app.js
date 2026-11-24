@@ -1,6 +1,7 @@
 /**
  * EduPath KG (БилимГид) — Core Application Logic
- * Interactive Search, Filters, Chance Matcher, Comparison, Favorites, and Document Checklist.
+ * Interactive Search, Filters, Chance Matcher (GPA, Minimum vs Recommended IELTS, TOEFL, Duolingo, SAT),
+ * Comparison, Favorites, and Document Checklist.
  */
 
 // Application State
@@ -11,15 +12,18 @@ const state = {
   maxBudget: 70000,
   fullGrantOnly: false,
   direct11Only: false,
+  noIeltsOnly: false,
   language: 'all',
   difficulty: 'all',
   sortBy: 'cheapest',
-  activeView: 'catalog', // 'catalog' | 'favorites'
+  activeView: 'catalog',
   favorites: new Set(JSON.parse(localStorage.getItem('edupath_favs') || '[]')),
   compareList: new Set(JSON.parse(localStorage.getItem('edupath_compare') || '[]')),
   chanceProfile: {
     gpa: null,
-    ielts: null,
+    examType: 'ielts', // 'ielts' | 'toefl' | 'duolingo' | 'none'
+    examScore: null,
+    satScore: null,
     budget: null,
     active: false
   },
@@ -37,15 +41,41 @@ function t(key) {
 // Initialize Application
 document.addEventListener('DOMContentLoaded', () => {
   initEventListeners();
-  updateStaticTexts();
-  renderCounters();
-  renderActiveFilters();
-  renderCatalog();
-  updateCompareBar();
+  state.lang = SUPPORTED_LANGUAGES.includes(state.lang) ? state.lang : 'ru';
+  reloadApplicationData();
 });
+
+async function reloadApplicationData() {
+  const errorPanel = document.getElementById('data-load-error');
+  if (errorPanel) {
+    errorPanel.hidden = true;
+    errorPanel.textContent = '';
+  }
+
+  try {
+    await loadApplicationData();
+    updateStaticTexts();
+    renderCounters();
+    renderActiveFilters();
+    renderCatalog();
+    updateCompareBar();
+    renderUniversityRoute();
+  } catch (error) {
+    console.error('Unable to initialize EduPath KG data:', error);
+    if (errorPanel) {
+      errorPanel.hidden = false;
+      errorPanel.innerHTML = `
+        <p>${t('dataLoadError')}</p>
+        <button type="button" class="btn-empty-reset" onclick="reloadApplicationData()">${t('retry')}</button>
+      `;
+    }
+  }
+}
 
 // Update Static UI Texts based on current language
 function updateStaticTexts() {
+  document.documentElement.lang = state.lang === 'kg' ? 'ky' : state.lang;
+
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
     el.textContent = t(key);
@@ -63,6 +93,12 @@ function updateStaticTexts() {
     } else {
       btn.classList.remove('active');
     }
+  });
+
+  UNIVERSITIES_DATA.forEach(university => {
+    university.name = university.nameLocalized[state.lang]
+      || university.nameLocalized.ru
+      || university.displayName;
   });
 
   // Update budget display
@@ -86,6 +122,7 @@ function renderCounters() {
   const elGrants = document.getElementById('stat-total-grants');
   const elCountries = document.getElementById('stat-total-countries');
   const elDirect11 = document.getElementById('stat-total-direct11');
+  const elNoIelts = document.getElementById('stat-total-no-ielts');
 
   if (elTotal) elTotal.textContent = UNIVERSITIES_DATA.length;
   if (elGrants) elGrants.textContent = UNIVERSITIES_DATA.filter(u => u.fullGrantAvailable).length;
@@ -94,6 +131,20 @@ function renderCounters() {
   if (elCountries) elCountries.textContent = countries.size;
 
   if (elDirect11) elDirect11.textContent = UNIVERSITIES_DATA.filter(u => u.accepts11thGradeDirectly).length;
+  if (elNoIelts) elNoIelts.textContent = UNIVERSITIES_DATA.filter(u => u.ieltsRequired === false).length;
+
+  const regionCounts = {
+    all: UNIVERSITIES_DATA.length,
+    europe: UNIVERSITIES_DATA.filter(u => u.region === 'europe').length,
+    asia: UNIVERSITIES_DATA.filter(u => u.region === 'asia').length,
+    middleEast: UNIVERSITIES_DATA.filter(u => u.region === 'middle_east').length,
+    northAmerica: UNIVERSITIES_DATA.filter(u => u.region === 'north_america').length
+  };
+  Object.entries(regionCounts).forEach(([region, count]) => {
+    const regionId = region.replace(/[A-Z]/g, letter => `-${letter.toLowerCase()}`);
+    const regionCountEl = document.getElementById(`region-count-${regionId}`);
+    if (regionCountEl) regionCountEl.textContent = count;
+  });
 }
 
 // Filter and Sort Engine
@@ -113,9 +164,10 @@ function getFilteredAndSortedUnis() {
       const inNative = (u.nativeName || '').toLowerCase().includes(q);
       const inCountry = u.country.toLowerCase().includes(q);
       const inCity = u.city.toLowerCase().includes(q);
-      const inMajors = u.popularMajors.some(m => m.toLowerCase().includes(q));
-      const inGrants = u.grantNames.some(g => g.toLowerCase().includes(q));
-      return inName || inNative || inCountry || inCity || inMajors || inGrants;
+      const inMajors = u.popularMajors.some(m => String(m).toLowerCase().includes(q));
+      const inGrants = u.grantNames.some(g => String(g).toLowerCase().includes(q));
+      const inNote = (u.ieltsAlternativeNote || '').toLowerCase().includes(q);
+      return inName || inNative || inCountry || inCity || inMajors || inGrants || inNote;
     });
   }
 
@@ -127,7 +179,7 @@ function getFilteredAndSortedUnis() {
   // Budget Filter
   if (state.maxBudget < 70000) {
     list = list.filter(u => {
-      if (u.tuitionUSD <= state.maxBudget) return true;
+      if (u.tuitionUSD != null && u.tuitionUSD <= state.maxBudget) return true;
       if (state.fullGrantOnly && u.fullGrantAvailable) return true;
       return false;
     });
@@ -141,6 +193,11 @@ function getFilteredAndSortedUnis() {
   // 11-th Grade Direct Entry Filter
   if (state.direct11Only) {
     list = list.filter(u => u.accepts11thGradeDirectly);
+  }
+
+  // NO IELTS Required Filter
+  if (state.noIeltsOnly) {
+    list = list.filter(u => u.ieltsRequired === false);
   }
 
   // Language Filter
@@ -157,9 +214,9 @@ function getFilteredAndSortedUnis() {
   list.sort((a, b) => {
     switch (state.sortBy) {
       case 'cheapest':
-        return a.tuitionUSD - b.tuitionUSD;
+        return (a.tuitionUSD ?? Infinity) - (b.tuitionUSD ?? Infinity);
       case 'rank':
-        return a.qsRank - b.qsRank;
+        return (a.qsRank ?? Infinity) - (b.qsRank ?? Infinity);
       case 'deadline':
         return new Date(a.deadlineDate) - new Date(b.deadlineDate);
       case 'name':
@@ -172,49 +229,147 @@ function getFilteredAndSortedUnis() {
   return list;
 }
 
-// Calculate Chances for a given University
+// Evaluate Chances with Minimum vs Recommended IELTS thresholds
 function evaluateChance(uni) {
   if (!state.chanceProfile.active) return null;
 
-  const { gpa, ielts, budget } = state.chanceProfile;
+  const { gpa, examType, examScore, satScore, budget } = state.chanceProfile;
   let academicScore = 0; // 0 to 100
   let feedback = [];
 
   // GPA Evaluation (scale 5.0)
   if (gpa !== null) {
-    if (gpa >= uni.minGPA) {
-      academicScore += 50;
+    if (uni.minGPA == null) {
+      academicScore += 25;
+      feedback.push(t('verificationNote'));
+    } else if (gpa >= uni.minGPA) {
+      academicScore += 35;
     } else if (gpa >= uni.minGPA - 0.3) {
-      academicScore += 30;
-      feedback.push(`GPA ${gpa} чуть ниже порога ${uni.minGPA}`);
+      academicScore += 20;
+      feedback.push(`GPA ${gpa} (порог ${uni.minGPA})`);
     } else {
       academicScore += 10;
       feedback.push(`Требуется GPA от ${uni.minGPA}`);
     }
   } else {
-    academicScore += 40;
+    academicScore += 25;
   }
 
-  // IELTS Evaluation
-  if (ielts !== null && uni.minIELTS) {
-    if (ielts >= uni.minIELTS) {
-      academicScore += 50;
-    } else if (ielts >= uni.minIELTS - 0.5) {
-      academicScore += 30;
-      feedback.push(`IELTS ${ielts} (рекомендуется ${uni.minIELTS})`);
+  // Language & Exam Evaluation (Minimum vs Recommended)
+  if (examType === 'none') {
+    // Student has NO language certificate
+    if (uni.ieltsRequired === false) {
+      academicScore += 40;
+      feedback.push('✓ Подходит: IELTS не требуется (внутр. экзамен / язык)');
+    } else if (uni.ieltsRequired == null || uni.minIELTS == null) {
+      academicScore += 20;
+      feedback.push(t('verificationNote'));
     } else {
-      academicScore += 10;
-      feedback.push(`Нужен IELTS ${uni.minIELTS}+`);
+      academicScore += 5;
+      feedback.push(`Обязателен IELTS (мин. ${uni.minIELTS}, реком. ${uni.recommendedIELTS})`);
+    }
+  } else if (examType === 'ielts') {
+    if (examScore !== null) {
+      if (uni.ieltsRequired === false) {
+        academicScore += 40;
+        feedback.push(`IELTS ${examScore} — сильное преимущество!`);
+      } else if (uni.ieltsRequired == null || uni.minIELTS == null) {
+        academicScore += 25;
+        feedback.push(t('verificationNote'));
+      } else {
+        const rec = uni.recommendedIELTS || uni.minIELTS;
+        if (examScore >= rec) {
+          academicScore += 40;
+          feedback.push(`✓ IELTS ${examScore} — идеальный балл для гранта (реком. ${rec})`);
+        } else if (examScore >= uni.minIELTS) {
+          academicScore += 30;
+          feedback.push(`✓ IELTS ${examScore} проходит порог ${uni.minIELTS} (для гранта лучше ${rec})`);
+        } else if (examScore >= uni.minIELTS - 0.5) {
+          academicScore += 15;
+          feedback.push(`IELTS ${examScore} чуть ниже порога ${uni.minIELTS}`);
+        } else {
+          academicScore += 5;
+          feedback.push(`Нужен IELTS от ${uni.minIELTS} (реком. ${rec})`);
+        }
+      }
+    } else {
+      academicScore += 25;
+    }
+  } else if (examType === 'toefl') {
+    if (examScore !== null) {
+      const minT = uni.minTOEFL;
+      const recT = uni.recommendedTOEFL || minT;
+      if (minT == null) {
+        academicScore += 25;
+        feedback.push(t('verificationNote'));
+      } else if (examScore >= recT) {
+        academicScore += 40;
+        feedback.push(`✓ TOEFL ${examScore} — отличный балл для гранта`);
+      } else if (examScore >= minT) {
+        academicScore += 30;
+        feedback.push(`✓ TOEFL ${examScore} принят (порог ${minT})`);
+      } else {
+        academicScore += 15;
+        feedback.push(`Нужен TOEFL от ${minT}`);
+      }
+    } else {
+      academicScore += 25;
+    }
+  } else if (examType === 'duolingo') {
+    if (examScore !== null) {
+      const minD = uni.minDuolingo;
+      const recD = uni.recommendedDuolingo || minD;
+      if (minD != null && examScore >= recD) {
+        academicScore += 40;
+        feedback.push(`✓ Duolingo ${examScore} — конкурентный балл`);
+      } else if (minD != null && examScore >= minD) {
+        academicScore += 30;
+        feedback.push(`✓ Duolingo ${examScore} принят (порог ${minD})`);
+      } else if (minD != null) {
+        academicScore += 15;
+        feedback.push(`Нужен Duolingo ${minD}+`);
+      } else {
+        academicScore += 25;
+        feedback.push(t('verificationNote'));
+      }
+    } else {
+      academicScore += 25;
+    }
+  }
+
+  // SAT Evaluation
+  if (satScore !== null && satScore > 0) {
+    if (uni.minSAT) {
+      const recSAT = uni.recommendedSAT || uni.minSAT;
+      if (satScore >= recSAT) {
+        academicScore += 25;
+        feedback.push(`✓ Топ SAT ${satScore} (реком. ${recSAT})`);
+      } else if (satScore >= uni.minSAT) {
+        academicScore += 18;
+        feedback.push(`✓ SAT ${satScore} проходит (реком. ${recSAT})`);
+      } else {
+        academicScore += 8;
+        feedback.push(`SAT ${satScore} ниже рекомендуемого ${recSAT}`);
+      }
+    } else {
+      if (satScore >= 1250) {
+        academicScore += 15;
+        feedback.push(`SAT ${satScore} — сильный бонус к досье`);
+      }
     }
   } else {
-    academicScore += 40;
+    if (uni.minSAT && uni.minSAT >= 1350) {
+      academicScore -= 10;
+      feedback.push(`Рекомендуется сдать SAT (от ${uni.minSAT})`);
+    } else {
+      academicScore += 15;
+    }
   }
 
   // Financial Fit
   let isOverBudget = false;
-  if (budget !== null) {
+  if (budget !== null && uni.tuitionUSD != null) {
     if (budget === 0) {
-      // User only wants full grants
       if (!uni.fullGrantAvailable && uni.tuitionUSD > 0) {
         isOverBudget = true;
       }
@@ -235,19 +390,19 @@ function evaluateChance(uni) {
     return {
       status: 'high',
       label: t('chanceHigh'),
-      hint: feedback.length ? feedback.join(' • ') : 'Отличный профиль для зачисления!'
+      hint: feedback.length ? feedback.slice(0, 2).join(' • ') : 'Высокие шансы на поступление и грант!'
     };
-  } else if (academicScore >= 55) {
+  } else if (academicScore >= 50) {
     return {
       status: 'moderate',
       label: t('chanceModerate'),
-      hint: feedback.length ? feedback.join(' • ') : 'Хорошие шансы при сильном эссе'
+      hint: feedback.length ? feedback.slice(0, 2).join(' • ') : 'Хорошие шансы при сильном эссе'
     };
   } else {
     return {
       status: 'challenging',
       label: t('chanceChallenging'),
-      hint: feedback.length ? feedback.join(' • ') : 'Высокий конкурс'
+      hint: feedback.length ? feedback.slice(0, 2).join(' • ') : 'Высокий конкурс'
     };
   }
 }
@@ -282,44 +437,78 @@ function renderCatalog() {
     const chance = evaluateChance(uni);
 
     // Badges
-    const badge11 = uni.accepts11thGradeDirectly
+    const badge11 = uni.accepts11thGradeDirectly === true
       ? `<span class="badge badge-direct-11">✓ ${t('badgeDirect11')}</span>`
-      : `<span class="badge badge-need-foundation">⚠ ${t('badgeNeedFoundation')}</span>`;
+      : uni.accepts11thGradeDirectly === false
+        ? `<span class="badge badge-need-foundation">⚠ ${t('badgeNeedFoundation')}</span>`
+        : `<span class="badge">${t('verificationNote')}</span>`;
 
     const badgeGrant = uni.fullGrantAvailable
       ? `<span class="badge badge-grant">★ ${t('badgeFullGrant')}</span>`
       : '';
 
-    const badgeLang = `<span class="badge badge-lang">${uni.primaryLanguage}</span>`;
+    // No IELTS vs IELTS Requirement Badge
+    const badgeIelts = uni.ieltsRequired === false
+      ? `<span class="badge badge-no-ielts" title="${state.lang === 'ru' ? uni.ieltsAlternativeNote : t('detailsRussianOnly')}">✓ ${t('badgeNoIelts')}</span>`
+      : uni.ieltsRequired === true && uni.minIELTS != null
+        ? `<span class="badge badge-ielts-req">${t('ieltsMinBadge').replace('{min}', uni.minIELTS).replace('{recommended}', uni.recommendedIELTS ?? uni.minIELTS)}</span>`
+        : `<span class="badge">${t('verificationNote')}</span>`;
+
+    const badgeLang = `<span class="badge badge-lang">${getUniversityLanguageNames(uni.primaryLanguage)}</span>`;
+    const sourceUrl = safeExternalUrl(uni.sourceUrl);
+    const dataVerificationLabel = uni.verified ? t('dataVerified') : t('dataUnverified');
+    const dataMeta = `
+      <div class="card-data-meta">
+        <span class="${uni.verified ? 'verified-label' : 'unverified-label'}">${dataVerificationLabel}</span>
+        <span>${t('dataUpdated')}: ${getUniversityDisplayDate(uni.lastUpdated)}</span>
+        ${sourceUrl ? `<a href="${sourceUrl}" target="_blank" rel="noopener noreferrer">${t('officialSource')}</a>` : ''}
+        <a class="btn-report-error" href="${universityReportUrl(uni)}" target="_blank" rel="noopener noreferrer">${t('reportError')}</a>
+      </div>
+    `;
 
     // Chance Ribbon
     const chanceHtml = chance ? `
       <div class="card-chance-ribbon ${chance.status}">
         <span>● ${chance.label}</span>
-        <span style="font-weight: 500; font-size: 0.72rem; opacity: 0.9;">${chance.hint}</span>
+        <span style="font-weight: 500; font-size: 0.72rem; opacity: 0.9;">${state.lang === 'ru' ? chance.hint : t('chanceHintLimited')}</span>
       </div>
     ` : '';
 
-    const tuitionText = uni.tuitionUSD === 0 
+    const tuitionText = uni.tuitionUSD == null
+      ? `<span class="cost-value">${t('verificationNote')}</span>`
+      : uni.tuitionUSD === 0
       ? `<span class="cost-value free">${t('tuitionFree')}</span>`
-      : `<span class="cost-value">$${uni.tuitionUSD.toLocaleString()} <span class="cost-sub">/ год</span></span>`;
+      : `<span class="cost-value">$${uni.tuitionUSD.toLocaleString(getUniversityIntlLocale())} <span class="cost-sub">/ ${t('perYear')}</span></span>`;
 
+    // Detailed exam specs text for card
+    let examSummary;
+    if (uni.ieltsRequired === false) {
+      examSummary = `<span class="spec-val" style="color: #059669;" title="${state.lang === 'ru' ? uni.ieltsAlternativeNote : t('detailsRussianOnly')}">${t('noIeltsAlternativeShort')}</span>`;
+    } else if (uni.ieltsRequired === true && uni.minIELTS != null) {
+      examSummary = `<span class="spec-val">${t('ieltsMinBadge').replace('{min}', uni.minIELTS).replace('{recommended}', uni.recommendedIELTS ?? uni.minIELTS)}</span>`;
+    } else {
+      examSummary = `<span class="spec-val">${t('verificationNote')}</span>`;
+    }
+
+    const imageUrl = safeExternalUrl(uni.image);
     return `
       <article class="uni-card" data-id="${uni.id}">
         <div class="card-media">
-          <img class="card-img" src="${uni.image}" alt="${uni.name}" loading="lazy">
+          ${imageUrl ? `<img class="card-img" src="${imageUrl}" alt="${t('campusImageUnverified')}: ${uni.name}" loading="lazy">` : ''}
           <div class="card-media-overlay"></div>
           
           <div class="card-media-top">
-            <span class="card-country-badge">${uni.flag} ${uni.city}, ${uni.country}</span>
+            <span class="card-country-badge">${uni.flag} ${uni.city}, ${getUniversityCountryName(uni)}</span>
             <div class="card-actions-top">
               <button class="card-icon-btn ${isCompared ? 'is-compare' : ''}" 
                       title="${t('btnCompare')}" 
+                      aria-label="${t('btnCompare')}: ${uni.name}"
                       onclick="toggleCompare('${uni.id}')">
                 <svg width="15" height="15" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
               </button>
               <button class="card-icon-btn ${isFav ? 'is-fav' : ''}" 
                       title="${t('btnFavorite')}" 
+                      aria-label="${t('btnFavorite')}: ${uni.name}"
                       onclick="toggleFavorite('${uni.id}')">
                 <svg width="15" height="15" fill="${isFav ? 'currentColor' : 'none'}" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
               </button>
@@ -327,8 +516,8 @@ function renderCatalog() {
           </div>
 
           <div class="card-media-bottom">
-            <span class="card-rank-badge">🏆 QS #${uni.qsRank}</span>
-            <span class="card-acceptance-rate">Прием: ${uni.acceptanceRate}</span>
+            <span class="card-rank-badge">🏆 QS ${uni.qsRank == null ? t('verificationNote') : `#${uni.qsRank}`}</span>
+            ${uni.acceptanceRate ? `<span class="card-acceptance-rate">${t('acceptanceRate')}: ${uni.acceptanceRate}</span>` : ''}
           </div>
         </div>
 
@@ -337,8 +526,10 @@ function renderCatalog() {
         <div class="card-body">
           <h3 class="card-uni-name">${uni.name}</h3>
           <p class="card-uni-native">${uni.nativeName}</p>
+          ${dataMeta}
 
           <div class="card-tags-row">
+            ${badgeIelts}
             ${badge11}
             ${badgeGrant}
             ${badgeLang}
@@ -351,31 +542,31 @@ function renderCatalog() {
             </div>
             <div class="cost-item">
               <span class="cost-caption">${t('livingCostLabel')}</span>
-              <span class="cost-value">~$${uni.livingCostUSDMonth.total} <span class="cost-sub">/ мес</span></span>
+              <span class="cost-value">${uni.livingCostUSDMonth.total == null ? t('verificationNote') : `~$${uni.livingCostUSDMonth.total} <span class="cost-sub">/ ${t('perMonth')}</span>`}</span>
             </div>
           </div>
 
           <div class="card-specs-row">
-            <div class="spec-item" title="Минимальный GPA аттестата">
+            <div class="spec-item" title="${t('minimumGpaTitle')}">
               <span>GPA:</span>
-              <span class="spec-val">${uni.minGPA}/5.0</span>
+              <span class="spec-val">${uni.minGPA == null ? t('verificationNote') : `${uni.minGPA}/5.0`}</span>
             </div>
-            <div class="spec-item" title="Требуемый балл IELTS">
+            <div class="spec-item" title="${t('languageRequirements')}">
               <span>IELTS:</span>
-              <span class="spec-val">${uni.minIELTS || 'Не обязателен'}</span>
+              ${examSummary}
             </div>
-            <div class="spec-item" title="Авиабилет из аэропорта Манас">
-              <span>✈ Бишкек:</span>
-              <span class="spec-val">~$${uni.livingCostUSDMonth.flightBishkek}</span>
+            <div class="spec-item" title="${t('flightFromBishkek')}">
+              <span>✈ ${t('flightFromBishkek')}:</span>
+              <span class="spec-val">${uni.livingCostUSDMonth.flightBishkek == null ? t('verificationNote') : `~$${uni.livingCostUSDMonth.flightBishkek}`}</span>
             </div>
           </div>
 
           <div class="card-footer">
             <div class="deadline-indicator">
               <span class="deadline-sub">${t('deadlineLabel')}</span>
-              <span class="deadline-date">${uni.nextDeadline}</span>
+              <span class="deadline-date">${getUniversityDeadlineLabel({ name: uni.nextDeadline, date: uni.deadlineDate })}</span>
             </div>
-            <button class="btn-card-details" onclick="openUniModal('${uni.id}')">
+            <button class="btn-card-details" aria-label="${t('details')}: ${uni.name}" onclick="navigateToUniversityPage('${uni.id}')">
               <span>${t('btnDetails')}</span>
               <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
             </button>
@@ -394,28 +585,36 @@ function renderActiveFilters() {
   const chips = [];
 
   if (state.searchQuery.trim()) {
-    chips.push({ key: 'search', label: `Поиск: "${state.searchQuery}"` });
+    chips.push({ key: 'search', label: `${t('activeSearch')}: "${state.searchQuery}"` });
   }
   if (state.region !== 'all') {
-    chips.push({ key: 'region', label: `Регион: ${getRegionName(state.region)}` });
+    chips.push({ key: 'region', label: `${t('activeRegion')}: ${getRegionName(state.region)}` });
   }
   if (state.maxBudget < 70000) {
-    chips.push({ key: 'budget', label: `Бюджет: до $${Number(state.maxBudget).toLocaleString()}` });
+    chips.push({ key: 'budget', label: `${t('activeBudget')}: ${t('budgetMax')} $${Number(state.maxBudget).toLocaleString()}` });
   }
   if (state.fullGrantOnly) {
-    chips.push({ key: 'grant', label: `Только 100% гранты` });
+    chips.push({ key: 'grant', label: t('activeGrant') });
   }
   if (state.direct11Only) {
-    chips.push({ key: '11grade', label: `Прямое после 11 кл.` });
+    chips.push({ key: '11grade', label: t('direct11Only') });
+  }
+  if (state.noIeltsOnly) {
+    chips.push({ key: 'noielts', label: t('noIeltsOnly') });
   }
   if (state.language !== 'all') {
-    chips.push({ key: 'lang', label: `Язык: ${state.language}` });
+    chips.push({ key: 'lang', label: `${t('filterLanguage')}: ${getUniversityLanguageNames(state.language)}` });
   }
   if (state.difficulty !== 'all') {
-    chips.push({ key: 'difficulty', label: `Сложность: ${state.difficulty}` });
+    const difficultyLabels = {
+      moderate: 'diffModerate',
+      competitive: 'diffCompetitive',
+      ultra_competitive: 'diffUltra'
+    };
+    chips.push({ key: 'difficulty', label: `${t('filterDifficulty')}: ${t(difficultyLabels[state.difficulty] || 'diffAll')}` });
   }
   if (state.activeView === 'favorites') {
-    chips.push({ key: 'view', label: `Только избранное` });
+    chips.push({ key: 'view', label: t('activeFavorites') });
   }
 
   if (chips.length === 0) {
@@ -472,6 +671,11 @@ function removeActiveFilter(key) {
       const gradeCheck = document.getElementById('filter-direct-11');
       if (gradeCheck) gradeCheck.checked = false;
       break;
+    case 'noielts':
+      state.noIeltsOnly = false;
+      const ieltsCheck = document.getElementById('filter-no-ielts');
+      if (ieltsCheck) ieltsCheck.checked = false;
+      break;
     case 'lang':
       state.language = 'all';
       const langSel = document.getElementById('filter-language');
@@ -498,6 +702,7 @@ function resetAllFilters() {
   state.maxBudget = 70000;
   state.fullGrantOnly = false;
   state.direct11Only = false;
+  state.noIeltsOnly = false;
   state.language = 'all';
   state.difficulty = 'all';
   state.activeView = 'catalog';
@@ -513,6 +718,9 @@ function resetAllFilters() {
 
   const dCheck = document.getElementById('filter-direct-11');
   if (dCheck) dCheck.checked = false;
+
+  const iCheck = document.getElementById('filter-no-ielts');
+  if (iCheck) iCheck.checked = false;
 
   const lSel = document.getElementById('filter-language');
   if (lSel) lSel.value = 'all';
@@ -554,7 +762,7 @@ function toggleCompare(uniId) {
     state.compareList.delete(uniId);
   } else {
     if (state.compareList.size >= 4) {
-      alert('Можно одновременно сравнивать до 4 университетов.');
+      window.alert(t('compareMaxLimit'));
       return;
     }
     state.compareList.add(uniId);
@@ -606,13 +814,13 @@ function openCompareModal() {
     <table class="compare-table">
       <thead>
         <tr>
-          <th>Параметр сравнения</th>
+          <th>${t('compareParameter')}</th>
           ${unis.map(u => `
             <th>
               <div class="compare-col-header">
-                <span style="font-size: 1.2rem;">${u.flag} ${u.country}</span>
+                <span style="font-size: 1.2rem;">${u.flag} ${getUniversityCountryName(u)}</span>
                 <span style="font-size: 0.95rem; font-weight: 800;">${u.name}</span>
-                <button class="btn-remove-compare-col" onclick="toggleCompare('${u.id}'); openCompareModal();">✕ Убрать</button>
+                <button class="btn-remove-compare-col" onclick="toggleCompare('${u.id}'); openCompareModal();">✕ ${t('compareRemove')}</button>
               </div>
             </th>
           `).join('')}
@@ -621,14 +829,37 @@ function openCompareModal() {
       <tbody>
         <tr>
           <td>${t('compareParamRank')}</td>
-          ${unis.map(u => `<td><strong>QS #${u.qsRank}</strong> (Прием: ${u.acceptanceRate})</td>`).join('')}
+          ${unis.map(u => `<td><strong>QS ${u.qsRank == null ? t('verificationNote') : `#${u.qsRank}`}</strong>${u.acceptanceRate ? ` (${t('acceptanceRate')}: ${u.acceptanceRate})` : ''}</td>`).join('')}
+        </tr>
+        <tr>
+          <td>${t('dataUpdated')}</td>
+          ${unis.map(u => `<td><strong class="${u.verified ? 'verified-label' : 'unverified-label'}">${u.verified ? t('dataVerified') : t('dataUnverified')}</strong><br>${getUniversityDisplayDate(u.lastUpdated)}</td>`).join('')}
+        </tr>
+        <tr>
+          <td>${t('compareParamExams')}</td>
+          ${unis.map(u => `
+            <td>
+              <div style="margin-bottom: 6px;">
+                ${u.ieltsRequired === false
+                  ? `<span class="badge badge-no-ielts" style="font-size: 0.8rem;">${t('badgeNoIelts')}</span>`
+                  : u.ieltsRequired === true && u.minIELTS != null
+                    ? `<span class="badge badge-ielts-req" style="font-size: 0.8rem;">${t('ieltsMinBadge').replace('{min}', u.minIELTS).replace('{recommended}', u.recommendedIELTS ?? u.minIELTS)}</span>`
+                    : `<span class="badge">${t('verificationNote')}</span>`}
+              </div>
+              <div style="font-size: 0.78rem; color: #1e3a8a; font-weight: 700; margin-bottom: 4px;">${state.lang === 'ru' ? u.ieltsNote || '' : t('detailsRussianOnly')}</div>
+              <div style="font-size: 0.76rem; color: #334155;"><strong>${t('ieltsAlternatives')}:</strong> ${state.lang === 'ru' ? u.ieltsAlternativeNote || t('verificationNote') : t('detailsRussianOnly')}</div>
+              ${u.minSAT ? `<div style="font-size: 0.78rem; margin-top: 4px;"><strong>SAT:</strong> ${t('minimumLabel')} ${u.minSAT} (${t('recommendedLabel')} ${u.recommendedSAT || u.minSAT}+)</div>` : ''}
+              ${u.minTOEFL ? `<div style="font-size: 0.78rem;"><strong>TOEFL:</strong> ${t('minimumLabel')} ${u.minTOEFL} (${t('recommendedLabel')} ${u.recommendedTOEFL || u.minTOEFL}+)</div>` : ''}
+              ${u.minDuolingo ? `<div style="font-size: 0.78rem;"><strong>Duolingo:</strong> ${t('minimumLabel')} ${u.minDuolingo} (${t('recommendedLabel')} ${u.recommendedDuolingo || u.minDuolingo}+)</div>` : ''}
+            </td>
+          `).join('')}
         </tr>
         <tr>
           <td>${t('compareParamTuition')}</td>
           ${unis.map(u => `
             <td>
-              <strong>${u.tuitionUSD === 0 ? 'Бесплатно' : '$' + u.tuitionUSD.toLocaleString() + ' / год'}</strong>
-              <div style="font-size: 0.76rem; color: #64748b;">${u.tuitionLocal}</div>
+              <strong>${u.tuitionUSD == null ? t('verificationNote') : u.tuitionUSD === 0 ? t('tuitionFree') : '$' + u.tuitionUSD.toLocaleString() + ' / ' + t('perYear')}</strong>
+              <div style="font-size: 0.76rem; color: #64748b;">${state.lang === 'ru' ? u.tuitionLocal : ''}</div>
             </td>
           `).join('')}
         </tr>
@@ -636,11 +867,11 @@ function openCompareModal() {
           <td>${t('compareParamLiving')}</td>
           ${unis.map(u => `
             <td>
-              <strong>~$${u.livingCostUSDMonth.total} / мес</strong>
+              <strong>${u.livingCostUSDMonth.total == null ? t('verificationNote') : `~$${u.livingCostUSDMonth.total} / ${t('perMonth')}`}</strong>
               <div style="font-size: 0.74rem; color: #64748b;">
-                Жилье: ~$${u.livingCostUSDMonth.housing}<br>
-                Еда: ~$${u.livingCostUSDMonth.food}<br>
-                Рейс из Бишкека: ~$${u.livingCostUSDMonth.flightBishkek}
+                ${t('livingHousing')}: ${u.livingCostUSDMonth.housing == null ? t('verificationNote') : `~$${u.livingCostUSDMonth.housing}`}<br>
+                ${t('livingFood')}: ${u.livingCostUSDMonth.food == null ? t('verificationNote') : `~$${u.livingCostUSDMonth.food}`}<br>
+                ${t('flightFromBishkek')}: ${u.livingCostUSDMonth.flightBishkek == null ? t('verificationNote') : `~$${u.livingCostUSDMonth.flightBishkek}`}
               </div>
             </td>
           `).join('')}
@@ -649,10 +880,12 @@ function openCompareModal() {
           <td>${t('compareParam11thGrade')}</td>
           ${unis.map(u => `
             <td>
-              ${u.accepts11thGradeDirectly 
-                ? '<span class="badge badge-direct-11">✓ Прямое после 11 кл.</span>' 
-                : '<span class="badge badge-need-foundation">⚠ Нужен 1 курс / Studienkolleg</span>'}
-              <div style="font-size: 0.78rem; margin-top: 6px;">${u.admissionRouteDescription}</div>
+              ${u.accepts11thGradeDirectly === true
+                ? `<span class="badge badge-direct-11">✓ ${t('badgeDirect11')}</span>`
+                : u.accepts11thGradeDirectly === false
+                  ? `<span class="badge badge-need-foundation">⚠ ${t('badgeNeedFoundation')}</span>`
+                  : `<span class="badge">${t('verificationNote')}</span>`}
+              <div style="font-size: 0.78rem; margin-top: 6px;">${state.lang === 'ru' ? u.admissionRouteDescription || t('verificationNote') : t('detailsRussianOnly')}</div>
             </td>
           `).join('')}
         </tr>
@@ -660,43 +893,43 @@ function openCompareModal() {
           <td>${t('compareParamGrants')}</td>
           ${unis.map(u => `
             <td>
-              <strong>${u.grantType}</strong>
-              <div style="font-size: 0.78rem; margin-top: 4px; color: #475569;">${u.grantDetails}</div>
-            </td>
-          `).join('')}
-        </tr>
-        <tr>
-          <td>${t('compareParamMinScores')}</td>
-          ${unis.map(u => `
-            <td>
-              <div>GPA: <strong>${u.minGPA} / 5.0</strong></div>
-              <div>IELTS: <strong>${u.minIELTS || 'Не требуется'}</strong></div>
-              ${u.minSAT ? `<div>SAT: <strong>${u.minSAT}+</strong></div>` : ''}
+              <strong>${state.lang === 'ru' ? u.grantType || t('verificationNote') : t('detailsRussianOnly')}</strong>
+              <div style="font-size: 0.78rem; margin-top: 4px; color: #475569;">${state.lang === 'ru' ? u.grantDetails || t('verificationNote') : t('detailsRussianOnly')}</div>
             </td>
           `).join('')}
         </tr>
         <tr>
           <td>${t('compareParamLanguage')}</td>
-          ${unis.map(u => `<td>${u.languages.join(', ')}</td>`).join('')}
+          ${unis.map(u => `<td>${getUniversityLanguageNames(u.languages.join(', '))}</td>`).join('')}
         </tr>
         <tr>
           <td>${t('compareParamVisa')}</td>
           ${unis.map(u => `
             <td>
-              <strong>${u.visaGuideKG.embassyName}</strong>
-              <div style="font-size: 0.76rem; color: #64748b; margin-top: 4px;">${u.visaGuideKG.address}</div>
-              <div style="font-size: 0.76rem; margin-top: 4px;">Финансы: ${u.visaGuideKG.bankProof}</div>
+              ${state.lang === 'ru' ? `<strong>${u.visaGuideKG.embassyName || t('verificationNote')}</strong><div style="font-size: 0.76rem; color: #64748b; margin-top: 4px;">${u.visaGuideKG.address || t('verificationNote')}</div><div style="font-size: 0.76rem; margin-top: 4px;">${t('visaFinancialProof')}: ${u.visaGuideKG.bankProof || t('verificationNote')}</div>` : t('detailsRussianOnly')}
             </td>
           `).join('')}
         </tr>
         <tr>
           <td>${t('compareParamDeadline')}</td>
-          ${unis.map(u => `<td><strong style="color: #d97706;">${u.nextDeadline}</strong></td>`).join('')}
+          ${unis.map(u => `<td><strong style="color: #d97706;">${getUniversityDeadlineLabel({ name: u.nextDeadline, date: u.deadlineDate })}</strong></td>`).join('')}
         </tr>
       </tbody>
     </table>
   `;
 
+  modal.classList.add('open');
+}
+
+// Open IELTS Country Guide Modal
+function openIeltsGuideModal() {
+  const modal = document.getElementById('ielts-guide-modal');
+  if (!modal) return;
+  const content = document.getElementById('ielts-guide-content');
+  const unavailable = document.getElementById('ielts-guide-unavailable');
+  const russianContent = state.lang === 'ru';
+  if (content) content.hidden = !russianContent;
+  if (unavailable) unavailable.hidden = russianContent;
   modal.classList.add('open');
 }
 
@@ -720,6 +953,11 @@ function openUniModal(uniId) {
   const tabOverview = document.getElementById('tab-pane-overview');
   if (tabOverview) {
     tabOverview.innerHTML = `
+      <div class="alert-box ${!uni.ieltsRequired ? 'success' : 'info'}">
+        <strong>${!uni.ieltsRequired ? '✓ IELTS НЕ ОБЯЗАТЕЛЕН' : 'Языковые требования для учебы на английском:'}</strong>
+        <p style="margin-top: 4px;">${uni.ieltsNote || ''} ${uni.ieltsAlternativeNote}</p>
+      </div>
+
       <div class="guide-section-block">
         <h4 class="guide-block-title">Об университете</h4>
         <p style="font-size: 0.95rem; color: #334155; line-height: 1.6; margin-bottom: 14px;">
@@ -786,12 +1024,12 @@ function openUniModal(uniId) {
     `;
   }
 
-  // Populate Tab 2: Admission 11th Grade Route
+  // Populate Tab 2: Admission 11th Grade Route & Detailed Exam Requirements
   const tabAdmission = document.getElementById('tab-pane-admission');
   if (tabAdmission) {
     const alertType = uni.accepts11thGradeDirectly ? 'success' : 'warning';
-    const alertTitle = uni.accepts11thGradeDirectly 
-      ? '✓ Прямое поступление после 11 класса школы Кыргызстана' 
+    const alertTitle = uni.accepts11thGradeDirectly
+      ? '✓ Прямое поступление после 11 класса школы Кыргызстана'
       : '⚠ Требуется дополнительный подготовительный год';
 
     tabAdmission.innerHTML = `
@@ -801,24 +1039,43 @@ function openUniModal(uniId) {
       </div>
 
       <div class="guide-section-block">
-        <h4 class="guide-block-title">Академические требования</h4>
+        <h4 class="guide-block-title">Языковые стандарты и рекомендуемые баллы</h4>
         <table class="visa-details-table">
+          <tr>
+            <td>Требование к IELTS:</td>
+            <td>
+              ${!uni.ieltsRequired
+                ? '<strong style="color: #059669;">✓ IELTS НЕ ОБЯЗАТЕЛЕН</strong>'
+                : '<strong>Минимальный порог: ' + uni.minIELTS + '</strong> <br><strong style="color: #2563eb;">Рекомендуемый для 100% гранта: ' + uni.recommendedIELTS + '+</strong>'}
+            </td>
+          </tr>
+          <tr>
+            <td>Специфика языка обучения:</td>
+            <td>${uni.ieltsNote || 'Обучение ведется на английском языке.'}</td>
+          </tr>
+          <tr>
+            <td>Как поступить / альтернативы:</td>
+            <td>${uni.ieltsAlternativeNote}</td>
+          </tr>
+          <tr>
+            <td>Тест SAT (College Board):</td>
+            <td>
+              ${uni.minSAT
+                ? '<strong>Минимум: ' + uni.minSAT + '</strong> (Рекомендуется: ' + (uni.recommendedSAT || uni.minSAT) + '+ для гранта)'
+                : 'Не обязателен (но высокий балл усиливает шансы)'}
+            </td>
+          </tr>
+          <tr>
+            <td>Тест TOEFL iBT:</td>
+            <td>${uni.minTOEFL ? '<strong>Минимум: ' + uni.minTOEFL + '</strong> (Рекомендуется: ' + (uni.recommendedTOEFL || uni.minTOEFL) + '+)' : 'Не требуется'}</td>
+          </tr>
+          <tr>
+            <td>Duolingo English Test (DET):</td>
+            <td>${uni.minDuolingo ? '<strong>Минимум: ' + uni.minDuolingo + '</strong> (Рекомендуется: ' + (uni.recommendedDuolingo || uni.minDuolingo) + '+)' : 'Не принимается'}</td>
+          </tr>
           <tr>
             <td>Минимальный школьный GPA:</td>
             <td><strong>${uni.minGPA} из 5.0</strong> (Табель оценок за 10–11 классы)</td>
-          </tr>
-          <tr>
-            <td>Английский язык:</td>
-            <td><strong>IELTS ${uni.minIELTS || '—'} / TOEFL ${uni.minTOEFL || '—'}</strong></td>
-          </tr>
-          ${uni.minSAT ? `
-          <tr>
-            <td>Тест SAT (College Board):</td>
-            <td><strong>от ${uni.minSAT} баллов</strong> (Сдача в тест-центрах Silk Road или АУЦА в Бишкеке)</td>
-          </tr>` : ''}
-          <tr>
-            <td>Внутренние экзамены:</td>
-            <td>${uni.internalExamAvailable ? 'Доступен внутренний экзамен / онлайн-собеседование' : 'Вступительные экзамены отсутствуют (конкурс документов)'}</td>
           </tr>
           <tr>
             <td>Ближайший дедлайн приема:</td>
@@ -989,6 +1246,10 @@ function initEventListeners() {
       if (state.activeModalUniId) {
         openUniModal(state.activeModalUniId);
       }
+      renderUniversityRoute();
+      if (document.getElementById('ielts-guide-modal')?.classList.contains('open')) {
+        openIeltsGuideModal();
+      }
     });
   });
 
@@ -997,11 +1258,17 @@ function initEventListeners() {
     link.addEventListener('click', (e) => {
       e.preventDefault();
       const view = link.dataset.view;
+      if (view !== 'ielts_guide' && window.location.hash.startsWith('#/university/')) {
+        window.location.hash = '#catalog-section';
+      }
       if (view === 'favorites') {
         state.activeView = 'favorites';
       } else if (view === 'calculator') {
         state.activeView = 'catalog';
         document.getElementById('chance-calculator')?.scrollIntoView({ behavior: 'smooth' });
+      } else if (view === 'ielts_guide') {
+        openIeltsGuideModal();
+        return;
       } else if (view === 'catalog') {
         state.activeView = 'catalog';
         document.getElementById('catalog-section')?.scrollIntoView({ behavior: 'smooth' });
@@ -1066,6 +1333,16 @@ function initEventListeners() {
     });
   }
 
+  // NO IELTS Checkbox
+  const noIeltsCheck = document.getElementById('filter-no-ielts');
+  if (noIeltsCheck) {
+    noIeltsCheck.addEventListener('change', (e) => {
+      state.noIeltsOnly = e.target.checked;
+      renderActiveFilters();
+      renderCatalog();
+    });
+  }
+
   // Language Select
   const langSelect = document.getElementById('filter-language');
   if (langSelect) {
@@ -1095,24 +1372,60 @@ function initEventListeners() {
     });
   }
 
-  // Chance Calculator Inputs
+  // Chance Calculator: Exam type switcher
+  const examTypeSelect = document.getElementById('calc-exam-type');
+  const examScoreInput = document.getElementById('calc-exam-score');
+  const examScoreWrap = document.getElementById('calc-exam-score-wrap');
+  if (examTypeSelect) {
+    examTypeSelect.addEventListener('change', (e) => {
+      const type = e.target.value;
+      if (type === 'none') {
+        if (examScoreWrap) examScoreWrap.style.display = 'none';
+      } else {
+        if (examScoreWrap) examScoreWrap.style.display = 'block';
+        if (type === 'ielts') {
+          examScoreInput.placeholder = 'Напр. 6.5 или 7.0';
+          examScoreInput.step = '0.5';
+          examScoreInput.min = '4.0';
+          examScoreInput.max = '9.0';
+        } else if (type === 'toefl') {
+          examScoreInput.placeholder = 'Напр. 85 или 100';
+          examScoreInput.step = '1';
+          examScoreInput.min = '40';
+          examScoreInput.max = '120';
+        } else if (type === 'duolingo') {
+          examScoreInput.placeholder = 'Напр. 115 или 130';
+          examScoreInput.step = '5';
+          examScoreInput.min = '60';
+          examScoreInput.max = '160';
+        }
+      }
+    });
+  }
+
+  // Chance Calculator Action
   const btnCalcApply = document.getElementById('btn-calc-apply');
   if (btnCalcApply) {
     btnCalcApply.addEventListener('click', () => {
       const gpaInput = document.getElementById('calc-gpa');
-      const ieltsInput = document.getElementById('calc-ielts');
+      const examTypeVal = document.getElementById('calc-exam-type')?.value || 'ielts';
+      const examScoreVal = document.getElementById('calc-exam-score')?.value;
+      const satScoreVal = document.getElementById('calc-sat-score')?.value;
       const budgetInput = document.getElementById('calc-budget');
 
       const gpa = gpaInput && gpaInput.value ? parseFloat(gpaInput.value) : null;
-      const ielts = ieltsInput && ieltsInput.value ? parseFloat(ieltsInput.value) : null;
+      const examScore = examScoreVal ? parseFloat(examScoreVal) : null;
+      const satScore = satScoreVal ? parseFloat(satScoreVal) : null;
       const budget = budgetInput && budgetInput.value !== '' ? parseFloat(budgetInput.value) : null;
 
-      if (gpa === null && ielts === null && budget === null) {
-        alert('Пожалуйста, введите хотя бы один параметр для расчета.');
-        return;
-      }
-
-      state.chanceProfile = { gpa, ielts, budget, active: true };
+      state.chanceProfile = {
+        gpa,
+        examType: examTypeVal,
+        examScore,
+        satScore,
+        budget,
+        active: true
+      };
       renderCatalog();
       document.getElementById('catalog-section')?.scrollIntoView({ behavior: 'smooth' });
     });
@@ -1122,9 +1435,20 @@ function initEventListeners() {
   if (btnCalcReset) {
     btnCalcReset.addEventListener('click', () => {
       document.getElementById('calc-gpa').value = '';
-      document.getElementById('calc-ielts').value = '';
+      if (document.getElementById('calc-exam-score')) document.getElementById('calc-exam-score').value = '';
+      if (document.getElementById('calc-sat-score')) document.getElementById('calc-sat-score').value = '';
       document.getElementById('calc-budget').value = '';
-      state.chanceProfile = { gpa: null, ielts: null, budget: null, active: false };
+      if (document.getElementById('calc-exam-type')) document.getElementById('calc-exam-type').value = 'ielts';
+      if (examScoreWrap) examScoreWrap.style.display = 'block';
+
+      state.chanceProfile = {
+        gpa: null,
+        examType: 'ielts',
+        examScore: null,
+        satScore: null,
+        budget: null,
+        active: false
+      };
       renderCatalog();
     });
   }

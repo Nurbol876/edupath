@@ -1,0 +1,2986 @@
+[
+{
+    "id":  "amherst-usa",
+    "nativeName":  "Amherst College (Massachusetts)",
+    "country":  "США",
+    "countryCode":  "US",
+    "city":  "Амхерст, Массачусетс",
+    "region":  "north_america",
+    "flag":  "🇺🇸",
+    "image":  "https://images.unsplash.com/photo-1562774053-701939374585?auto=format\u0026fit=crop\u0026w=800\u0026q=80",
+    "qsRank":  120,
+    "theRank":  100,
+    "acceptanceRate":  "7%",
+    "tuitionUSD":  66000,
+    "tuitionLocal":  "$66,000",
+    "tuitionPeriod":  "в год (но $0 при гранте)",
+    "livingCostUSDMonth":  {
+                               "total":  1300,
+                               "housing":  750,
+                               "food":  400,
+                               "transport":  50,
+                               "insurance":  100,
+                               "flightBishkek":  650
+                           },
+    "fullGrantAvailable":  true,
+    "grantNames":  [
+                       "Amherst Need-Based Financial Aid (100% Need-Met)"
+                   ],
+    "grantType":  "100% Need-Blind Грант (покрывает обучение, жилье, питание и перелет)",
+    "grantDetails":  "Amherst College — один из единичных колледжей США с политикой Need-Blind для иностранных студентов. Покрывает 100% продемонстрированной финансовой потребности семьи (до $85,000/год без кредитов!).",
+    "grantLink":  "https://www.amherst.edu/admission/financialaid",
+    "accepts11thGradeDirectly":  true,
+    "admissionRouteDescription":  "Прямое поступление после 11 класса КР! Принимается 11-летний аттестат. Оцениваются оценки за 9, 10 и 11 классы, внеклассная деятельность, эссе Common App и рекомендации.",
+    "languages":  [
+                      "Английский"
+                  ],
+    "primaryLanguage":  "Английский",
+    "ieltsRequired":  true,
+    "ieltsNote":  "В США обучение на 100% на английском языке (лекции, дискуссии, эссе).",
+    "minIELTS":  7.0,
+    "recommendedIELTS":  7.5,
+    "minTOEFL":  100,
+    "recommendedTOEFL":  108,
+    "minDuolingo":  130,
+    "recommendedDuolingo":  140,
+    "minSAT":  1460,
+    "recommendedSAT":  1520,
+    "ieltsAlternativeNote":  "Обязателен подтвержденный свободный английский: IELTS от 7.0 (рекомендуется 7.5–8.0), TOEFL iBT от 100 (рекомендуется 108+) или Duolingo от 130+. Высокий SAT 1500+ критически важен для выигрыша гранта.",
+    "minGPA":  4.8,
+    "acceptedExams":  [
+                          "IELTS",
+                          "TOEFL",
+                          "DUOLINGO",
+                          "SAT"
+                      ],
+    "internalExamAvailable":  false,
+    "nextDeadline":  "3 января 2027 (Regular Decision)",
+    "deadlineDate":  "2027-01-03",
+    "intakeSeason":  "Осень 2027",
+    "difficulty":  "ultra_competitive",
+    "documentRequirements":  [
+                                 "attestat",
+                                 "translation_notary",
+                                 "sat",
+                                 "motivation_letter",
+                                 "recommendations",
+                                 "css_profile_financial"
+                             ],
+    "visaGuideKG":  {
+                        "embassyName":  "Посольство США в Кыргызской Республике",
+                        "address":  "г. Бишкек, проспект Чынгыза Айтматова, 171",
+                        "city":  "Бишкек",
+                        "visaType":  "Студенческая виза F-1",
+                        "bankProof":  "Форма I-20 от колледжа. При полной стипендии I-20 подтверждает 100% покрытие расходов колледжем.",
+                        "processingWeeks":  "2–4 недели",
+                        "keyTips":  "Оплата сбора SEVIS I-901 ($350) и сбор MRV ($185). Собеседование проходит в Бишкеке на свободном английском."
+                    },
+    "popularMajors":  [
+                          "Economics",
+                          "Computer Science",
+                          "Political Science",
+                          "Mathematics \u0026 Physics"
+                      ],
+    "officialWebsite":  "https://www.amherst.edu",
+    "applicationPortal":  "https://www.commonapp.org",
+    "displayName":  "Amherst College",
+    "nameLocalized":  {
+                          "ru":  "Amherst College",
+                          "kg":  "Amherst College",
+                          "en":  "Amherst College"
+                      },
+    "name":  {
+                 "ru":  "Amherst College",
+                 "kg":  "Amherst College",
+                 "en":  "Amherst College"
+             },
+    "programs":  [
+                     "Economics",
+                     "Computer Science",
+                     "Political Science",
+                     "Mathematics \u0026 Physics"
+                 ],
+    "grantTypes":  [
+                       "Amherst Need-Based Financial Aid (100% Need-Met)"
+                   ],
+    "grantCoverage":  {
+                          "type":  "100% Need-Blind Грант (покрывает обучение, жилье, питание и перелет)",
+                          "details":  "Amherst College — один из единичных колледжей США с политикой Need-Blind для иностранных студентов. Покрывает 100% продемонстрированной финансовой потребности семьи (до $85,000/год без кредитов!)."
+                      },
+    "directAdmissionAfter11":  true,
+    "livingCostMonthly":  {
+                              "total":  1300,
+                              "housing":  750,
+                              "food":  400,
+                              "transport":  50,
+                              "insurance":  100,
+                              "flightBishkek":  650
+                          },
+    "deadlines":  [
+                      {
+                          "name":  "3 января 2027 (Regular Decision)",
+                          "date":  "2027-01-03",
+                          "verified":  false,
+                          "note":  "TODO: проверить на официальном сайте"
+                      }
+                  ],
+    "requirements":  {
+                         "ielts":  {
+                                       "required":  true,
+                                       "minimum":  7.0,
+                                       "recommended":  7.5
+                                   },
+                         "gpaMinimum":  4.8,
+                         "documents":  [
+                                           "attestat",
+                                           "translation_notary",
+                                           "sat",
+                                           "motivation_letter",
+                                           "recommendations",
+                                           "css_profile_financial"
+                                       ]
+                     },
+    "visaInformation":  {
+                            "embassyName":  "Посольство США в Кыргызской Республике",
+                            "address":  "г. Бишкек, проспект Чынгыза Айтматова, 171",
+                            "city":  "Бишкек",
+                            "visaType":  "Студенческая виза F-1",
+                            "bankProof":  "Форма I-20 от колледжа. При полной стипендии I-20 подтверждает 100% покрытие расходов колледжем.",
+                            "processingWeeks":  "2–4 недели",
+                            "keyTips":  "Оплата сбора SEVIS I-901 ($350) и сбор MRV ($185). Собеседование проходит в Бишкеке на свободном английском."
+                        },
+    "website":  "https://www.amherst.edu",
+    "lastUpdated":  "2026-11-23",
+    "sourceUrl":  "https://www.amherst.edu",
+    "verified":  false,
+    "verificationNote":  "TODO: проверить на официальном сайте",
+    "imageIsCampusVerified":  false
+},
+{
+    "id":  "usf-usa",
+    "nativeName":  "University of South Florida (Tampa)",
+    "country":  "США",
+    "countryCode":  "US",
+    "city":  "Тампа, Флорида",
+    "region":  "north_america",
+    "flag":  "🇺🇸",
+    "image":  "https://images.unsplash.com/photo-1590579491624-f98f36d4c763?auto=format\u0026fit=crop\u0026w=800\u0026q=80",
+    "qsRank":  330,
+    "theRank":  250,
+    "acceptanceRate":  "44%",
+    "tuitionUSD":  17300,
+    "tuitionLocal":  "$17,324",
+    "tuitionPeriod":  "в год (до стипендии)",
+    "livingCostUSDMonth":  {
+                               "total":  1050,
+                               "housing":  600,
+                               "food":  320,
+                               "transport":  40,
+                               "insurance":  90,
+                               "flightBishkek":  650
+                           },
+    "fullGrantAvailable":  true,
+    "grantNames":  [
+                       "USF Green \u0026 Gold Presidential Award",
+                       "International Merit Scholars"
+                   ],
+    "grantType":  "Автоматическая академическая стипендия (до $12,000/год)",
+    "grantDetails":  "USF предлагает автоматические стипендии для иностранных абитуриентов с высокими баллами: Green \u0026 Gold Presidential Award дает до $12,000 ежегодно, снижая контракт до ~$5,300/год!",
+    "grantLink":  "https://www.usf.edu/admissions/international/scholarships",
+    "accepts11thGradeDirectly":  true,
+    "admissionRouteDescription":  "Прямое поступление после 11 класса КР! USF принимает выпускников кыргызстанских школ с эвалюацией аттестата. Подача через портал USF или Common App.",
+    "languages":  [
+                      "Английский"
+                  ],
+    "primaryLanguage":  "Английский",
+    "ieltsRequired":  true,
+    "ieltsNote":  "В США преподавание 100% на английском языке.",
+    "minIELTS":  6.5,
+    "recommendedIELTS":  7.0,
+    "minTOEFL":  79,
+    "recommendedTOEFL":  90,
+    "minDuolingo":  110,
+    "recommendedDuolingo":  120,
+    "minSAT":  1260,
+    "recommendedSAT":  1360,
+    "ieltsAlternativeNote":  "Минимальный IELTS 6.5 (рекомендуется 7.0 для получения стипендии $12,000). Заменяется на TOEFL iBT (79+, реком. 90+), Duolingo (110+, реком. 120+) или сданный SAT EBRW от 580.",
+    "minGPA":  4.3,
+    "acceptedExams":  [
+                          "IELTS",
+                          "TOEFL",
+                          "DUOLINGO",
+                          "SAT"
+                      ],
+    "internalExamAvailable":  false,
+    "nextDeadline":  "15 января 2027",
+    "deadlineDate":  "2027-01-15",
+    "intakeSeason":  "Осень 2027",
+    "difficulty":  "moderate",
+    "documentRequirements":  [
+                                 "attestat",
+                                 "translation_notary",
+                                 "sat",
+                                 "bank_statement",
+                                 "wes_span_tran_evaluation"
+                             ],
+    "visaGuideKG":  {
+                        "embassyName":  "Посольство США в Кыргызской Республике",
+                        "address":  "г. Бишкек, проспект Чынгыза Айтматова, 171",
+                        "city":  "Бишкек",
+                        "visaType":  "Студенческая виза F-1",
+                        "bankProof":  "Выписка из банка КР с остатком, покрывающим разницу между стоимостью и стипендией (~$18,000).",
+                        "processingWeeks":  "2–4 недели",
+                        "keyTips":  "Для получения максимальной стипендии $12,000 в год критически важно подать заявку и сдать SAT до 15 января."
+                    },
+    "popularMajors":  [
+                          "Cybersecurity",
+                          "Biomedical Sciences",
+                          "Finance \u0026 Fintech",
+                          "Data Analytics"
+                      ],
+    "officialWebsite":  "https://www.usf.edu",
+    "applicationPortal":  "https://portal.usf.edu",
+    "displayName":  "University of South Florida (USF)",
+    "nameLocalized":  {
+                          "ru":  "University of South Florida (USF)",
+                          "kg":  "University of South Florida (USF)",
+                          "en":  "University of South Florida (USF)"
+                      },
+    "name":  {
+                 "ru":  "University of South Florida (USF)",
+                 "kg":  "University of South Florida (USF)",
+                 "en":  "University of South Florida (USF)"
+             },
+    "programs":  [
+                     "Cybersecurity",
+                     "Biomedical Sciences",
+                     "Finance \u0026 Fintech",
+                     "Data Analytics"
+                 ],
+    "grantTypes":  [
+                       "USF Green \u0026 Gold Presidential Award",
+                       "International Merit Scholars"
+                   ],
+    "grantCoverage":  {
+                          "type":  "Автоматическая академическая стипендия (до $12,000/год)",
+                          "details":  "USF предлагает автоматические стипендии для иностранных абитуриентов с высокими баллами: Green \u0026 Gold Presidential Award дает до $12,000 ежегодно, снижая контракт до ~$5,300/год!"
+                      },
+    "directAdmissionAfter11":  true,
+    "livingCostMonthly":  {
+                              "total":  1050,
+                              "housing":  600,
+                              "food":  320,
+                              "transport":  40,
+                              "insurance":  90,
+                              "flightBishkek":  650
+                          },
+    "deadlines":  [
+                      {
+                          "name":  "15 января 2027",
+                          "date":  "2027-01-15",
+                          "verified":  false,
+                          "note":  "TODO: проверить на официальном сайте"
+                      }
+                  ],
+    "requirements":  {
+                         "ielts":  {
+                                       "required":  true,
+                                       "minimum":  6.5,
+                                       "recommended":  7.0
+                                   },
+                         "gpaMinimum":  4.3,
+                         "documents":  [
+                                           "attestat",
+                                           "translation_notary",
+                                           "sat",
+                                           "bank_statement",
+                                           "wes_span_tran_evaluation"
+                                       ]
+                     },
+    "visaInformation":  {
+                            "embassyName":  "Посольство США в Кыргызской Республике",
+                            "address":  "г. Бишкек, проспект Чынгыза Айтматова, 171",
+                            "city":  "Бишкек",
+                            "visaType":  "Студенческая виза F-1",
+                            "bankProof":  "Выписка из банка КР с остатком, покрывающим разницу между стоимостью и стипендией (~$18,000).",
+                            "processingWeeks":  "2–4 недели",
+                            "keyTips":  "Для получения максимальной стипендии $12,000 в год критически важно подать заявку и сдать SAT до 15 января."
+                        },
+    "website":  "https://www.usf.edu",
+    "lastUpdated":  "2026-11-23",
+    "sourceUrl":  "https://www.usf.edu",
+    "verified":  false,
+    "verificationNote":  "TODO: проверить на официальном сайте",
+    "imageIsCampusVerified":  false
+},
+{
+    "id":  "kaist-korea",
+    "nativeName":  "한국과학기술원",
+    "country":  "Южная Корея",
+    "countryCode":  "KR",
+    "city":  "Тэджон",
+    "region":  "asia",
+    "flag":  "🇰🇷",
+    "image":  "https://images.unsplash.com/photo-1538485399081-7191377e8241?auto=format\u0026fit=crop\u0026w=800\u0026q=80",
+    "qsRank":  53,
+    "theRank":  62,
+    "acceptanceRate":  "14%",
+    "tuitionUSD":  0,
+    "tuitionLocal":  "0 KRW (100% Full Waiver)",
+    "tuitionPeriod":  "в год",
+    "livingCostUSDMonth":  {
+                               "total":  450,
+                               "housing":  120,
+                               "food":  220,
+                               "transport":  40,
+                               "insurance":  40,
+                               "flightBishkek":  450
+                           },
+    "fullGrantAvailable":  true,
+    "grantNames":  [
+                       "KAIST International Student Scholarship",
+                       "GKS (Global Korea Scholarship)"
+                   ],
+    "grantType":  "100% Грант от университета + Ежемесячная стипендия",
+    "grantDetails":  "Все принятые иностранные студенты бакалавриата получают 100% покрытие стоимости обучения, ежемесячное пособие 350,000 KRW (~$270) и медицинскую страховку при поддержании GPA от 2.7/4.3.",
+    "grantLink":  "https://admission.kaist.ac.kr/intl-undergraduate",
+    "accepts11thGradeDirectly":  true,
+    "admissionRouteDescription":  "Прямое поступление после 11 класса КР! 11-летний школьный аттестат принимается напрямую. Обучение на 100% английском. Плюс — участие в олимпиадах по математике/физике/информатике.",
+    "languages":  [
+                      "Английский"
+                  ],
+    "primaryLanguage":  "Английский",
+    "ieltsRequired":  true,
+    "ieltsNote":  "В Корее в KAIST все лекции, экзамены и лаборатории ведутся на 100% английском языке.",
+    "minIELTS":  6.5,
+    "recommendedIELTS":  7.0,
+    "minTOEFL":  83,
+    "recommendedTOEFL":  95,
+    "minDuolingo":  115,
+    "recommendedDuolingo":  125,
+    "minSAT":  1400,
+    "recommendedSAT":  1480,
+    "ieltsAlternativeNote":  "Минимальный IELTS 6.5 (рекомендуется 7.0–7.5). Принимаются альтернативы: TOEFL iBT (83+, реком. 95+), Duolingo (115+, реком. 125+) или справка об окончании англоязычной школы. SAT Math 780+ дает весомый плюс.",
+    "minGPA":  4.6,
+    "acceptedExams":  [
+                          "IELTS",
+                          "TOEFL",
+                          "DUOLINGO",
+                          "SAT"
+                      ],
+    "internalExamAvailable":  false,
+    "nextDeadline":  "13 января 2027",
+    "deadlineDate":  "2027-01-13",
+    "intakeSeason":  "Осень 2027",
+    "difficulty":  "ultra_competitive",
+    "documentRequirements":  [
+                                 "attestat",
+                                 "translation_notary",
+                                 "apostille",
+                                 "motivation_letter",
+                                 "recommendations",
+                                 "financial_resource_statement"
+                             ],
+    "visaGuideKG":  {
+                        "embassyName":  "Посольство Республики Корея в Кыргызской Республике",
+                        "address":  "г. Бишкек, ул. Ахунбаева, 201 / ул. Газиева",
+                        "city":  "Бишкек",
+                        "visaType":  "Студенческая виза D-2-2",
+                        "bankProof":  "Сертификат о присуждении стипендии KAIST Scholarship освобождает от банковской выписки.",
+                        "processingWeeks":  "2–3 недели",
+                        "keyTips":  "В Бишкеке работает Корейский образовательный центр (ЦОК). Для англоязычного бакалавриата KAIST корейский язык TOPIK не требуется."
+                    },
+    "popularMajors":  [
+                          "Computer Science",
+                          "Электротехника",
+                          "Биоинженерия",
+                          "Математические науки"
+                      ],
+    "officialWebsite":  "https://www.kaist.ac.kr",
+    "applicationPortal":  "https://apply.kaist.ac.kr",
+    "displayName":  "KAIST (Korea Advanced Institute of Science and Technology)",
+    "nameLocalized":  {
+                          "ru":  "KAIST (Korea Advanced Institute of Science and Technology)",
+                          "kg":  "KAIST (Korea Advanced Institute of Science and Technology)",
+                          "en":  "KAIST (Korea Advanced Institute of Science and Technology)"
+                      },
+    "name":  {
+                 "ru":  "KAIST (Korea Advanced Institute of Science and Technology)",
+                 "kg":  "KAIST (Korea Advanced Institute of Science and Technology)",
+                 "en":  "KAIST (Korea Advanced Institute of Science and Technology)"
+             },
+    "programs":  [
+                     "Computer Science",
+                     "Электротехника",
+                     "Биоинженерия",
+                     "Математические науки"
+                 ],
+    "grantTypes":  [
+                       "KAIST International Student Scholarship",
+                       "GKS (Global Korea Scholarship)"
+                   ],
+    "grantCoverage":  {
+                          "type":  "100% Грант от университета + Ежемесячная стипендия",
+                          "details":  "Все принятые иностранные студенты бакалавриата получают 100% покрытие стоимости обучения, ежемесячное пособие 350,000 KRW (~$270) и медицинскую страховку при поддержании GPA от 2.7/4.3."
+                      },
+    "directAdmissionAfter11":  true,
+    "livingCostMonthly":  {
+                              "total":  450,
+                              "housing":  120,
+                              "food":  220,
+                              "transport":  40,
+                              "insurance":  40,
+                              "flightBishkek":  450
+                          },
+    "deadlines":  [
+                      {
+                          "name":  "13 января 2027",
+                          "date":  "2027-01-13",
+                          "verified":  false,
+                          "note":  "TODO: проверить на официальном сайте"
+                      }
+                  ],
+    "requirements":  {
+                         "ielts":  {
+                                       "required":  true,
+                                       "minimum":  6.5,
+                                       "recommended":  7.0
+                                   },
+                         "gpaMinimum":  4.6,
+                         "documents":  [
+                                           "attestat",
+                                           "translation_notary",
+                                           "apostille",
+                                           "motivation_letter",
+                                           "recommendations",
+                                           "financial_resource_statement"
+                                       ]
+                     },
+    "visaInformation":  {
+                            "embassyName":  "Посольство Республики Корея в Кыргызской Республике",
+                            "address":  "г. Бишкек, ул. Ахунбаева, 201 / ул. Газиева",
+                            "city":  "Бишкек",
+                            "visaType":  "Студенческая виза D-2-2",
+                            "bankProof":  "Сертификат о присуждении стипендии KAIST Scholarship освобождает от банковской выписки.",
+                            "processingWeeks":  "2–3 недели",
+                            "keyTips":  "В Бишкеке работает Корейский образовательный центр (ЦОК). Для англоязычного бакалавриата KAIST корейский язык TOPIK не требуется."
+                        },
+    "website":  "https://www.kaist.ac.kr",
+    "lastUpdated":  "2026-11-23",
+    "sourceUrl":  "https://www.kaist.ac.kr",
+    "verified":  false,
+    "verificationNote":  "TODO: проверить на официальном сайте",
+    "imageIsCampusVerified":  false
+},
+{
+    "id":  "snu-korea",
+    "nativeName":  "서울대학교",
+    "country":  "Южная Корея",
+    "countryCode":  "KR",
+    "city":  "Сеул",
+    "region":  "asia",
+    "flag":  "🇰🇷",
+    "image":  "https://images.unsplash.com/photo-1546874177-9e664107314e?auto=format\u0026fit=crop\u0026w=800\u0026q=80",
+    "qsRank":  41,
+    "theRank":  62,
+    "acceptanceRate":  "15%",
+    "tuitionUSD":  5200,
+    "tuitionLocal":  "6,800,000 KRW",
+    "tuitionPeriod":  "в год",
+    "livingCostUSDMonth":  {
+                               "total":  750,
+                               "housing":  280,
+                               "food":  320,
+                               "transport":  60,
+                               "insurance":  50,
+                               "flightBishkek":  450
+                           },
+    "fullGrantAvailable":  true,
+    "grantNames":  [
+                       "GKS (Global Korea Scholarship)",
+                       "SNU Global Hope Scholarship"
+                   ],
+    "grantType":  "100% Госстипендия Кореи / Внутренние гранты SNU",
+    "grantDetails":  "Программа GKS через Посольство Кореи в Бишкеке покрывает 100% учебы, авиаперелет, 1 год языковых курсов, стипендию 900,000 KRW/мес и подъемные пособия.",
+    "grantLink":  "https://www.studyinkorea.go.kr",
+    "accepts11thGradeDirectly":  true,
+    "admissionRouteDescription":  "Прямое поступление после 11 класса КР! Выпускники школ Бишкека и регионов Кыргызстана могут подаваться как через программу GKS (Embassy Track в Бишкеке), так и напрямую через International Admissions SNU.",
+    "languages":  [
+                      "Английский",
+                      "Корейский"
+                  ],
+    "primaryLanguage":  "Корейский / Английский",
+    "ieltsRequired":  true,
+    "ieltsNote":  "Для англоязычных треков (GSIS) нужен сильный английский. Для корейских программ IELTS не нужен при наличии TOPIK 3+ или через языковой год GKS.",
+    "minIELTS":  6.5,
+    "recommendedIELTS":  7.0,
+    "minTOEFL":  80,
+    "recommendedTOEFL":  95,
+    "minSAT":  null,
+    "minDuolingo":  null,
+    "ieltsAlternativeNote":  "Для англоязычных программ минимальный IELTS 6.5 (рекомендуется 7.0+). Альтернатива: при подаче через грант GKS с изучением корейского языка с нуля IELTS не требуется!",
+    "minGPA":  4.7,
+    "acceptedExams":  [
+                          "IELTS",
+                          "TOEFL",
+                          "NO_EXAM_PREP"
+                      ],
+    "internalExamAvailable":  false,
+    "nextDeadline":  "5 марта 2027",
+    "deadlineDate":  "2027-03-05",
+    "intakeSeason":  "Осень 2027",
+    "difficulty":  "competitive",
+    "documentRequirements":  [
+                                 "attestat",
+                                 "translation_notary",
+                                 "apostille",
+                                 "motivation_letter",
+                                 "recommendations",
+                                 "family_relation_certificate"
+                             ],
+    "visaGuideKG":  {
+                        "embassyName":  "Посольство Республики Корея в Бишкеке",
+                        "address":  "г. Бишкек, ул. Ахунбаева, 201",
+                        "city":  "Бишкек",
+                        "visaType":  "Студенческая виза D-2",
+                        "bankProof":  "Для GKS — освобождение от выписки. Для контрактников — выписка от $20,000.",
+                        "processingWeeks":  "3 недели",
+                        "keyTips":  "Обязательно требуется апостилированное свидетельство о рождении и нотариальные копии паспортов обоих родителей."
+                    },
+    "popularMajors":  [
+                          "Международные исследования (GSIS)",
+                          "Бизнес-администрирование",
+                          "Экономика",
+                          "Инженерия искусственного интеллекта"
+                      ],
+    "officialWebsite":  "https://www.snu.ac.kr",
+    "applicationPortal":  "https://en.snu.ac.kr/admission",
+    "displayName":  "Seoul National University (SNU)",
+    "nameLocalized":  {
+                          "ru":  "Seoul National University (SNU)",
+                          "kg":  "Seoul National University (SNU)",
+                          "en":  "Seoul National University (SNU)"
+                      },
+    "name":  {
+                 "ru":  "Seoul National University (SNU)",
+                 "kg":  "Seoul National University (SNU)",
+                 "en":  "Seoul National University (SNU)"
+             },
+    "programs":  [
+                     "Международные исследования (GSIS)",
+                     "Бизнес-администрирование",
+                     "Экономика",
+                     "Инженерия искусственного интеллекта"
+                 ],
+    "grantTypes":  [
+                       "GKS (Global Korea Scholarship)",
+                       "SNU Global Hope Scholarship"
+                   ],
+    "grantCoverage":  {
+                          "type":  "100% Госстипендия Кореи / Внутренние гранты SNU",
+                          "details":  "Программа GKS через Посольство Кореи в Бишкеке покрывает 100% учебы, авиаперелет, 1 год языковых курсов, стипендию 900,000 KRW/мес и подъемные пособия."
+                      },
+    "directAdmissionAfter11":  true,
+    "livingCostMonthly":  {
+                              "total":  750,
+                              "housing":  280,
+                              "food":  320,
+                              "transport":  60,
+                              "insurance":  50,
+                              "flightBishkek":  450
+                          },
+    "deadlines":  [
+                      {
+                          "name":  "5 марта 2027",
+                          "date":  "2027-03-05",
+                          "verified":  false,
+                          "note":  "TODO: проверить на официальном сайте"
+                      }
+                  ],
+    "requirements":  {
+                         "ielts":  {
+                                       "required":  true,
+                                       "minimum":  6.5,
+                                       "recommended":  7.0
+                                   },
+                         "gpaMinimum":  4.7,
+                         "documents":  [
+                                           "attestat",
+                                           "translation_notary",
+                                           "apostille",
+                                           "motivation_letter",
+                                           "recommendations",
+                                           "family_relation_certificate"
+                                       ]
+                     },
+    "visaInformation":  {
+                            "embassyName":  "Посольство Республики Корея в Бишкеке",
+                            "address":  "г. Бишкек, ул. Ахунбаева, 201",
+                            "city":  "Бишкек",
+                            "visaType":  "Студенческая виза D-2",
+                            "bankProof":  "Для GKS — освобождение от выписки. Для контрактников — выписка от $20,000.",
+                            "processingWeeks":  "3 недели",
+                            "keyTips":  "Обязательно требуется апостилированное свидетельство о рождении и нотариальные копии паспортов обоих родителей."
+                        },
+    "website":  "https://www.snu.ac.kr",
+    "lastUpdated":  "2026-11-23",
+    "sourceUrl":  "https://www.snu.ac.kr",
+    "verified":  false,
+    "verificationNote":  "TODO: проверить на официальном сайте",
+    "imageIsCampusVerified":  false
+},
+{
+    "id":  "utoronto-canada",
+    "nativeName":  "University of Toronto",
+    "country":  "Канада",
+    "countryCode":  "CA",
+    "city":  "Торонто",
+    "region":  "north_america",
+    "flag":  "🇨🇦",
+    "image":  "https://images.unsplash.com/photo-1569098644584-210bcd375b59?auto=format\u0026fit=crop\u0026w=800\u0026q=80",
+    "qsRank":  21,
+    "theRank":  21,
+    "acceptanceRate":  "43%",
+    "tuitionUSD":  43000,
+    "tuitionLocal":  "59,000 CAD",
+    "tuitionPeriod":  "в год",
+    "livingCostUSDMonth":  {
+                               "total":  1350,
+                               "housing":  750,
+                               "food":  380,
+                               "transport":  90,
+                               "insurance":  60,
+                               "flightBishkek":  750
+                           },
+    "fullGrantAvailable":  true,
+    "grantNames":  [
+                       "Lester B. Pearson International Scholarship"
+                   ],
+    "grantType":  "100% Президентский грант (Полный грант)",
+    "grantDetails":  "Стипендия им. Лестера Б. Пирсона покрывает 100% обучения, книги, проживание в резиденции на 4 года. Требуется официальная номинация от вашей школы в Кыргызстане!",
+    "grantLink":  "https://future.utoronto.ca/pearson",
+    "accepts11thGradeDirectly":  true,
+    "admissionRouteDescription":  "Прямое поступление после 11 класса КР возможно при выдающихся академических показателях (красный аттестат, победы в олимпиадах).",
+    "languages":  [
+                      "Английский"
+                  ],
+    "primaryLanguage":  "Английский",
+    "ieltsRequired":  true,
+    "ieltsNote":  "В Канаде преподавание 100% на английском языке.",
+    "minIELTS":  6.5,
+    "recommendedIELTS":  7.0,
+    "minTOEFL":  100,
+    "recommendedTOEFL":  105,
+    "minDuolingo":  120,
+    "recommendedDuolingo":  130,
+    "minSAT":  null,
+    "ieltsAlternativeNote":  "Минимальный IELTS 6.5 (ни один band не ниже 6.0). Для престижного гранта Pearson рекомендуется IELTS 7.0–7.5. Альтернатива: TOEFL iBT от 100 или Duolingo от 120.",
+    "minGPA":  4.8,
+    "acceptedExams":  [
+                          "IELTS",
+                          "TOEFL",
+                          "DUOLINGO"
+                      ],
+    "internalExamAvailable":  false,
+    "nextDeadline":  "15 января 2027",
+    "deadlineDate":  "2027-01-15",
+    "intakeSeason":  "Осень 2027",
+    "difficulty":  "competitive",
+    "documentRequirements":  [
+                                 "attestat",
+                                 "translation_notary",
+                                 "motivation_letter",
+                                 "recommendations",
+                                 "school_nomination_pearson"
+                             ],
+    "visaGuideKG":  {
+                        "embassyName":  "Визовый центр Канады (VAC / VFS Global) в Алматы / Астане",
+                        "address":  "Заявление подается онлайн (IRCC Portal); сдача биометрии — в г. Алматы (БЦ «Almaty Towers»)",
+                        "city":  "Алматы / Онлайн",
+                        "visaType":  "Canada Study Permit",
+                        "bankProof":  "Справка из банка на 1-й год обучения + $20,635 CAD на проживание.",
+                        "processingWeeks":  "6–10 недель",
+                        "keyTips":  "Абитуриенты из Бишкека выезжают на 1 день в Алматы для сдачи отпечатков пальцев."
+                    },
+    "popularMajors":  [
+                          "Computer Science \u0026 AI",
+                          "Rotman Commerce (Бизнес)",
+                          "Инженерия",
+                          "Биология и медицина"
+                      ],
+    "officialWebsite":  "https://www.utoronto.ca",
+    "applicationPortal":  "https://ouac.on.ca",
+    "displayName":  "University of Toronto",
+    "nameLocalized":  {
+                          "ru":  "University of Toronto",
+                          "kg":  "University of Toronto",
+                          "en":  "University of Toronto"
+                      },
+    "name":  {
+                 "ru":  "University of Toronto",
+                 "kg":  "University of Toronto",
+                 "en":  "University of Toronto"
+             },
+    "programs":  [
+                     "Computer Science \u0026 AI",
+                     "Rotman Commerce (Бизнес)",
+                     "Инженерия",
+                     "Биология и медицина"
+                 ],
+    "grantTypes":  [
+                       "Lester B. Pearson International Scholarship"
+                   ],
+    "grantCoverage":  {
+                          "type":  "100% Президентский грант (Полный грант)",
+                          "details":  "Стипендия им. Лестера Б. Пирсона покрывает 100% обучения, книги, проживание в резиденции на 4 года. Требуется официальная номинация от вашей школы в Кыргызстане!"
+                      },
+    "directAdmissionAfter11":  true,
+    "livingCostMonthly":  {
+                              "total":  1350,
+                              "housing":  750,
+                              "food":  380,
+                              "transport":  90,
+                              "insurance":  60,
+                              "flightBishkek":  750
+                          },
+    "deadlines":  [
+                      {
+                          "name":  "15 января 2027",
+                          "date":  "2027-01-15",
+                          "verified":  false,
+                          "note":  "TODO: проверить на официальном сайте"
+                      }
+                  ],
+    "requirements":  {
+                         "ielts":  {
+                                       "required":  true,
+                                       "minimum":  6.5,
+                                       "recommended":  7.0
+                                   },
+                         "gpaMinimum":  4.8,
+                         "documents":  [
+                                           "attestat",
+                                           "translation_notary",
+                                           "motivation_letter",
+                                           "recommendations",
+                                           "school_nomination_pearson"
+                                       ]
+                     },
+    "visaInformation":  {
+                            "embassyName":  "Визовый центр Канады (VAC / VFS Global) в Алматы / Астане",
+                            "address":  "Заявление подается онлайн (IRCC Portal); сдача биометрии — в г. Алматы (БЦ «Almaty Towers»)",
+                            "city":  "Алматы / Онлайн",
+                            "visaType":  "Canada Study Permit",
+                            "bankProof":  "Справка из банка на 1-й год обучения + $20,635 CAD на проживание.",
+                            "processingWeeks":  "6–10 недель",
+                            "keyTips":  "Абитуриенты из Бишкека выезжают на 1 день в Алматы для сдачи отпечатков пальцев."
+                        },
+    "website":  "https://www.utoronto.ca",
+    "lastUpdated":  "2026-11-23",
+    "sourceUrl":  "https://www.utoronto.ca",
+    "verified":  false,
+    "verificationNote":  "TODO: проверить на официальном сайте",
+    "imageIsCampusVerified":  false
+},
+{
+    "id":  "nyu-ad-uae",
+    "nativeName":  "جامعة نيويورك أبوظبي",
+    "country":  "ОАЭ",
+    "countryCode":  "AE",
+    "city":  "Абу-Даби",
+    "region":  "middle_east",
+    "flag":  "🇦🇪",
+    "image":  "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format\u0026fit=crop\u0026w=800\u0026q=80",
+    "qsRank":  38,
+    "theRank":  32,
+    "acceptanceRate":  "4%",
+    "tuitionUSD":  62000,
+    "tuitionLocal":  "227,000 AED",
+    "tuitionPeriod":  "в год (но $0 при гранте)",
+    "livingCostUSDMonth":  {
+                               "total":  1100,
+                               "housing":  650,
+                               "food":  320,
+                               "transport":  40,
+                               "insurance":  90,
+                               "flightBishkek":  240
+                           },
+    "fullGrantAvailable":  true,
+    "grantNames":  [
+                       "NYU Abu Dhabi Falcon Fellowship / Need-Based Aid"
+                   ],
+    "grantType":  "100% Грант Need-Based (Обучение + Жилье + Билеты + Стипендия)",
+    "grantDetails":  "При поступлении NYUAD покрывает 100% расходов: полную стоимость обучения, проживание на о. Саадият, питание, страховку, книги и 2 авиабилета в год Бишкек — ОАЭ — Бишкек!",
+    "grantLink":  "https://nyuad.nyu.edu/en/admissions/undergraduate/financial-aid.html",
+    "accepts11thGradeDirectly":  true,
+    "admissionRouteDescription":  "Прямое поступление после 11 класса КР! Принимается 11-летний аттестат. Отобранные кандидаты приглашаются на финал Candidate Weekend за счет университета.",
+    "languages":  [
+                      "Английский"
+                  ],
+    "primaryLanguage":  "Английский",
+    "ieltsRequired":  true,
+    "ieltsNote":  "В NYU Abu Dhabi уроки ведутся профессорами из Нью-Йорка на 100% английском.",
+    "minIELTS":  7.0,
+    "recommendedIELTS":  7.5,
+    "minTOEFL":  100,
+    "recommendedTOEFL":  105,
+    "minDuolingo":  130,
+    "recommendedDuolingo":  135,
+    "minSAT":  1470,
+    "recommendedSAT":  1510,
+    "ieltsAlternativeNote":  "Минимальный IELTS 7.0 (рекомендуется 7.5–8.0). Заменяется на TOEFL iBT (100+, реком. 105+), Duolingo (130+) или высокий SAT от 1470.",
+    "minGPA":  4.8,
+    "acceptedExams":  [
+                          "IELTS",
+                          "TOEFL",
+                          "DUOLINGO",
+                          "SAT"
+                      ],
+    "internalExamAvailable":  false,
+    "nextDeadline":  "5 января 2027",
+    "deadlineDate":  "2027-01-05",
+    "intakeSeason":  "Осень 2027",
+    "difficulty":  "ultra_competitive",
+    "documentRequirements":  [
+                                 "attestat",
+                                 "translation_notary",
+                                 "sat",
+                                 "motivation_letter",
+                                 "recommendations",
+                                 "css_profile_financial"
+                             ],
+    "visaGuideKG":  {
+                        "embassyName":  "Электронная студенческая виза ОАЭ (Оформляется университетом)",
+                        "address":  "Посещать посольство не нужно — визовая поддержка осуществляется миграционной службой кампуса NYUAD",
+                        "city":  "Онлайн / Абу-Даби",
+                        "visaType":  "UAE Student Residence Visa",
+                        "bankProof":  "Финансовая гарантия от NYUAD полностью покрывает визовые требования.",
+                        "processingWeeks":  "1–2 недели",
+                        "keyTips":  "Близкий прямой перелет из Бишкека (FlyDubai, Air Arabia, Wizz Air Abu Dhabi, около 4 часов)."
+                    },
+    "popularMajors":  [
+                          "Computer Science",
+                          "Economics \u0026 Finance",
+                          "Engineering",
+                          "Social Research and Public Policy"
+                      ],
+    "officialWebsite":  "https://nyuad.nyu.edu",
+    "applicationPortal":  "https://www.commonapp.org",
+    "displayName":  "New York University Abu Dhabi (NYUAD)",
+    "nameLocalized":  {
+                          "ru":  "New York University Abu Dhabi (NYUAD)",
+                          "kg":  "New York University Abu Dhabi (NYUAD)",
+                          "en":  "New York University Abu Dhabi (NYUAD)"
+                      },
+    "name":  {
+                 "ru":  "New York University Abu Dhabi (NYUAD)",
+                 "kg":  "New York University Abu Dhabi (NYUAD)",
+                 "en":  "New York University Abu Dhabi (NYUAD)"
+             },
+    "programs":  [
+                     "Computer Science",
+                     "Economics \u0026 Finance",
+                     "Engineering",
+                     "Social Research and Public Policy"
+                 ],
+    "grantTypes":  [
+                       "NYU Abu Dhabi Falcon Fellowship / Need-Based Aid"
+                   ],
+    "grantCoverage":  {
+                          "type":  "100% Грант Need-Based (Обучение + Жилье + Билеты + Стипендия)",
+                          "details":  "При поступлении NYUAD покрывает 100% расходов: полную стоимость обучения, проживание на о. Саадият, питание, страховку, книги и 2 авиабилета в год Бишкек — ОАЭ — Бишкек!"
+                      },
+    "directAdmissionAfter11":  true,
+    "livingCostMonthly":  {
+                              "total":  1100,
+                              "housing":  650,
+                              "food":  320,
+                              "transport":  40,
+                              "insurance":  90,
+                              "flightBishkek":  240
+                          },
+    "deadlines":  [
+                      {
+                          "name":  "5 января 2027",
+                          "date":  "2027-01-05",
+                          "verified":  false,
+                          "note":  "TODO: проверить на официальном сайте"
+                      }
+                  ],
+    "requirements":  {
+                         "ielts":  {
+                                       "required":  true,
+                                       "minimum":  7.0,
+                                       "recommended":  7.5
+                                   },
+                         "gpaMinimum":  4.8,
+                         "documents":  [
+                                           "attestat",
+                                           "translation_notary",
+                                           "sat",
+                                           "motivation_letter",
+                                           "recommendations",
+                                           "css_profile_financial"
+                                       ]
+                     },
+    "visaInformation":  {
+                            "embassyName":  "Электронная студенческая виза ОАЭ (Оформляется университетом)",
+                            "address":  "Посещать посольство не нужно — визовая поддержка осуществляется миграционной службой кампуса NYUAD",
+                            "city":  "Онлайн / Абу-Даби",
+                            "visaType":  "UAE Student Residence Visa",
+                            "bankProof":  "Финансовая гарантия от NYUAD полностью покрывает визовые требования.",
+                            "processingWeeks":  "1–2 недели",
+                            "keyTips":  "Близкий прямой перелет из Бишкека (FlyDubai, Air Arabia, Wizz Air Abu Dhabi, около 4 часов)."
+                        },
+    "website":  "https://nyuad.nyu.edu",
+    "lastUpdated":  "2026-11-23",
+    "sourceUrl":  "https://nyuad.nyu.edu",
+    "verified":  false,
+    "verificationNote":  "TODO: проверить на официальном сайте",
+    "imageIsCampusVerified":  false
+},
+{
+    "id":  "cityu-hong-kong",
+    "nativeName":  "香港城市大學",
+    "country":  "Гонконг",
+    "countryCode":  "HK",
+    "city":  "Гонконг",
+    "region":  "asia",
+    "flag":  "🇭🇰",
+    "image":  "https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?auto=format\u0026fit=crop\u0026w=800\u0026q=80",
+    "qsRank":  62,
+    "theRank":  82,
+    "acceptanceRate":  "16%",
+    "tuitionUSD":  18500,
+    "tuitionLocal":  "145,000 HKD",
+    "tuitionPeriod":  "в год (до 100% гранта)",
+    "livingCostUSDMonth":  {
+                               "total":  750,
+                               "housing":  320,
+                               "food":  320,
+                               "transport":  50,
+                               "insurance":  60,
+                               "flightBishkek":  480
+                           },
+    "fullGrantAvailable":  true,
+    "grantNames":  [
+                       "CityU Top Scholarship (100% Tuition + Living Allowance)",
+                       "HKSAR Government Scholarship"
+                   ],
+    "grantType":  "100% Академический грант (Обучение + Проживание)",
+    "grantDetails":  "CityU входит в Топ-65 мира и автоматически рассматривает всех сильных иностранных абитуриентов на Top Scholarship: 100% покрытие контракта + стипендия на жилье и питание около $25,000/год!",
+    "grantLink":  "https://www.cityu.edu.hk/admissions",
+    "accepts11thGradeDirectly":  true,
+    "admissionRouteDescription":  "Прямое поступление после 11 класса КР! CityU принимает 11-летний школьный аттестат с высокими оценками (GPA от 4.5) при наличии SAT (1300+) или хороших результатов олимпиад.",
+    "languages":  [
+                      "Английский"
+                  ],
+    "primaryLanguage":  "Английский",
+    "ieltsRequired":  true,
+    "ieltsNote":  "В Гонконге преподавание полностью на английском языке.",
+    "minIELTS":  6.5,
+    "recommendedIELTS":  7.0,
+    "minTOEFL":  79,
+    "recommendedTOEFL":  90,
+    "minDuolingo":  115,
+    "recommendedDuolingo":  125,
+    "minSAT":  1300,
+    "recommendedSAT":  1400,
+    "ieltsAlternativeNote":  "Минимальный IELTS 6.5 (рекомендуется 7.0 для получения Top Scholarship). Заменяется на TOEFL iBT (79+, реком. 90+), Duolingo (115+) или секцию SAT EBRW от 590.",
+    "minGPA":  4.5,
+    "acceptedExams":  [
+                          "IELTS",
+                          "TOEFL",
+                          "DUOLINGO",
+                          "SAT"
+                      ],
+    "internalExamAvailable":  true,
+    "nextDeadline":  "15 января 2027 (Early Review)",
+    "deadlineDate":  "2027-01-15",
+    "intakeSeason":  "Осень 2027",
+    "difficulty":  "competitive",
+    "documentRequirements":  [
+                                 "attestat",
+                                 "translation_notary",
+                                 "sat",
+                                 "motivation_letter",
+                                 "recommendations"
+                             ],
+    "visaGuideKG":  {
+                        "embassyName":  "Иммиграционный департамент Гонконга (подача через визовую службу CityU)",
+                        "address":  "Визовая поддержка оформляется онлайн университетом CityU, студенческая виза пересылается курьером в Бишкек",
+                        "city":  "Онлайн / Гонконг",
+                        "visaType":  "Hong Kong Student Visa",
+                        "bankProof":  "Для стипендиатов CityU Top Scholarship выписка не требуется.",
+                        "processingWeeks":  "4–6 недель",
+                        "keyTips":  "Один из мировых финансовых и технологических центров Азии с 100% преподаванием на английском языке."
+                    },
+    "popularMajors":  [
+                          "Data Science \u0026 Computing",
+                          "Finance \u0026 Fintech",
+                          "Electronic Engineering",
+                          "Biomedical Sciences"
+                      ],
+    "officialWebsite":  "https://www.cityu.edu.hk",
+    "applicationPortal":  "https://www.admo.cityu.edu.hk/apply",
+    "displayName":  "City University of Hong Kong (CityU)",
+    "nameLocalized":  {
+                          "ru":  "City University of Hong Kong (CityU)",
+                          "kg":  "City University of Hong Kong (CityU)",
+                          "en":  "City University of Hong Kong (CityU)"
+                      },
+    "name":  {
+                 "ru":  "City University of Hong Kong (CityU)",
+                 "kg":  "City University of Hong Kong (CityU)",
+                 "en":  "City University of Hong Kong (CityU)"
+             },
+    "programs":  [
+                     "Data Science \u0026 Computing",
+                     "Finance \u0026 Fintech",
+                     "Electronic Engineering",
+                     "Biomedical Sciences"
+                 ],
+    "grantTypes":  [
+                       "CityU Top Scholarship (100% Tuition + Living Allowance)",
+                       "HKSAR Government Scholarship"
+                   ],
+    "grantCoverage":  {
+                          "type":  "100% Академический грант (Обучение + Проживание)",
+                          "details":  "CityU входит в Топ-65 мира и автоматически рассматривает всех сильных иностранных абитуриентов на Top Scholarship: 100% покрытие контракта + стипендия на жилье и питание около $25,000/год!"
+                      },
+    "directAdmissionAfter11":  true,
+    "livingCostMonthly":  {
+                              "total":  750,
+                              "housing":  320,
+                              "food":  320,
+                              "transport":  50,
+                              "insurance":  60,
+                              "flightBishkek":  480
+                          },
+    "deadlines":  [
+                      {
+                          "name":  "15 января 2027 (Early Review)",
+                          "date":  "2027-01-15",
+                          "verified":  false,
+                          "note":  "TODO: проверить на официальном сайте"
+                      }
+                  ],
+    "requirements":  {
+                         "ielts":  {
+                                       "required":  true,
+                                       "minimum":  6.5,
+                                       "recommended":  7.0
+                                   },
+                         "gpaMinimum":  4.5,
+                         "documents":  [
+                                           "attestat",
+                                           "translation_notary",
+                                           "sat",
+                                           "motivation_letter",
+                                           "recommendations"
+                                       ]
+                     },
+    "visaInformation":  {
+                            "embassyName":  "Иммиграционный департамент Гонконга (подача через визовую службу CityU)",
+                            "address":  "Визовая поддержка оформляется онлайн университетом CityU, студенческая виза пересылается курьером в Бишкек",
+                            "city":  "Онлайн / Гонконг",
+                            "visaType":  "Hong Kong Student Visa",
+                            "bankProof":  "Для стипендиатов CityU Top Scholarship выписка не требуется.",
+                            "processingWeeks":  "4–6 недель",
+                            "keyTips":  "Один из мировых финансовых и технологических центров Азии с 100% преподаванием на английском языке."
+                        },
+    "website":  "https://www.cityu.edu.hk",
+    "lastUpdated":  "2026-11-23",
+    "sourceUrl":  "https://www.cityu.edu.hk",
+    "verified":  false,
+    "verificationNote":  "TODO: проверить на официальном сайте",
+    "imageIsCampusVerified":  false
+},
+{
+    "id":  "apu-japan",
+    "nativeName":  "立命館アジア太平洋大学",
+    "country":  "Япония",
+    "countryCode":  "JP",
+    "city":  "Беппу",
+    "region":  "asia",
+    "flag":  "🇯🇵",
+    "image":  "https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format\u0026fit=crop\u0026w=800\u0026q=80",
+    "qsRank":  750,
+    "theRank":  800,
+    "acceptanceRate":  "35%",
+    "tuitionUSD":  9800,
+    "tuitionLocal":  "1,500,000 JPY",
+    "tuitionPeriod":  "в год (до скидки)",
+    "livingCostUSDMonth":  {
+                               "total":  580,
+                               "housing":  240,
+                               "food":  230,
+                               "transport":  30,
+                               "insurance":  25,
+                               "flightBishkek":  550
+                           },
+    "fullGrantAvailable":  true,
+    "grantNames":  [
+                       "APU Tuition Reduction Scholarship (до 100%)",
+                       "MEXT (Межгос грант)"
+                   ],
+    "grantType":  "Стипендия сокращения платы (30%, 50%, 65%, 80%, 100%)",
+    "grantDetails":  "Университет APU присуждает гранты на снижение стоимости обучения от 30% до 100% на все 4 года бакалавриата при зачислении. Очень активное сообщество студентов из Кыргызстана!",
+    "grantLink":  "https://admissions.apu.ac.jp",
+    "accepts11thGradeDirectly":  true,
+    "admissionRouteDescription":  "Прямое поступление после 11 класса КР! APU аккредитован Министерством образования Японии и напрямую принимает 11-летний аттестат Кыргызстана. Обучение на 100% английском или японском.",
+    "languages":  [
+                      "Английский",
+                      "Японский"
+                  ],
+    "primaryLanguage":  "Английский",
+    "ieltsRequired":  false,
+    "ieltsNote":  "Для англоязычных программ нужен английский (IELTS 6.0 или альтернативы). Для программ на японском — тест JLPT N2.",
+    "minIELTS":  6.0,
+    "recommendedIELTS":  6.5,
+    "minTOEFL":  75,
+    "recommendedTOEFL":  85,
+    "minDuolingo":  105,
+    "recommendedDuolingo":  115,
+    "minSAT":  null,
+    "ieltsAlternativeNote":  "IELTS НЕ СТРОГО ОБЯЗАТЕЛЕН! Минимальный порог IELTS 6.0 (рекомендуется 6.5 для 100% гранта). Можно заменить на Duolingo English Test (от 105, реком. 115) или TOEFL iBT (от 75).",
+    "minGPA":  4.0,
+    "acceptedExams":  [
+                          "IELTS",
+                          "DUOLINGO",
+                          "TOEFL",
+                          "INTERNAL_EXAM"
+                      ],
+    "internalExamAvailable":  true,
+    "nextDeadline":  "25 марта 2027",
+    "deadlineDate":  "2027-03-25",
+    "intakeSeason":  "Осень 2027",
+    "difficulty":  "moderate",
+    "documentRequirements":  [
+                                 "attestat",
+                                 "translation_notary",
+                                 "motivation_letter",
+                                 "recommendations",
+                                 "bank_statement",
+                                 "medical_086"
+                             ],
+    "visaGuideKG":  {
+                        "embassyName":  "Посольство Японии в Кыргызской Республике",
+                        "address":  "г. Бишкек, ул. Раззакова, 16",
+                        "city":  "Бишкек",
+                        "visaType":  "Студенческая виза (College Student Visa)",
+                        "bankProof":  "После зачисления APU оформляет Certificate of Eligibility (COE). По нему виза в Бишкеке оформляется бесплатно за 5-7 дней!",
+                        "processingWeeks":  "1–2 недели",
+                        "keyTips":  "Разрешена легальная подработка для студентов до 28 часов в неделю."
+                    },
+    "popularMajors":  [
+                          "Международный менеджмент (APM)",
+                          "Устойчивое развитие и общество (APS)",
+                          "Международные отношения"
+                      ],
+    "officialWebsite":  "https://www.apu.ac.jp",
+    "applicationPortal":  "https://admissions.apu.ac.jp/apply_online",
+    "displayName":  "Ritsumeikan Asia Pacific University (APU)",
+    "nameLocalized":  {
+                          "ru":  "Ritsumeikan Asia Pacific University (APU)",
+                          "kg":  "Ritsumeikan Asia Pacific University (APU)",
+                          "en":  "Ritsumeikan Asia Pacific University (APU)"
+                      },
+    "name":  {
+                 "ru":  "Ritsumeikan Asia Pacific University (APU)",
+                 "kg":  "Ritsumeikan Asia Pacific University (APU)",
+                 "en":  "Ritsumeikan Asia Pacific University (APU)"
+             },
+    "programs":  [
+                     "Международный менеджмент (APM)",
+                     "Устойчивое развитие и общество (APS)",
+                     "Международные отношения"
+                 ],
+    "grantTypes":  [
+                       "APU Tuition Reduction Scholarship (до 100%)",
+                       "MEXT (Межгос грант)"
+                   ],
+    "grantCoverage":  {
+                          "type":  "Стипендия сокращения платы (30%, 50%, 65%, 80%, 100%)",
+                          "details":  "Университет APU присуждает гранты на снижение стоимости обучения от 30% до 100% на все 4 года бакалавриата при зачислении. Очень активное сообщество студентов из Кыргызстана!"
+                      },
+    "directAdmissionAfter11":  true,
+    "livingCostMonthly":  {
+                              "total":  580,
+                              "housing":  240,
+                              "food":  230,
+                              "transport":  30,
+                              "insurance":  25,
+                              "flightBishkek":  550
+                          },
+    "deadlines":  [
+                      {
+                          "name":  "25 марта 2027",
+                          "date":  "2027-03-25",
+                          "verified":  false,
+                          "note":  "TODO: проверить на официальном сайте"
+                      }
+                  ],
+    "requirements":  {
+                         "ielts":  {
+                                       "required":  false,
+                                       "minimum":  6.0,
+                                       "recommended":  6.5
+                                   },
+                         "gpaMinimum":  4.0,
+                         "documents":  [
+                                           "attestat",
+                                           "translation_notary",
+                                           "motivation_letter",
+                                           "recommendations",
+                                           "bank_statement",
+                                           "medical_086"
+                                       ]
+                     },
+    "visaInformation":  {
+                            "embassyName":  "Посольство Японии в Кыргызской Республике",
+                            "address":  "г. Бишкек, ул. Раззакова, 16",
+                            "city":  "Бишкек",
+                            "visaType":  "Студенческая виза (College Student Visa)",
+                            "bankProof":  "После зачисления APU оформляет Certificate of Eligibility (COE). По нему виза в Бишкеке оформляется бесплатно за 5-7 дней!",
+                            "processingWeeks":  "1–2 недели",
+                            "keyTips":  "Разрешена легальная подработка для студентов до 28 часов в неделю."
+                        },
+    "website":  "https://www.apu.ac.jp",
+    "lastUpdated":  "2026-11-23",
+    "sourceUrl":  "https://www.apu.ac.jp",
+    "verified":  false,
+    "verificationNote":  "TODO: проверить на официальном сайте",
+    "imageIsCampusVerified":  false
+},
+{
+    "id":  "elte-hungary",
+    "nativeName":  "Eötvös Loránd Tudományegyetem",
+    "country":  "Венгрия",
+    "countryCode":  "HU",
+    "city":  "Будапешт",
+    "region":  "europe",
+    "flag":  "🇭🇺",
+    "image":  "https://images.unsplash.com/photo-1513584684374-8bab748fbf90?auto=format\u0026fit=crop\u0026w=800\u0026q=80",
+    "qsRank":  564,
+    "theRank":  601,
+    "acceptanceRate":  "28%",
+    "tuitionUSD":  3600,
+    "tuitionLocal":  "€3,200",
+    "tuitionPeriod":  "в год",
+    "livingCostUSDMonth":  {
+                               "total":  650,
+                               "housing":  250,
+                               "food":  220,
+                               "transport":  30,
+                               "insurance":  30,
+                               "flightBishkek":  280
+                           },
+    "fullGrantAvailable":  true,
+    "grantNames":  [
+                       "Stipendium Hungaricum",
+                       "Грант Правительства Венгрии"
+                   ],
+    "grantType":  "100% Межправительственный грант КР-Венгрия",
+    "grantDetails":  "100% покрытие обучения, стипендия ~€130/мес, бесплатное общежитие (или компенсация жилья €110/мес), медицинская страховка. Квота для граждан КР — около 200 мест ежегодно!",
+    "grantLink":  "https://apply.stipendiumhungaricum.hu",
+    "accepts11thGradeDirectly":  true,
+    "admissionRouteDescription":  "Прямое поступление после 11 класса КР! Венгерские вузы признают аттестат о среднем образовании Кыргызстана без необходимости окончания 1 курса или Studienkolleg.",
+    "languages":  [
+                      "Английский"
+                  ],
+    "primaryLanguage":  "Английский",
+    "ieltsRequired":  false,
+    "ieltsNote":  "Обучение на английском. Минимальный IELTS 5.5, рекомендуется 6.5 для успешного отбора в МОН КР.",
+    "minIELTS":  5.5,
+    "recommendedIELTS":  6.5,
+    "minTOEFL":  70,
+    "recommendedTOEFL":  80,
+    "minDuolingo":  100,
+    "recommendedDuolingo":  110,
+    "minSAT":  null,
+    "ieltsAlternativeNote":  "IELTS НЕ ОБЯЗАТЕЛЕН! ELTE проводит собственный внутренний онлайн-тест по английскому языку и собеседование по Skype/Teams, которые полностью заменяют IELTS. Если сдаете IELTS — рекомендуется от 6.0–6.5 для победы в гранте Stipendium Hungaricum.",
+    "minGPA":  4.0,
+    "acceptedExams":  [
+                          "INTERNAL_EXAM",
+                          "DUOLINGO",
+                          "IELTS",
+                          "TOEFL"
+                      ],
+    "internalExamAvailable":  true,
+    "nextDeadline":  "15 января 2027",
+    "deadlineDate":  "2027-01-15",
+    "intakeSeason":  "Осень 2027",
+    "difficulty":  "moderate",
+    "documentRequirements":  [
+                                 "attestat",
+                                 "translation_notary",
+                                 "motivation_letter",
+                                 "recommendations",
+                                 "medical_086",
+                                 "tunduk_police"
+                             ],
+    "visaGuideKG":  {
+                        "embassyName":  "Посольство Венгрии в Кыргызской Республике",
+                        "address":  "г. Бишкек, ул. Раззакова, 72 (БЦ «Россия», 5 этаж)",
+                        "city":  "Бишкек",
+                        "visaType":  "Национальная студенческая виза D (Шенген)",
+                        "bankProof":  "Для грантовиков Stipendium Hungaricum выписка не нужна (письмо Letter of Award). Для контрактников — от €7,000 на счете.",
+                        "processingWeeks":  "2–4 недели",
+                        "keyTips":  "Обязательна регистрация в две платформы: 1) apply.stipendiumhungaricum.hu и 2) student.edu.gov.kg (МОН КР)!"
+                    },
+    "popularMajors":  [
+                          "Data Science \u0026 IT",
+                          "Психология",
+                          "Международное право",
+                          "Английская филология"
+                      ],
+    "officialWebsite":  "https://www.elte.hu/en",
+    "applicationPortal":  "https://apply.elte.hu",
+    "displayName":  "Eötvös Loránd University (ELTE)",
+    "nameLocalized":  {
+                          "ru":  "Eötvös Loránd University (ELTE)",
+                          "kg":  "Eötvös Loránd University (ELTE)",
+                          "en":  "Eötvös Loránd University (ELTE)"
+                      },
+    "name":  {
+                 "ru":  "Eötvös Loránd University (ELTE)",
+                 "kg":  "Eötvös Loránd University (ELTE)",
+                 "en":  "Eötvös Loránd University (ELTE)"
+             },
+    "programs":  [
+                     "Data Science \u0026 IT",
+                     "Психология",
+                     "Международное право",
+                     "Английская филология"
+                 ],
+    "grantTypes":  [
+                       "Stipendium Hungaricum",
+                       "Грант Правительства Венгрии"
+                   ],
+    "grantCoverage":  {
+                          "type":  "100% Межправительственный грант КР-Венгрия",
+                          "details":  "100% покрытие обучения, стипендия ~€130/мес, бесплатное общежитие (или компенсация жилья €110/мес), медицинская страховка. Квота для граждан КР — около 200 мест ежегодно!"
+                      },
+    "directAdmissionAfter11":  true,
+    "livingCostMonthly":  {
+                              "total":  650,
+                              "housing":  250,
+                              "food":  220,
+                              "transport":  30,
+                              "insurance":  30,
+                              "flightBishkek":  280
+                          },
+    "deadlines":  [
+                      {
+                          "name":  "15 января 2027",
+                          "date":  "2027-01-15",
+                          "verified":  false,
+                          "note":  "TODO: проверить на официальном сайте"
+                      }
+                  ],
+    "requirements":  {
+                         "ielts":  {
+                                       "required":  false,
+                                       "minimum":  5.5,
+                                       "recommended":  6.5
+                                   },
+                         "gpaMinimum":  4.0,
+                         "documents":  [
+                                           "attestat",
+                                           "translation_notary",
+                                           "motivation_letter",
+                                           "recommendations",
+                                           "medical_086",
+                                           "tunduk_police"
+                                       ]
+                     },
+    "visaInformation":  {
+                            "embassyName":  "Посольство Венгрии в Кыргызской Республике",
+                            "address":  "г. Бишкек, ул. Раззакова, 72 (БЦ «Россия», 5 этаж)",
+                            "city":  "Бишкек",
+                            "visaType":  "Национальная студенческая виза D (Шенген)",
+                            "bankProof":  "Для грантовиков Stipendium Hungaricum выписка не нужна (письмо Letter of Award). Для контрактников — от €7,000 на счете.",
+                            "processingWeeks":  "2–4 недели",
+                            "keyTips":  "Обязательна регистрация в две платформы: 1) apply.stipendiumhungaricum.hu и 2) student.edu.gov.kg (МОН КР)!"
+                        },
+    "website":  "https://www.elte.hu/en",
+    "lastUpdated":  "2026-11-23",
+    "sourceUrl":  "https://www.elte.hu/en",
+    "verified":  false,
+    "verificationNote":  "TODO: проверить на официальном сайте",
+    "imageIsCampusVerified":  false
+},
+{
+    "id":  "metu-turkey",
+    "nativeName":  "Orta Doğu Teknik Üniversitesi",
+    "country":  "Турция",
+    "countryCode":  "TR",
+    "city":  "Анкара",
+    "region":  "middle_east",
+    "flag":  "🇹🇷",
+    "image":  "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format\u0026fit=crop\u0026w=800\u0026q=80",
+    "qsRank":  285,
+    "theRank":  351,
+    "acceptanceRate":  "12%",
+    "tuitionUSD":  1400,
+    "tuitionLocal":  "45,000 TRY",
+    "tuitionPeriod":  "в год",
+    "livingCostUSDMonth":  {
+                               "total":  380,
+                               "housing":  100,
+                               "food":  180,
+                               "transport":  30,
+                               "insurance":  20,
+                               "flightBishkek":  220
+                           },
+    "fullGrantAvailable":  true,
+    "grantNames":  [
+                       "Türkiye Bursları",
+                       "Госстипендия Турции",
+                       "YTB"
+                   ],
+    "grantType":  "100% Государственный грант",
+    "grantDetails":  "Полное покрытие: 100% стоимости обучения, бесплатное общежитие, ежемесячная стипендия, медицинская страховка, бесплатные годовые курсы турецкого языка (TÖMER) и авиабилет Бишкек — Турция.",
+    "grantLink":  "https://www.turkiyeburslari.gov.tr",
+    "accepts11thGradeDirectly":  true,
+    "admissionRouteDescription":  "Прямое поступление после 11 класса КР! Выпускникам школ Кыргызстана не нужен подготовительный год. Зачисление возможно через стипендию Türkiye Bursları или напрямую по SAT (от 1200) / TR-YÖS.",
+    "languages":  [
+                      "Английский",
+                      "Турецкий"
+                  ],
+    "primaryLanguage":  "Английский",
+    "ieltsRequired":  false,
+    "ieltsNote":  "В METU все лекции и инженерия идут на 100% английском языке.",
+    "minIELTS":  6.0,
+    "recommendedIELTS":  6.5,
+    "minTOEFL":  75,
+    "recommendedTOEFL":  85,
+    "minSAT":  1200,
+    "recommendedSAT":  1350,
+    "minDuolingo":  null,
+    "ieltsAlternativeNote":  "IELTS НЕ ОБЯЗАТЕЛЕН ПРИ ПОДАЧЕ! Студенты могут сдать внутренний экзамен METU English Proficiency Exam (EPE) прямо в кампусе по прибытии. Если есть IELTS (мин. 6.0, реком. 6.5–7.0) или TOEFL (75+), студент освобождается от подготовительного года.",
+    "minGPA":  4.2,
+    "acceptedExams":  [
+                          "INTERNAL_EXAM",
+                          "TOEFL",
+                          "SAT",
+                          "IELTS"
+                      ],
+    "internalExamAvailable":  true,
+    "nextDeadline":  "20 февраля 2027 (Türkiye Bursları)",
+    "deadlineDate":  "2027-02-20",
+    "intakeSeason":  "Осень 2027",
+    "difficulty":  "competitive",
+    "documentRequirements":  [
+                                 "attestat",
+                                 "translation_notary",
+                                 "apostille",
+                                 "motivation_letter",
+                                 "recommendations",
+                                 "bank_statement",
+                                 "medical_086",
+                                 "tunduk_police"
+                             ],
+    "visaGuideKG":  {
+                        "embassyName":  "Посольство Турции в Бишкеке (Консульский отдел)",
+                        "address":  "г. Бишкек, ул. Московская, 89 (пересекает ул. Панфилова)",
+                        "city":  "Бишкек",
+                        "visaType":  "Студенческий ВНЖ (İkamet)",
+                        "bankProof":  "Для стипендиатов Türkiye Bursları выписка не требуется. Для контрактников — выписка из банка КР (от $4,000).",
+                        "processingWeeks":  "3–4 недели",
+                        "keyTips":  "Граждане КР въезжают в Турцию без визы до 90 дней, студенческий икамет оформляется в Анкаре в первый месяц."
+                    },
+    "popularMajors":  [
+                          "Компьютерная инженерия",
+                          "Архитектура",
+                          "Международные отношения",
+                          "Бизнес и менеджмент"
+                      ],
+    "officialWebsite":  "https://www.metu.edu.tr",
+    "applicationPortal":  "https://iso.metu.edu.tr",
+    "displayName":  "Middle East Technical University (METU / ODTÜ)",
+    "nameLocalized":  {
+                          "ru":  "Middle East Technical University (METU / ODTÜ)",
+                          "kg":  "Middle East Technical University (METU / ODTÜ)",
+                          "en":  "Middle East Technical University (METU / ODTÜ)"
+                      },
+    "name":  {
+                 "ru":  "Middle East Technical University (METU / ODTÜ)",
+                 "kg":  "Middle East Technical University (METU / ODTÜ)",
+                 "en":  "Middle East Technical University (METU / ODTÜ)"
+             },
+    "programs":  [
+                     "Компьютерная инженерия",
+                     "Архитектура",
+                     "Международные отношения",
+                     "Бизнес и менеджмент"
+                 ],
+    "grantTypes":  [
+                       "Türkiye Bursları",
+                       "Госстипендия Турции",
+                       "YTB"
+                   ],
+    "grantCoverage":  {
+                          "type":  "100% Государственный грант",
+                          "details":  "Полное покрытие: 100% стоимости обучения, бесплатное общежитие, ежемесячная стипендия, медицинская страховка, бесплатные годовые курсы турецкого языка (TÖMER) и авиабилет Бишкек — Турция."
+                      },
+    "directAdmissionAfter11":  true,
+    "livingCostMonthly":  {
+                              "total":  380,
+                              "housing":  100,
+                              "food":  180,
+                              "transport":  30,
+                              "insurance":  20,
+                              "flightBishkek":  220
+                          },
+    "deadlines":  [
+                      {
+                          "name":  "20 февраля 2027 (Türkiye Bursları)",
+                          "date":  "2027-02-20",
+                          "verified":  false,
+                          "note":  "TODO: проверить на официальном сайте"
+                      }
+                  ],
+    "requirements":  {
+                         "ielts":  {
+                                       "required":  false,
+                                       "minimum":  6.0,
+                                       "recommended":  6.5
+                                   },
+                         "gpaMinimum":  4.2,
+                         "documents":  [
+                                           "attestat",
+                                           "translation_notary",
+                                           "apostille",
+                                           "motivation_letter",
+                                           "recommendations",
+                                           "bank_statement",
+                                           "medical_086",
+                                           "tunduk_police"
+                                       ]
+                     },
+    "visaInformation":  {
+                            "embassyName":  "Посольство Турции в Бишкеке (Консульский отдел)",
+                            "address":  "г. Бишкек, ул. Московская, 89 (пересекает ул. Панфилова)",
+                            "city":  "Бишкек",
+                            "visaType":  "Студенческий ВНЖ (İkamet)",
+                            "bankProof":  "Для стипендиатов Türkiye Bursları выписка не требуется. Для контрактников — выписка из банка КР (от $4,000).",
+                            "processingWeeks":  "3–4 недели",
+                            "keyTips":  "Граждане КР въезжают в Турцию без визы до 90 дней, студенческий икамет оформляется в Анкаре в первый месяц."
+                        },
+    "website":  "https://www.metu.edu.tr",
+    "lastUpdated":  "2026-11-23",
+    "sourceUrl":  "https://www.metu.edu.tr",
+    "verified":  false,
+    "verificationNote":  "TODO: проверить на официальном сайте",
+    "imageIsCampusVerified":  false
+},
+{
+    "id":  "auca-kyrgyzstan",
+    "nativeName":  "Американский Университет в Центральной Азии (АУЦА)",
+    "country":  "Кыргызстан",
+    "countryCode":  "KG",
+    "city":  "Бишкек",
+    "region":  "asia",
+    "flag":  "🇰🇬",
+    "image":  "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format\u0026fit=crop\u0026w=800\u0026q=80",
+    "qsRank":  850,
+    "theRank":  850,
+    "acceptanceRate":  "35%",
+    "tuitionUSD":  6900,
+    "tuitionLocal":  "590,000 KGS",
+    "tuitionPeriod":  "в год (до 100% скидки при финансовой помощи)",
+    "livingCostUSDMonth":  {
+                               "total":  250,
+                               "housing":  100,
+                               "food":  120,
+                               "transport":  20,
+                               "insurance":  10,
+                               "flightBishkek":  0
+                           },
+    "fullGrantAvailable":  true,
+    "grantNames":  [
+                       "AUCA Financial Aid (скидки до 100%)",
+                       "Стипендия Бард Колледжа",
+                       "Гранты Кумтор/Шеврон"
+                   ],
+    "grantType":  "Финансовая поддержка по материальному положению (Need-Based) и за ОРТ",
+    "grantDetails":  "Более 75% студентов из Кыргызстана в АУЦА получают финансовую помощь со скидками от 20% до 100% стоимости обучения. Выпускники получают два диплома: кыргызстанский и американский (Bard College, New York)!",
+    "grantLink":  "https://auca.kg/en/financial_aid",
+    "accepts11thGradeDirectly":  true,
+    "admissionRouteDescription":  "Прямое поступление после 11 класса КР! Стандартный путь для выпускников школ Кыргызстана. Требуется сертификат ОРТ / ЖРТ выше порогового балла + внутренний экзамен АУЦА или SAT/IELTS.",
+    "languages":  [
+                      "Английский"
+                  ],
+    "primaryLanguage":  "Английский",
+    "ieltsRequired":  false,
+    "ieltsNote":  "В АУЦА обучение полностью на английском (американский стандарт Bard College).",
+    "minIELTS":  6.0,
+    "recommendedIELTS":  6.5,
+    "minTOEFL":  70,
+    "recommendedTOEFL":  80,
+    "minSAT":  1100,
+    "recommendedSAT":  1250,
+    "minDuolingo":  105,
+    "recommendedDuolingo":  115,
+    "ieltsAlternativeNote":  "IELTS НЕ ОБЯЗАТЕЛЕН! Большинство поступает по ежемесячному внутреннему экзамену АУЦА прямо в Бишкеке (English Test + Essay + Math). При наличии IELTS (мин. 6.0, реком. 6.5–7.0) или Duolingo (от 105) языковой тест перезачитывается.",
+    "minGPA":  4.0,
+    "acceptedExams":  [
+                          "INTERNAL_EXAM",
+                          "ORT_JRT",
+                          "DUOLINGO",
+                          "SAT",
+                          "TOEFL",
+                          "IELTS"
+                      ],
+    "internalExamAvailable":  true,
+    "nextDeadline":  "20 апреля 2027 (1-й поток)",
+    "deadlineDate":  "2027-04-20",
+    "intakeSeason":  "Осень 2027",
+    "difficulty":  "moderate",
+    "documentRequirements":  [
+                                 "attestat",
+                                 "ort_certificate",
+                                 "motivation_letter",
+                                 "financial_aid_form_auca"
+                             ],
+    "visaGuideKG":  {
+                        "embassyName":  "Виза не требуется (университет находится в г. Бишкек)",
+                        "address":  "г. Бишкек, ул. Аалы Токомбаева, 7/6 (12 микрорайон)",
+                        "city":  "Бишкек",
+                        "visaType":  "Не требуется для граждан КР",
+                        "bankProof":  "Для получения финансовой скидки (Financial Aid) предоставляются справки о доходах членов семьи из КР (налоговая, Соцфонд, выписки из банка).",
+                        "processingWeeks":  "Мгновенно",
+                        "keyTips":  "Идеальный ориентир для сравнения: международный американский диплом Bard College прямо дома в Бишкеке, с возможностью семестрового обмена в Европу и США."
+                    },
+    "popularMajors":  [
+                          "Software Engineering",
+                          "Business Administration",
+                          "International and Comparative Politics",
+                          "Applied Geology"
+                      ],
+    "officialWebsite":  "https://auca.kg",
+    "applicationPortal":  "https://apply.auca.kg",
+    "displayName":  "American University of Central Asia (AUCA)",
+    "nameLocalized":  {
+                          "ru":  "American University of Central Asia (AUCA)",
+                          "kg":  "American University of Central Asia (AUCA)",
+                          "en":  "American University of Central Asia (AUCA)"
+                      },
+    "name":  {
+                 "ru":  "American University of Central Asia (AUCA)",
+                 "kg":  "American University of Central Asia (AUCA)",
+                 "en":  "American University of Central Asia (AUCA)"
+             },
+    "programs":  [
+                     "Software Engineering",
+                     "Business Administration",
+                     "International and Comparative Politics",
+                     "Applied Geology"
+                 ],
+    "grantTypes":  [
+                       "AUCA Financial Aid (скидки до 100%)",
+                       "Стипендия Бард Колледжа",
+                       "Гранты Кумтор/Шеврон"
+                   ],
+    "grantCoverage":  {
+                          "type":  "Финансовая поддержка по материальному положению (Need-Based) и за ОРТ",
+                          "details":  "Более 75% студентов из Кыргызстана в АУЦА получают финансовую помощь со скидками от 20% до 100% стоимости обучения. Выпускники получают два диплома: кыргызстанский и американский (Bard College, New York)!"
+                      },
+    "directAdmissionAfter11":  true,
+    "livingCostMonthly":  {
+                              "total":  250,
+                              "housing":  100,
+                              "food":  120,
+                              "transport":  20,
+                              "insurance":  10,
+                              "flightBishkek":  0
+                          },
+    "deadlines":  [
+                      {
+                          "name":  "20 апреля 2027 (1-й поток)",
+                          "date":  "2027-04-20",
+                          "verified":  false,
+                          "note":  "TODO: проверить на официальном сайте"
+                      }
+                  ],
+    "requirements":  {
+                         "ielts":  {
+                                       "required":  false,
+                                       "minimum":  6.0,
+                                       "recommended":  6.5
+                                   },
+                         "gpaMinimum":  4.0,
+                         "documents":  [
+                                           "attestat",
+                                           "ort_certificate",
+                                           "motivation_letter",
+                                           "financial_aid_form_auca"
+                                       ]
+                     },
+    "visaInformation":  {
+                            "embassyName":  "Виза не требуется (университет находится в г. Бишкек)",
+                            "address":  "г. Бишкек, ул. Аалы Токомбаева, 7/6 (12 микрорайон)",
+                            "city":  "Бишкек",
+                            "visaType":  "Не требуется для граждан КР",
+                            "bankProof":  "Для получения финансовой скидки (Financial Aid) предоставляются справки о доходах членов семьи из КР (налоговая, Соцфонд, выписки из банка).",
+                            "processingWeeks":  "Мгновенно",
+                            "keyTips":  "Идеальный ориентир для сравнения: международный американский диплом Bard College прямо дома в Бишкеке, с возможностью семестрового обмена в Европу и США."
+                        },
+    "website":  "https://auca.kg",
+    "lastUpdated":  "2026-11-23",
+    "sourceUrl":  "https://auca.kg",
+    "verified":  false,
+    "verificationNote":  "TODO: проверить на официальном сайте",
+    "imageIsCampusVerified":  false
+},
+{
+    "id":  "manas-kyrgyzstan",
+    "nativeName":  "Кыргыз-Түрк «Манас» университети",
+    "country":  "Кыргызстан / Турция",
+    "countryCode":  "KG",
+    "city":  "Бишкек",
+    "region":  "middle_east",
+    "flag":  "🇰🇬🇹🇷",
+    "image":  "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format\u0026fit=crop\u0026w=800\u0026q=80",
+    "qsRank":  801,
+    "theRank":  801,
+    "acceptanceRate":  "18%",
+    "tuitionUSD":  0,
+    "tuitionLocal":  "0 KGS (100% Бесплатно для всех поступивших)",
+    "tuitionPeriod":  "в год",
+    "livingCostUSDMonth":  {
+                               "total":  200,
+                               "housing":  50,
+                               "food":  110,
+                               "transport":  20,
+                               "insurance":  10,
+                               "flightBishkek":  0
+                           },
+    "fullGrantAvailable":  true,
+    "grantNames":  [
+                       "100% Государственный грант Турции и КР",
+                       "Стипендия за отличную учебу",
+                       "Бесплатное питание и общежитие"
+                   ],
+    "grantType":  "100% Бесплатное обучение для всех студентов",
+    "grantDetails":  "Все поступившие студенты учатся БЕСПЛАТНО! Нет контракта. Отличникам выплачивается ежемесячная стипендия, предоставляется современное общежитие на кампусе Джал и бесплатная медицинская страховка.",
+    "grantLink":  "https://manas.edu.kg",
+    "accepts11thGradeDirectly":  true,
+    "admissionRouteDescription":  "Прямое поступление после 11 класса КР! Зачисление по результатам ОРТ (ЖРТ) выше порогового балла или по собственному вступительному экзамену «Манас» (проводится в Бишкеке и Оше в начале июля).",
+    "languages":  [
+                      "Турецкий",
+                      "Кыргызский",
+                      "Английский"
+                  ],
+    "primaryLanguage":  "Турецкий / Кыргызский",
+    "ieltsRequired":  false,
+    "ieltsNote":  "Обучение ведется на турецком и кыргызском языках. Предусмотрен бесплатный подготовительный год Hazırlık.",
+    "minIELTS":  null,
+    "recommendedIELTS":  null,
+    "minTOEFL":  null,
+    "minSAT":  null,
+    "minDuolingo":  null,
+    "ieltsAlternativeNote":  "IELTS НЕ ТРЕБУЕТСЯ ВООБЩЕ! Поступление идет по ОРТ или вступительному экзамену «Манас». Все поступившие проходят 1 год бесплатного изучения турецкого языка (Hazırlık) на кампусе.",
+    "minGPA":  3.8,
+    "acceptedExams":  [
+                          "ORT_JRT",
+                          "INTERNAL_EXAM",
+                          "NO_EXAM_PREP"
+                      ],
+    "internalExamAvailable":  true,
+    "nextDeadline":  "5 июля 2027 (Экзамен «Манас»)",
+    "deadlineDate":  "2027-07-05",
+    "intakeSeason":  "Осень 2027",
+    "difficulty":  "moderate",
+    "documentRequirements":  [
+                                 "attestat",
+                                 "ort_certificate",
+                                 "medical_086"
+                             ],
+    "visaGuideKG":  {
+                        "embassyName":  "Виза не требуется (Кампус в Бишкеке, мкр. Джал)",
+                        "address":  "г. Бишкек, мкр. Джал, ул. А. Тынчтык / Ч. Айтматова",
+                        "city":  "Бишкек",
+                        "visaType":  "Не требуется гражданам КР",
+                        "bankProof":  "Выписка не требуется, обучение полностью бесплатное.",
+                        "processingWeeks":  "Мгновенно",
+                        "keyTips":  "Один из лучших вариантов получить диплом турецкого государственного стандарта бесплатно, не выезжая за пределы Бишкека. Студенты проходят оплачиваемые стажировки в Турции (Анталья, Стамбул)."
+                    },
+    "popularMajors":  [
+                          "Компьютерная инженерия",
+                          "Туризм и гостиничное дело",
+                          "Международные отношения",
+                          "Ветеринария и биотехнологии"
+                      ],
+    "officialWebsite":  "https://manas.edu.kg",
+    "applicationPortal":  "https://exams.manas.edu.kg",
+    "displayName":  "Kyrgyz-Turkish Manas University (KTMU)",
+    "nameLocalized":  {
+                          "ru":  "Kyrgyz-Turkish Manas University (KTMU)",
+                          "kg":  "Kyrgyz-Turkish Manas University (KTMU)",
+                          "en":  "Kyrgyz-Turkish Manas University (KTMU)"
+                      },
+    "name":  {
+                 "ru":  "Kyrgyz-Turkish Manas University (KTMU)",
+                 "kg":  "Kyrgyz-Turkish Manas University (KTMU)",
+                 "en":  "Kyrgyz-Turkish Manas University (KTMU)"
+             },
+    "programs":  [
+                     "Компьютерная инженерия",
+                     "Туризм и гостиничное дело",
+                     "Международные отношения",
+                     "Ветеринария и биотехнологии"
+                 ],
+    "grantTypes":  [
+                       "100% Государственный грант Турции и КР",
+                       "Стипендия за отличную учебу",
+                       "Бесплатное питание и общежитие"
+                   ],
+    "grantCoverage":  {
+                          "type":  "100% Бесплатное обучение для всех студентов",
+                          "details":  "Все поступившие студенты учатся БЕСПЛАТНО! Нет контракта. Отличникам выплачивается ежемесячная стипендия, предоставляется современное общежитие на кампусе Джал и бесплатная медицинская страховка."
+                      },
+    "directAdmissionAfter11":  true,
+    "livingCostMonthly":  {
+                              "total":  200,
+                              "housing":  50,
+                              "food":  110,
+                              "transport":  20,
+                              "insurance":  10,
+                              "flightBishkek":  0
+                          },
+    "deadlines":  [
+                      {
+                          "name":  "5 июля 2027 (Экзамен «Манас»)",
+                          "date":  "2027-07-05",
+                          "verified":  false,
+                          "note":  "TODO: проверить на официальном сайте"
+                      }
+                  ],
+    "requirements":  {
+                         "ielts":  {
+                                       "required":  false,
+                                       "minimum":  null,
+                                       "recommended":  null
+                                   },
+                         "gpaMinimum":  3.8,
+                         "documents":  [
+                                           "attestat",
+                                           "ort_certificate",
+                                           "medical_086"
+                                       ]
+                     },
+    "visaInformation":  {
+                            "embassyName":  "Виза не требуется (Кампус в Бишкеке, мкр. Джал)",
+                            "address":  "г. Бишкек, мкр. Джал, ул. А. Тынчтык / Ч. Айтматова",
+                            "city":  "Бишкек",
+                            "visaType":  "Не требуется гражданам КР",
+                            "bankProof":  "Выписка не требуется, обучение полностью бесплатное.",
+                            "processingWeeks":  "Мгновенно",
+                            "keyTips":  "Один из лучших вариантов получить диплом турецкого государственного стандарта бесплатно, не выезжая за пределы Бишкека. Студенты проходят оплачиваемые стажировки в Турции (Анталья, Стамбул)."
+                        },
+    "website":  "https://manas.edu.kg",
+    "lastUpdated":  "2026-11-23",
+    "sourceUrl":  "https://manas.edu.kg",
+    "verified":  false,
+    "verificationNote":  "TODO: проверить на официальном сайте",
+    "imageIsCampusVerified":  false
+},
+{
+    "id":  "istanbul-uni-turkey",
+    "nativeName":  "İstanbul Üniversitesi",
+    "country":  "Турция",
+    "countryCode":  "TR",
+    "city":  "Стамбул",
+    "region":  "middle_east",
+    "flag":  "🇹🇷",
+    "image":  "https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?auto=format\u0026fit=crop\u0026w=800\u0026q=80",
+    "qsRank":  651,
+    "theRank":  601,
+    "acceptanceRate":  "35%",
+    "tuitionUSD":  600,
+    "tuitionLocal":  "20,000 TRY",
+    "tuitionPeriod":  "в год",
+    "livingCostUSDMonth":  {
+                               "total":  480,
+                               "housing":  180,
+                               "food":  200,
+                               "transport":  40,
+                               "insurance":  20,
+                               "flightBishkek":  210
+                           },
+    "fullGrantAvailable":  true,
+    "grantNames":  [
+                       "Türkiye Bursları",
+                       "Студенческие гранты Стамбула"
+                   ],
+    "grantType":  "100% Государственный грант или сверхдоступный контракт",
+    "grantDetails":  "Один из старейших государственных вузов Европы и Турции (осн. 1453 г.). По гранту Türkiye Bursları — 100% бесплатно со стипендией. По контракту — всего от $500–$800 в год!",
+    "grantLink":  "https://www.turkiyeburslari.gov.tr",
+    "accepts11thGradeDirectly":  true,
+    "admissionRouteDescription":  "Прямое поступление после 11 класса КР! Принимается 11-летний аттестат Кыргызстана. Поступление через экзамен TR-YÖS / İÜYÖS или по результатам аттестата.",
+    "languages":  [
+                      "Турецкий",
+                      "Английский"
+                  ],
+    "primaryLanguage":  "Турецкий / Английский",
+    "ieltsRequired":  false,
+    "ieltsNote":  "Для программ на турецком языке знание языка на входе не требуется (1 год языковых курсов TÖMER при университете).",
+    "minIELTS":  null,
+    "recommendedIELTS":  null,
+    "minTOEFL":  70,
+    "minSAT":  1100,
+    "minDuolingo":  null,
+    "ieltsAlternativeNote":  "IELTS НЕ ТРЕБУЕТСЯ! Учеба идет на турецком языке, при вузе действует подготовительный языковой центр Dil Merkezi (TÖMER). Для редких англоязычных программ принимается внутренний экзамен.",
+    "minGPA":  3.9,
+    "acceptedExams":  [
+                          "NO_EXAM_PREP",
+                          "INTERNAL_EXAM",
+                          "SAT",
+                          "TOEFL"
+                      ],
+    "internalExamAvailable":  true,
+    "nextDeadline":  "30 мая 2027",
+    "deadlineDate":  "2027-05-30",
+    "intakeSeason":  "Осень 2027",
+    "difficulty":  "moderate",
+    "documentRequirements":  [
+                                 "attestat",
+                                 "translation_notary",
+                                 "apostille",
+                                 "bank_statement",
+                                 "medical_086"
+                             ],
+    "visaGuideKG":  {
+                        "embassyName":  "Посольство Турции в Бишкеке",
+                        "address":  "г. Бишкек, ул. Московская, 89",
+                        "city":  "Бишкек",
+                        "visaType":  "Студенческий ВНЖ (İkamet)",
+                        "bankProof":  "Выписка из банка КР (от $3,000 на счете).",
+                        "processingWeeks":  "2–3 недели",
+                        "keyTips":  "Огромная кыргызская студенческая диаспора в Стамбуле. Прямой рейс Бишкек — Стамбул занимает всего 5 часов."
+                    },
+    "popularMajors":  [
+                          "Международный бизнес",
+                          "Юриспруденция",
+                          "Журналистика",
+                          "Фармация и медицина"
+                      ],
+    "officialWebsite":  "https://www.istanbul.edu.tr/en",
+    "applicationPortal":  "https://yos.istanbul.edu.tr",
+    "displayName":  "Istanbul University (İstanbul Üniversitesi)",
+    "nameLocalized":  {
+                          "ru":  "Istanbul University (İstanbul Üniversitesi)",
+                          "kg":  "Istanbul University (İstanbul Üniversitesi)",
+                          "en":  "Istanbul University (İstanbul Üniversitesi)"
+                      },
+    "name":  {
+                 "ru":  "Istanbul University (İstanbul Üniversitesi)",
+                 "kg":  "Istanbul University (İstanbul Üniversitesi)",
+                 "en":  "Istanbul University (İstanbul Üniversitesi)"
+             },
+    "programs":  [
+                     "Международный бизнес",
+                     "Юриспруденция",
+                     "Журналистика",
+                     "Фармация и медицина"
+                 ],
+    "grantTypes":  [
+                       "Türkiye Bursları",
+                       "Студенческие гранты Стамбула"
+                   ],
+    "grantCoverage":  {
+                          "type":  "100% Государственный грант или сверхдоступный контракт",
+                          "details":  "Один из старейших государственных вузов Европы и Турции (осн. 1453 г.). По гранту Türkiye Bursları — 100% бесплатно со стипендией. По контракту — всего от $500–$800 в год!"
+                      },
+    "directAdmissionAfter11":  true,
+    "livingCostMonthly":  {
+                              "total":  480,
+                              "housing":  180,
+                              "food":  200,
+                              "transport":  40,
+                              "insurance":  20,
+                              "flightBishkek":  210
+                          },
+    "deadlines":  [
+                      {
+                          "name":  "30 мая 2027",
+                          "date":  "2027-05-30",
+                          "verified":  false,
+                          "note":  "TODO: проверить на официальном сайте"
+                      }
+                  ],
+    "requirements":  {
+                         "ielts":  {
+                                       "required":  false,
+                                       "minimum":  null,
+                                       "recommended":  null
+                                   },
+                         "gpaMinimum":  3.9,
+                         "documents":  [
+                                           "attestat",
+                                           "translation_notary",
+                                           "apostille",
+                                           "bank_statement",
+                                           "medical_086"
+                                       ]
+                     },
+    "visaInformation":  {
+                            "embassyName":  "Посольство Турции в Бишкеке",
+                            "address":  "г. Бишкек, ул. Московская, 89",
+                            "city":  "Бишкек",
+                            "visaType":  "Студенческий ВНЖ (İkamet)",
+                            "bankProof":  "Выписка из банка КР (от $3,000 на счете).",
+                            "processingWeeks":  "2–3 недели",
+                            "keyTips":  "Огромная кыргызская студенческая диаспора в Стамбуле. Прямой рейс Бишкек — Стамбул занимает всего 5 часов."
+                        },
+    "website":  "https://www.istanbul.edu.tr/en",
+    "lastUpdated":  "2026-11-23",
+    "sourceUrl":  "https://www.istanbul.edu.tr/en",
+    "verified":  false,
+    "verificationNote":  "TODO: проверить на официальном сайте",
+    "imageIsCampusVerified":  false
+},
+{
+    "id":  "charles-uni-czech",
+    "nativeName":  "Univerzita Karlova v Praze",
+    "country":  "Чехия",
+    "countryCode":  "CZ",
+    "city":  "Прага",
+    "region":  "europe",
+    "flag":  "🇨🇿",
+    "image":  "https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?auto=format\u0026fit=crop\u0026w=800\u0026q=80",
+    "qsRank":  248,
+    "theRank":  401,
+    "acceptanceRate":  "20%",
+    "tuitionUSD":  0,
+    "tuitionLocal":  "0 CZK (на чешском 100% бесплатно)",
+    "tuitionPeriod":  "в год",
+    "livingCostUSDMonth":  {
+                               "total":  600,
+                               "housing":  240,
+                               "food":  240,
+                               "transport":  20,
+                               "insurance":  40,
+                               "flightBishkek":  330
+                           },
+    "fullGrantAvailable":  true,
+    "grantNames":  [
+                       "Бесплатное высшее образование на чешском языке",
+                       "Erasmus+"
+                   ],
+    "grantType":  "100% Бесплатное государственное обучение в Чехии",
+    "grantDetails":  "По законам Чехии высшее образование во всех государственных вузах 100% БЕСПЛАТНО для иностранцев, если обучение идет на чешском языке (уровень B2).",
+    "grantLink":  "https://cuni.cz/UKEN-1.html",
+    "accepts11thGradeDirectly":  true,
+    "admissionRouteDescription":  "Поступление после 11 класса КР через нострификацию (Nostrifikace) аттестата. Школьники из КР берут годовые подготовительные курсы чешского (ÚJOP при Карловом университете), после чего учатся бесплатно.",
+    "languages":  [
+                      "Чешский",
+                      "Английский"
+                  ],
+    "primaryLanguage":  "Чешский (Бесплатно) / Английский",
+    "ieltsRequired":  false,
+    "ieltsNote":  "На чешском языке обучение бесплатное и IELTS не нужен. На платных английских программах нужен IELTS 6.5.",
+    "minIELTS":  6.5,
+    "recommendedIELTS":  7.0,
+    "minTOEFL":  80,
+    "minSAT":  null,
+    "minDuolingo":  null,
+    "ieltsAlternativeNote":  "Для 100% бесплатного обучения на чешском языке IELTS НЕ ТРЕБУЕТСЯ! Студенты проходят 1 год курсов чешского языка ÚJOP и сдают профильные экзамены на чешском.",
+    "minGPA":  4.0,
+    "acceptedExams":  [
+                          "NO_EXAM_PREP",
+                          "INTERNAL_EXAM",
+                          "IELTS"
+                      ],
+    "internalExamAvailable":  true,
+    "nextDeadline":  "28 февраля 2027",
+    "deadlineDate":  "2027-02-28",
+    "intakeSeason":  "Осень 2027",
+    "difficulty":  "competitive",
+    "documentRequirements":  [
+                                 "attestat",
+                                 "translation_notary",
+                                 "apostille",
+                                 "nostrifikace_certificate",
+                                 "medical_086"
+                             ],
+    "visaGuideKG":  {
+                        "embassyName":  "Посольство Чешской Республики (Консульство в Астане / Visametric в Бишкеке)",
+                        "address":  "Подача на долгосрочную студенческую визу D через визовый центр Visametric в Бишкеке",
+                        "city":  "Бишкек / Астана",
+                        "visaType":  "Долгосрочная виза D с целью учебы",
+                        "bankProof":  "Международная банковская карта на имя студента и выписка со счета от 140,000 CZK (~$6,000) на 1 год.",
+                        "processingWeeks":  "6–12 недель",
+                        "keyTips":  "Подавать на студенческую визу необходимо минимум за 3-4 месяца до начала учебы из-за регламентов МВД Чехии."
+                    },
+    "popularMajors":  [
+                          "Общая медицина",
+                          "Физика и математика",
+                          "Юриспруденция",
+                          "Философия и политология"
+                      ],
+    "officialWebsite":  "https://cuni.cz",
+    "applicationPortal":  "https://is.cuni.cz/prihlaska",
+    "displayName":  "Charles University (Univerzita Karlova)",
+    "nameLocalized":  {
+                          "ru":  "Charles University (Univerzita Karlova)",
+                          "kg":  "Charles University (Univerzita Karlova)",
+                          "en":  "Charles University (Univerzita Karlova)"
+                      },
+    "name":  {
+                 "ru":  "Charles University (Univerzita Karlova)",
+                 "kg":  "Charles University (Univerzita Karlova)",
+                 "en":  "Charles University (Univerzita Karlova)"
+             },
+    "programs":  [
+                     "Общая медицина",
+                     "Физика и математика",
+                     "Юриспруденция",
+                     "Философия и политология"
+                 ],
+    "grantTypes":  [
+                       "Бесплатное высшее образование на чешском языке",
+                       "Erasmus+"
+                   ],
+    "grantCoverage":  {
+                          "type":  "100% Бесплатное государственное обучение в Чехии",
+                          "details":  "По законам Чехии высшее образование во всех государственных вузах 100% БЕСПЛАТНО для иностранцев, если обучение идет на чешском языке (уровень B2)."
+                      },
+    "directAdmissionAfter11":  true,
+    "livingCostMonthly":  {
+                              "total":  600,
+                              "housing":  240,
+                              "food":  240,
+                              "transport":  20,
+                              "insurance":  40,
+                              "flightBishkek":  330
+                          },
+    "deadlines":  [
+                      {
+                          "name":  "28 февраля 2027",
+                          "date":  "2027-02-28",
+                          "verified":  false,
+                          "note":  "TODO: проверить на официальном сайте"
+                      }
+                  ],
+    "requirements":  {
+                         "ielts":  {
+                                       "required":  false,
+                                       "minimum":  6.5,
+                                       "recommended":  7.0
+                                   },
+                         "gpaMinimum":  4.0,
+                         "documents":  [
+                                           "attestat",
+                                           "translation_notary",
+                                           "apostille",
+                                           "nostrifikace_certificate",
+                                           "medical_086"
+                                       ]
+                     },
+    "visaInformation":  {
+                            "embassyName":  "Посольство Чешской Республики (Консульство в Астане / Visametric в Бишкеке)",
+                            "address":  "Подача на долгосрочную студенческую визу D через визовый центр Visametric в Бишкеке",
+                            "city":  "Бишкек / Астана",
+                            "visaType":  "Долгосрочная виза D с целью учебы",
+                            "bankProof":  "Международная банковская карта на имя студента и выписка со счета от 140,000 CZK (~$6,000) на 1 год.",
+                            "processingWeeks":  "6–12 недель",
+                            "keyTips":  "Подавать на студенческую визу необходимо минимум за 3-4 месяца до начала учебы из-за регламентов МВД Чехии."
+                        },
+    "website":  "https://cuni.cz",
+    "lastUpdated":  "2026-11-23",
+    "sourceUrl":  "https://cuni.cz",
+    "verified":  false,
+    "verificationNote":  "TODO: проверить на официальном сайте",
+    "imageIsCampusVerified":  false
+},
+{
+    "id":  "rwth-aachen-germany",
+    "nativeName":  "Rheinisch-Westfälische Technische Hochschule Aachen",
+    "country":  "Германия",
+    "countryCode":  "DE",
+    "city":  "Ахен",
+    "region":  "europe",
+    "flag":  "🇩🇪",
+    "image":  "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format\u0026fit=crop\u0026w=800\u0026q=80",
+    "qsRank":  99,
+    "theRank":  90,
+    "acceptanceRate":  "10%",
+    "tuitionUSD":  0,
+    "tuitionLocal":  "0 EUR (Семестровый сбор ~€320)",
+    "tuitionPeriod":  "в год",
+    "livingCostUSDMonth":  {
+                               "total":  920,
+                               "housing":  400,
+                               "food":  300,
+                               "transport":  40,
+                               "insurance":  130,
+                               "flightBishkek":  340
+                           },
+    "fullGrantAvailable":  true,
+    "grantNames":  [
+                       "DAAD",
+                       "Бесплатное высшее образование в Германии",
+                       "Deutschlandstipendium"
+                   ],
+    "grantType":  "100% Бесплатное высшее образование (€0 контракт)",
+    "grantDetails":  "Один из лучших инженерных университетов планеты (Топ-100 мира, немецкий MIT). Обучение БЕСПЛАТНОЕ во всех государственных бакалавриатах!",
+    "grantLink":  "https://www.rwth-aachen.de",
+    "accepts11thGradeDirectly":  false,
+    "admissionRouteDescription":  "Из-за 11-летней системы КР прямого входа нет. Требуется 1 год Studienkolleg (T-Kurs в Германии с экзаменом FSP) ЛИБО 1 курс кыргызстанского аккредитованного вуза по смежной специальности.",
+    "languages":  [
+                      "Немецкий"
+                  ],
+    "primaryLanguage":  "Немецкий",
+    "ieltsRequired":  false,
+    "ieltsNote":  "Обучение на немецком языке. Требуется сертификат немецкого TestDaF 4x4 или Goethe C1.",
+    "minIELTS":  null,
+    "recommendedIELTS":  null,
+    "minTOEFL":  null,
+    "minSAT":  null,
+    "minDuolingo":  null,
+    "ieltsAlternativeNote":  "IELTS НЕ ТРЕБУЕТСЯ! Для учебы на немецком языке нужен сертификат TestDaF (4x4) или Goethe C1. При поступлении в Studienkolleg достаточно немецкого B1/B2.",
+    "minGPA":  4.6,
+    "acceptedExams":  [
+                          "NO_EXAM_PREP",
+                          "INTERNAL_EXAM"
+                      ],
+    "internalExamAvailable":  true,
+    "nextDeadline":  "15 июля 2027",
+    "deadlineDate":  "2027-07-15",
+    "intakeSeason":  "Зимний семестр 2027",
+    "difficulty":  "ultra_competitive",
+    "documentRequirements":  [
+                                 "attestat",
+                                 "translation_notary",
+                                 "apostille",
+                                 "studienkolleg_fsp",
+                                 "cv",
+                                 "bank_statement"
+                             ],
+    "visaGuideKG":  {
+                        "embassyName":  "Посольство Германии в Бишкеке",
+                        "address":  "г. Бишкек, ул. Раззакова, 28",
+                        "city":  "Бишкек",
+                        "visaType":  "Национальная виза категории D",
+                        "bankProof":  "Блокированный счет (Sperrkonto) на сумму €11,904 в год (€992/мес) в Coracle или Expatrio.",
+                        "processingWeeks":  "4–8 недель",
+                        "keyTips":  "Выпускники RWTH Aachen — самые востребованные инженеры в автомобильных и промышленных концернах Германии (BMW, Siemens, Bosch)."
+                    },
+    "popularMajors":  [
+                          "Машиностроение (Maschinenbau)",
+                          "Электротехника",
+                          "Информатика",
+                          "Автоматизация и робототехника"
+                      ],
+    "officialWebsite":  "https://www.rwth-aachen.de",
+    "applicationPortal":  "https://online.rwth-aachen.de",
+    "displayName":  "RWTH Aachen University",
+    "nameLocalized":  {
+                          "ru":  "RWTH Aachen University",
+                          "kg":  "RWTH Aachen University",
+                          "en":  "RWTH Aachen University"
+                      },
+    "name":  {
+                 "ru":  "RWTH Aachen University",
+                 "kg":  "RWTH Aachen University",
+                 "en":  "RWTH Aachen University"
+             },
+    "programs":  [
+                     "Машиностроение (Maschinenbau)",
+                     "Электротехника",
+                     "Информатика",
+                     "Автоматизация и робототехника"
+                 ],
+    "grantTypes":  [
+                       "DAAD",
+                       "Бесплатное высшее образование в Германии",
+                       "Deutschlandstipendium"
+                   ],
+    "grantCoverage":  {
+                          "type":  "100% Бесплатное высшее образование (€0 контракт)",
+                          "details":  "Один из лучших инженерных университетов планеты (Топ-100 мира, немецкий MIT). Обучение БЕСПЛАТНОЕ во всех государственных бакалавриатах!"
+                      },
+    "directAdmissionAfter11":  false,
+    "livingCostMonthly":  {
+                              "total":  920,
+                              "housing":  400,
+                              "food":  300,
+                              "transport":  40,
+                              "insurance":  130,
+                              "flightBishkek":  340
+                          },
+    "deadlines":  [
+                      {
+                          "name":  "15 июля 2027",
+                          "date":  "2027-07-15",
+                          "verified":  false,
+                          "note":  "TODO: проверить на официальном сайте"
+                      }
+                  ],
+    "requirements":  {
+                         "ielts":  {
+                                       "required":  false,
+                                       "minimum":  null,
+                                       "recommended":  null
+                                   },
+                         "gpaMinimum":  4.6,
+                         "documents":  [
+                                           "attestat",
+                                           "translation_notary",
+                                           "apostille",
+                                           "studienkolleg_fsp",
+                                           "cv",
+                                           "bank_statement"
+                                       ]
+                     },
+    "visaInformation":  {
+                            "embassyName":  "Посольство Германии в Бишкеке",
+                            "address":  "г. Бишкек, ул. Раззакова, 28",
+                            "city":  "Бишкек",
+                            "visaType":  "Национальная виза категории D",
+                            "bankProof":  "Блокированный счет (Sperrkonto) на сумму €11,904 в год (€992/мес) в Coracle или Expatrio.",
+                            "processingWeeks":  "4–8 недель",
+                            "keyTips":  "Выпускники RWTH Aachen — самые востребованные инженеры в автомобильных и промышленных концернах Германии (BMW, Siemens, Bosch)."
+                        },
+    "website":  "https://www.rwth-aachen.de",
+    "lastUpdated":  "2026-11-23",
+    "sourceUrl":  "https://www.rwth-aachen.de",
+    "verified":  false,
+    "verificationNote":  "TODO: проверить на официальном сайте",
+    "imageIsCampusVerified":  false
+},
+{
+    "id":  "tum-germany",
+    "nativeName":  "Technische Universität München",
+    "country":  "Германия",
+    "countryCode":  "DE",
+    "city":  "Мюнхен",
+    "region":  "europe",
+    "flag":  "🇩🇪",
+    "image":  "https://images.unsplash.com/photo-1527891751199-722e374c6981?auto=format\u0026fit=crop\u0026w=800\u0026q=80",
+    "qsRank":  28,
+    "theRank":  30,
+    "acceptanceRate":  "8%",
+    "tuitionUSD":  4400,
+    "tuitionLocal":  "€4,000",
+    "tuitionPeriod":  "в год",
+    "livingCostUSDMonth":  {
+                               "total":  1150,
+                               "housing":  550,
+                               "food":  320,
+                               "transport":  50,
+                               "insurance":  130,
+                               "flightBishkek":  350
+                           },
+    "fullGrantAvailable":  true,
+    "grantNames":  [
+                       "DAAD",
+                       "Deutschlandstipendium",
+                       "TUM Merit Scholarship"
+                   ],
+    "grantType":  "Стипендии DAAD / Академические гранты",
+    "grantDetails":  "Стипендии DAAD для выдающихся студентов, стипендия Германии (€300/мес) и внутреннее освобождение от сборов при отличной успеваемости.",
+    "grantLink":  "https://www.daad.de",
+    "accepts11thGradeDirectly":  false,
+    "admissionRouteDescription":  "Из-за 11-летней системы КР прямое поступление невозможно. Требуется 1 год Studienkolleg T/W-Kurs в Германии либо 1 курс аккредитованного вуза в Кыргызстане.",
+    "languages":  [
+                      "Немецкий",
+                      "Английский"
+                  ],
+    "primaryLanguage":  "Немецкий / Английский",
+    "ieltsRequired":  false,
+    "ieltsNote":  "Для программ на немецком IELTS не нужен. Для англоязычных программ минимальный IELTS 6.5, рекомендуется 7.0–7.5.",
+    "minIELTS":  6.5,
+    "recommendedIELTS":  7.0,
+    "minTOEFL":  88,
+    "recommendedTOEFL":  98,
+    "minSAT":  null,
+    "minDuolingo":  null,
+    "ieltsAlternativeNote":  "Для немецких программ IELTS не нужен (TestDaF/Goethe C1). Для программ на английском (напр. Aerospace, Management) минимальный IELTS 6.5 (рекомендуется 7.0+) или TOEFL iBT 88+ (рекомендуется 98+).",
+    "minGPA":  4.8,
+    "acceptedExams":  [
+                          "NO_EXAM_PREP",
+                          "TOEFL",
+                          "IELTS"
+                      ],
+    "internalExamAvailable":  true,
+    "nextDeadline":  "15 июля 2027",
+    "deadlineDate":  "2027-07-15",
+    "intakeSeason":  "Зимний семестр 2027",
+    "difficulty":  "ultra_competitive",
+    "documentRequirements":  [
+                                 "attestat",
+                                 "translation_notary",
+                                 "apostille",
+                                 "motivation_letter",
+                                 "recommendations",
+                                 "cv",
+                                 "studienkolleg_fsp"
+                             ],
+    "visaGuideKG":  {
+                        "embassyName":  "Посольство Федеративной Республики Германия в Бишкеке",
+                        "address":  "г. Бишкек, ул. Раззакова, 28",
+                        "city":  "Бишкек",
+                        "visaType":  "Национальная виза категории D",
+                        "bankProof":  "Блокированный счет (Sperrkonto) на сумму €11,904 в год (€992/мес) в Coracle или Expatrio.",
+                        "processingWeeks":  "4–8 недель",
+                        "keyTips":  "Очередь на собеседование в немецкое посольство в Бишкеке бронируйте заранее через Terminvergabe."
+                    },
+    "popularMajors":  [
+                          "Информатика (Informatik)",
+                          "Машиностроение",
+                          "Аэрокосмическая техника",
+                          "Менеджмент и технологии"
+                      ],
+    "officialWebsite":  "https://www.tum.de",
+    "applicationPortal":  "https://campus.tum.de",
+    "displayName":  "Technical University of Munich (TUM)",
+    "nameLocalized":  {
+                          "ru":  "Technical University of Munich (TUM)",
+                          "kg":  "Technical University of Munich (TUM)",
+                          "en":  "Technical University of Munich (TUM)"
+                      },
+    "name":  {
+                 "ru":  "Technical University of Munich (TUM)",
+                 "kg":  "Technical University of Munich (TUM)",
+                 "en":  "Technical University of Munich (TUM)"
+             },
+    "programs":  [
+                     "Информатика (Informatik)",
+                     "Машиностроение",
+                     "Аэрокосмическая техника",
+                     "Менеджмент и технологии"
+                 ],
+    "grantTypes":  [
+                       "DAAD",
+                       "Deutschlandstipendium",
+                       "TUM Merit Scholarship"
+                   ],
+    "grantCoverage":  {
+                          "type":  "Стипендии DAAD / Академические гранты",
+                          "details":  "Стипендии DAAD для выдающихся студентов, стипендия Германии (€300/мес) и внутреннее освобождение от сборов при отличной успеваемости."
+                      },
+    "directAdmissionAfter11":  false,
+    "livingCostMonthly":  {
+                              "total":  1150,
+                              "housing":  550,
+                              "food":  320,
+                              "transport":  50,
+                              "insurance":  130,
+                              "flightBishkek":  350
+                          },
+    "deadlines":  [
+                      {
+                          "name":  "15 июля 2027",
+                          "date":  "2027-07-15",
+                          "verified":  false,
+                          "note":  "TODO: проверить на официальном сайте"
+                      }
+                  ],
+    "requirements":  {
+                         "ielts":  {
+                                       "required":  false,
+                                       "minimum":  6.5,
+                                       "recommended":  7.0
+                                   },
+                         "gpaMinimum":  4.8,
+                         "documents":  [
+                                           "attestat",
+                                           "translation_notary",
+                                           "apostille",
+                                           "motivation_letter",
+                                           "recommendations",
+                                           "cv",
+                                           "studienkolleg_fsp"
+                                       ]
+                     },
+    "visaInformation":  {
+                            "embassyName":  "Посольство Федеративной Республики Германия в Бишкеке",
+                            "address":  "г. Бишкек, ул. Раззакова, 28",
+                            "city":  "Бишкек",
+                            "visaType":  "Национальная виза категории D",
+                            "bankProof":  "Блокированный счет (Sperrkonto) на сумму €11,904 в год (€992/мес) в Coracle или Expatrio.",
+                            "processingWeeks":  "4–8 недель",
+                            "keyTips":  "Очередь на собеседование в немецкое посольство в Бишкеке бронируйте заранее через Terminvergabe."
+                        },
+    "website":  "https://www.tum.de",
+    "lastUpdated":  "2026-11-23",
+    "sourceUrl":  "https://www.tum.de",
+    "verified":  false,
+    "verificationNote":  "TODO: проверить на официальном сайте",
+    "imageIsCampusVerified":  false
+},
+{
+    "id":  "uni-vienna-austria",
+    "nativeName":  "Universität Wien",
+    "country":  "Австрия",
+    "countryCode":  "AT",
+    "city":  "Вена",
+    "region":  "europe",
+    "flag":  "🇦🇹",
+    "image":  "https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format\u0026fit=crop\u0026w=800\u0026q=80",
+    "qsRank":  130,
+    "theRank":  119,
+    "acceptanceRate":  "30%",
+    "tuitionUSD":  1600,
+    "tuitionLocal":  "€726,72 за семестр",
+    "tuitionPeriod":  "в год",
+    "livingCostUSDMonth":  {
+                               "total":  890,
+                               "housing":  420,
+                               "food":  300,
+                               "transport":  30,
+                               "insurance":  70,
+                               "flightBishkek":  320
+                           },
+    "fullGrantAvailable":  false,
+    "grantNames":  [
+                       "Государственная австрийская льготная ставка",
+                       "Erasmus+"
+                   ],
+    "grantType":  "Сверхнизкая европейская стоимость (€726/сем)",
+    "grantDetails":  "Один из старейших университетов мира (осн. 1365 г.). Стоимость учебы для иностранцев субсидируется правительством Австрии и составляет всего €726 в семестр!",
+    "grantLink":  "https://univie.ac.at",
+    "accepts11thGradeDirectly":  false,
+    "admissionRouteDescription":  "Из-за 11-летнего школьного аттестата КР абитуриенты зачисляются условно и проходят подготовительный курс Vorstudienlehrgang (VWU) в Вене, где досдают академические предметы и немецкий язык.",
+    "languages":  [
+                      "Немецкий"
+                  ],
+    "primaryLanguage":  "Немецкий",
+    "ieltsRequired":  false,
+    "ieltsNote":  "Обучение на немецком языке.",
+    "minIELTS":  null,
+    "recommendedIELTS":  null,
+    "minTOEFL":  null,
+    "minSAT":  null,
+    "minDuolingo":  null,
+    "ieltsAlternativeNote":  "IELTS НЕ ТРЕБУЕТСЯ! Подача возможна даже с начальным немецким (от A2) с прохождением подготовительного курса немецкого языка VWU непосредственно в Вене перед началом 1 курса.",
+    "minGPA":  4.2,
+    "acceptedExams":  [
+                          "NO_EXAM_PREP"
+                      ],
+    "internalExamAvailable":  true,
+    "nextDeadline":  "5 сентября 2027",
+    "deadlineDate":  "2027-09-05",
+    "intakeSeason":  "Зимний семестр 2027",
+    "difficulty":  "moderate",
+    "documentRequirements":  [
+                                 "attestat",
+                                 "translation_notary",
+                                 "apostille",
+                                 "special_qualification_kg_uni",
+                                 "medical_086"
+                             ],
+    "visaGuideKG":  {
+                        "embassyName":  "Посольство Австрии (подача через Посольство Германии в Бишкеке)",
+                        "address":  "г. Бишкек, ул. Раззакова, 28",
+                        "city":  "Бишкек",
+                        "visaType":  "Австрийский ВНЖ с целью учебы (Aufenthaltsbewilligung Student)",
+                        "bankProof":  "Выписка из банка КР на имя студента до 24 лет: около €7,500 на год.",
+                        "processingWeeks":  "6–10 недель",
+                        "keyTips":  "Вена признана самым комфортным городом мира для жизни. Студенческий проездной в Вене стоит всего €75 на семестр."
+                    },
+    "popularMajors":  [
+                          "Экономика и финансы",
+                          "Информатика",
+                          "Психология",
+                          "Биология и генетика"
+                      ],
+    "officialWebsite":  "https://www.univie.ac.at/en",
+    "applicationPortal":  "https://uspace.univie.ac.at",
+    "displayName":  "University of Vienna (Universität Wien)",
+    "nameLocalized":  {
+                          "ru":  "University of Vienna (Universität Wien)",
+                          "kg":  "University of Vienna (Universität Wien)",
+                          "en":  "University of Vienna (Universität Wien)"
+                      },
+    "name":  {
+                 "ru":  "University of Vienna (Universität Wien)",
+                 "kg":  "University of Vienna (Universität Wien)",
+                 "en":  "University of Vienna (Universität Wien)"
+             },
+    "programs":  [
+                     "Экономика и финансы",
+                     "Информатика",
+                     "Психология",
+                     "Биология и генетика"
+                 ],
+    "grantTypes":  [
+                       "Государственная австрийская льготная ставка",
+                       "Erasmus+"
+                   ],
+    "grantCoverage":  {
+                          "type":  "Сверхнизкая европейская стоимость (€726/сем)",
+                          "details":  "Один из старейших университетов мира (осн. 1365 г.). Стоимость учебы для иностранцев субсидируется правительством Австрии и составляет всего €726 в семестр!"
+                      },
+    "directAdmissionAfter11":  false,
+    "livingCostMonthly":  {
+                              "total":  890,
+                              "housing":  420,
+                              "food":  300,
+                              "transport":  30,
+                              "insurance":  70,
+                              "flightBishkek":  320
+                          },
+    "deadlines":  [
+                      {
+                          "name":  "5 сентября 2027",
+                          "date":  "2027-09-05",
+                          "verified":  false,
+                          "note":  "TODO: проверить на официальном сайте"
+                      }
+                  ],
+    "requirements":  {
+                         "ielts":  {
+                                       "required":  false,
+                                       "minimum":  null,
+                                       "recommended":  null
+                                   },
+                         "gpaMinimum":  4.2,
+                         "documents":  [
+                                           "attestat",
+                                           "translation_notary",
+                                           "apostille",
+                                           "special_qualification_kg_uni",
+                                           "medical_086"
+                                       ]
+                     },
+    "visaInformation":  {
+                            "embassyName":  "Посольство Австрии (подача через Посольство Германии в Бишкеке)",
+                            "address":  "г. Бишкек, ул. Раззакова, 28",
+                            "city":  "Бишкек",
+                            "visaType":  "Австрийский ВНЖ с целью учебы (Aufenthaltsbewilligung Student)",
+                            "bankProof":  "Выписка из банка КР на имя студента до 24 лет: около €7,500 на год.",
+                            "processingWeeks":  "6–10 недель",
+                            "keyTips":  "Вена признана самым комфортным городом мира для жизни. Студенческий проездной в Вене стоит всего €75 на семестр."
+                        },
+    "website":  "https://www.univie.ac.at/en",
+    "lastUpdated":  "2026-11-23",
+    "sourceUrl":  "https://www.univie.ac.at/en",
+    "verified":  false,
+    "verificationNote":  "TODO: проверить на официальном сайте",
+    "imageIsCampusVerified":  false
+},
+{
+    "id":  "zhejiang-china",
+    "nativeName":  "浙江大学",
+    "country":  "Китай",
+    "countryCode":  "CN",
+    "city":  "Ханчжоу",
+    "region":  "asia",
+    "flag":  "🇨🇳",
+    "image":  "https://images.unsplash.com/photo-1547981609-4b6bfe67ca0b?auto=format\u0026fit=crop\u0026w=800\u0026q=80",
+    "qsRank":  44,
+    "theRank":  55,
+    "acceptanceRate":  "12%",
+    "tuitionUSD":  3800,
+    "tuitionLocal":  "28,000 CNY",
+    "tuitionPeriod":  "в год",
+    "livingCostUSDMonth":  {
+                               "total":  480,
+                               "housing":  180,
+                               "food":  200,
+                               "transport":  30,
+                               "insurance":  25,
+                               "flightBishkek":  260
+                           },
+    "fullGrantAvailable":  true,
+    "grantNames":  [
+                       "Chinese Government Scholarship (CSC)",
+                       "Zhejiang Provincial Scholarship"
+                   ],
+    "grantType":  "100% Грант CSC (Обучение + Общежитие + 2,500 CNY/мес)",
+    "grantDetails":  "Полный грант правительства КНР: бесплатное обучение, бесплатное комфортное общежитие на кампусе Зицзиньган, медицинская страховка и ежемесячная стипендия 2,500 юаней.",
+    "grantLink":  "https://www.campuschina.org",
+    "accepts11thGradeDirectly":  true,
+    "admissionRouteDescription":  "Прямое поступление после 11 класса КР! Выпускники школ Кыргызстана могут поступать на программу «1 год китайского языка + 4 года бакалавриата (1+4)» с полным покрытием грантом CSC.",
+    "languages":  [
+                      "Китайский",
+                      "Английский"
+                  ],
+    "primaryLanguage":  "Китайский / Английский",
+    "ieltsRequired":  false,
+    "ieltsNote":  "Для программ 1+4 с изучением китайского языка английские тесты не требуются. Для англоязычных программ минимальный IELTS 6.5 (рекомендуется 7.0).",
+    "minIELTS":  6.5,
+    "recommendedIELTS":  7.0,
+    "minTOEFL":  80,
+    "recommendedTOEFL":  92,
+    "minSAT":  null,
+    "minDuolingo":  110,
+    "recommendedDuolingo":  120,
+    "ieltsAlternativeNote":  "Для программы 1+4 с изучением китайского языка IELTS НЕ ТРЕБУЕТСЯ. Для программ на английском минимальный IELTS 6.5 (рекомендуется 7.0) или Duolingo от 110 (реком. 120+).",
+    "minGPA":  4.4,
+    "acceptedExams":  [
+                          "NO_EXAM_PREP",
+                          "DUOLINGO",
+                          "TOEFL",
+                          "IELTS"
+                      ],
+    "internalExamAvailable":  true,
+    "nextDeadline":  "28 февраля 2027",
+    "deadlineDate":  "2027-02-28",
+    "intakeSeason":  "Осень 2027",
+    "difficulty":  "competitive",
+    "documentRequirements":  [
+                                 "attestat",
+                                 "translation_notary",
+                                 "apostille",
+                                 "motivation_letter",
+                                 "recommendations",
+                                 "foreign_physical_exam",
+                                 "tunduk_police"
+                             ],
+    "visaGuideKG":  {
+                        "embassyName":  "Посольство КНР в Кыргызской Республике",
+                        "address":  "г. Бишкек, проспект Чынгыза Айтматова, 299/1",
+                        "city":  "Бишкек",
+                        "visaType":  "Студенческая виза X1",
+                        "bankProof":  "Для грантовиков CSC выписка не нужна (форма JW201). Для платников — от $4,000.",
+                        "processingWeeks":  "1–2 недели",
+                        "keyTips":  "Ханчжоу — штаб-квартира Alibaba Group и технологическая столица Китая. Очень чистый, зеленый и ультрасовременный город."
+                    },
+    "popularMajors":  [
+                          "Компьютерные науки и ИИ",
+                          "Международная экономика",
+                          "Биомедицинская инженерия",
+                          "Архитектура"
+                      ],
+    "officialWebsite":  "https://www.zju.edu.cn/english",
+    "applicationPortal":  "https://isao.zju.edu.cn",
+    "displayName":  "Zhejiang University (ZJU)",
+    "nameLocalized":  {
+                          "ru":  "Zhejiang University (ZJU)",
+                          "kg":  "Zhejiang University (ZJU)",
+                          "en":  "Zhejiang University (ZJU)"
+                      },
+    "name":  {
+                 "ru":  "Zhejiang University (ZJU)",
+                 "kg":  "Zhejiang University (ZJU)",
+                 "en":  "Zhejiang University (ZJU)"
+             },
+    "programs":  [
+                     "Компьютерные науки и ИИ",
+                     "Международная экономика",
+                     "Биомедицинская инженерия",
+                     "Архитектура"
+                 ],
+    "grantTypes":  [
+                       "Chinese Government Scholarship (CSC)",
+                       "Zhejiang Provincial Scholarship"
+                   ],
+    "grantCoverage":  {
+                          "type":  "100% Грант CSC (Обучение + Общежитие + 2,500 CNY/мес)",
+                          "details":  "Полный грант правительства КНР: бесплатное обучение, бесплатное комфортное общежитие на кампусе Зицзиньган, медицинская страховка и ежемесячная стипендия 2,500 юаней."
+                      },
+    "directAdmissionAfter11":  true,
+    "livingCostMonthly":  {
+                              "total":  480,
+                              "housing":  180,
+                              "food":  200,
+                              "transport":  30,
+                              "insurance":  25,
+                              "flightBishkek":  260
+                          },
+    "deadlines":  [
+                      {
+                          "name":  "28 февраля 2027",
+                          "date":  "2027-02-28",
+                          "verified":  false,
+                          "note":  "TODO: проверить на официальном сайте"
+                      }
+                  ],
+    "requirements":  {
+                         "ielts":  {
+                                       "required":  false,
+                                       "minimum":  6.5,
+                                       "recommended":  7.0
+                                   },
+                         "gpaMinimum":  4.4,
+                         "documents":  [
+                                           "attestat",
+                                           "translation_notary",
+                                           "apostille",
+                                           "motivation_letter",
+                                           "recommendations",
+                                           "foreign_physical_exam",
+                                           "tunduk_police"
+                                       ]
+                     },
+    "visaInformation":  {
+                            "embassyName":  "Посольство КНР в Кыргызской Республике",
+                            "address":  "г. Бишкек, проспект Чынгыза Айтматова, 299/1",
+                            "city":  "Бишкек",
+                            "visaType":  "Студенческая виза X1",
+                            "bankProof":  "Для грантовиков CSC выписка не нужна (форма JW201). Для платников — от $4,000.",
+                            "processingWeeks":  "1–2 недели",
+                            "keyTips":  "Ханчжоу — штаб-квартира Alibaba Group и технологическая столица Китая. Очень чистый, зеленый и ультрасовременный город."
+                        },
+    "website":  "https://www.zju.edu.cn/english",
+    "lastUpdated":  "2026-11-23",
+    "sourceUrl":  "https://www.zju.edu.cn/english",
+    "verified":  false,
+    "verificationNote":  "TODO: проверить на официальном сайте",
+    "imageIsCampusVerified":  false
+},
+{
+    "id":  "vistula-poland",
+    "nativeName":  "Akademia Finansów i Biznesu Vistula",
+    "country":  "Польша",
+    "countryCode":  "PL",
+    "city":  "Варшава",
+    "region":  "europe",
+    "flag":  "🇵🇱",
+    "image":  "https://images.unsplash.com/photo-1519197924294-4ba991a11128?auto=format\u0026fit=crop\u0026w=800\u0026q=80",
+    "qsRank":  950,
+    "theRank":  900,
+    "acceptanceRate":  "55%",
+    "tuitionUSD":  2400,
+    "tuitionLocal":  "€2,200",
+    "tuitionPeriod":  "в год",
+    "livingCostUSDMonth":  {
+                               "total":  500,
+                               "housing":  200,
+                               "food":  200,
+                               "transport":  25,
+                               "insurance":  25,
+                               "flightBishkek":  290
+                           },
+    "fullGrantAvailable":  true,
+    "grantNames":  [
+                       "Vistula Merit Scholarship",
+                       "Стипендия за академические успехи"
+                   ],
+    "grantType":  "Скидки до 100% за отличные оценки + легкое поступление",
+    "grantDetails":  "Один из самых интернациональных и дружелюбных университетов Польши для абитуриентов из стран СНГ и Кыргызстана. Предоставляет гранты на бесплатное обучение для студентов с высоким средним баллом.",
+    "grantLink":  "https://vistula.edu.pl/en",
+    "accepts11thGradeDirectly":  true,
+    "admissionRouteDescription":  "Прямое поступление после 11 класса КР! Полное признание кыргызстанского аттестата. Быстрое зачисление без сложных вступительных экзаменов.",
+    "languages":  [
+                      "Английский",
+                      "Польский"
+                  ],
+    "primaryLanguage":  "Английский",
+    "ieltsRequired":  false,
+    "ieltsNote":  "Обучение на английском. Внутренний онлайн-тест бесплатный.",
+    "minIELTS":  5.5,
+    "recommendedIELTS":  6.0,
+    "minTOEFL":  65,
+    "recommendedTOEFL":  75,
+    "minDuolingo":  95,
+    "recommendedDuolingo":  105,
+    "minSAT":  null,
+    "ieltsAlternativeNote":  "IELTS НЕ ОБЯЗАТЕЛЕН! Vistula University проводит бесплатный онлайн-тест по английскому языку при подаче заявки. Также принимаются Duolingo (от 95, реком. 105) или IELTS от 5.5.",
+    "minGPA":  3.7,
+    "acceptedExams":  [
+                          "INTERNAL_EXAM",
+                          "DUOLINGO",
+                          "IELTS",
+                          "TOEFL"
+                      ],
+    "internalExamAvailable":  true,
+    "nextDeadline":  "31 июля 2027",
+    "deadlineDate":  "2027-07-31",
+    "intakeSeason":  "Осень 2027",
+    "difficulty":  "moderate",
+    "documentRequirements":  [
+                                 "attestat",
+                                 "translation_notary",
+                                 "apostille",
+                                 "medical_086",
+                                 "bank_statement"
+                             ],
+    "visaGuideKG":  {
+                        "embassyName":  "Визовый центр VFS Global Польши в Бишкеке",
+                        "address":  "г. Бишкек, ул. Раззакова, 19",
+                        "city":  "Бишкек",
+                        "visaType":  "Национальная польская виза D",
+                        "bankProof":  "Выписка из банка КР (от €3,000 на счету студента или родителей).",
+                        "processingWeeks":  "2–3 недели",
+                        "keyTips":  "Один из самых быстрых и гарантированных способов получить европейское образование и шенгенскую визу для выпускника из Кыргызстана."
+                    },
+    "popularMajors":  [
+                          "Computer Engineering",
+                          "International Business",
+                          "Графический дизайн",
+                          "Финансы и бухучет"
+                      ],
+    "officialWebsite":  "https://vistula.edu.pl/en",
+    "applicationPortal":  "https://apply.vistula.edu.pl",
+    "displayName":  "Vistula University (Akademia Finansów i Biznesu Vistula)",
+    "nameLocalized":  {
+                          "ru":  "Vistula University (Akademia Finansów i Biznesu Vistula)",
+                          "kg":  "Vistula University (Akademia Finansów i Biznesu Vistula)",
+                          "en":  "Vistula University (Akademia Finansów i Biznesu Vistula)"
+                      },
+    "name":  {
+                 "ru":  "Vistula University (Akademia Finansów i Biznesu Vistula)",
+                 "kg":  "Vistula University (Akademia Finansów i Biznesu Vistula)",
+                 "en":  "Vistula University (Akademia Finansów i Biznesu Vistula)"
+             },
+    "programs":  [
+                     "Computer Engineering",
+                     "International Business",
+                     "Графический дизайн",
+                     "Финансы и бухучет"
+                 ],
+    "grantTypes":  [
+                       "Vistula Merit Scholarship",
+                       "Стипендия за академические успехи"
+                   ],
+    "grantCoverage":  {
+                          "type":  "Скидки до 100% за отличные оценки + легкое поступление",
+                          "details":  "Один из самых интернациональных и дружелюбных университетов Польши для абитуриентов из стран СНГ и Кыргызстана. Предоставляет гранты на бесплатное обучение для студентов с высоким средним баллом."
+                      },
+    "directAdmissionAfter11":  true,
+    "livingCostMonthly":  {
+                              "total":  500,
+                              "housing":  200,
+                              "food":  200,
+                              "transport":  25,
+                              "insurance":  25,
+                              "flightBishkek":  290
+                          },
+    "deadlines":  [
+                      {
+                          "name":  "31 июля 2027",
+                          "date":  "2027-07-31",
+                          "verified":  false,
+                          "note":  "TODO: проверить на официальном сайте"
+                      }
+                  ],
+    "requirements":  {
+                         "ielts":  {
+                                       "required":  false,
+                                       "minimum":  5.5,
+                                       "recommended":  6.0
+                                   },
+                         "gpaMinimum":  3.7,
+                         "documents":  [
+                                           "attestat",
+                                           "translation_notary",
+                                           "apostille",
+                                           "medical_086",
+                                           "bank_statement"
+                                       ]
+                     },
+    "visaInformation":  {
+                            "embassyName":  "Визовый центр VFS Global Польши в Бишкеке",
+                            "address":  "г. Бишкек, ул. Раззакова, 19",
+                            "city":  "Бишкек",
+                            "visaType":  "Национальная польская виза D",
+                            "bankProof":  "Выписка из банка КР (от €3,000 на счету студента или родителей).",
+                            "processingWeeks":  "2–3 недели",
+                            "keyTips":  "Один из самых быстрых и гарантированных способов получить европейское образование и шенгенскую визу для выпускника из Кыргызстана."
+                        },
+    "website":  "https://vistula.edu.pl/en",
+    "lastUpdated":  "2026-11-23",
+    "sourceUrl":  "https://vistula.edu.pl/en",
+    "verified":  false,
+    "verificationNote":  "TODO: проверить на официальном сайте",
+    "imageIsCampusVerified":  false
+}
+]
